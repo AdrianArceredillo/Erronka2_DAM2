@@ -47,7 +47,7 @@ public class Partida {
     public void setData(Timestamp data) {
         this.data = data;
     }
-
+    
     @Override
     public String toString() {
         return "Partida[id: " + id +

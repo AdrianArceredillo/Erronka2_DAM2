@@ -12,7 +12,7 @@ public class Langilea {
     private String email;
     private String izena;
     private String user;
-    private Timestamp jaiotzaData;
+    private Timestamp jaiotzadata;
     private int taldea;
 
     public String getEmail() {
@@ -40,11 +40,11 @@ public class Langilea {
     }
 
     public String getJaiotzaData() {
-        return jaiotzaData.toString();
+        return jaiotzadata.toString();
     }
 
-    public void setJaiotzaData(Timestamp jaiotzaData) {
-        this.jaiotzaData = jaiotzaData;
+    public void setJaiotzaData(Timestamp jaiotzadata) {
+        this.jaiotzadata = jaiotzadata;
     }
 
     public int getTaldea() {
@@ -61,7 +61,7 @@ public class Langilea {
                 ", taldea: " + taldea +
                 ", izena: " + izena +
                 ", email: " + email +
-                ", jaiotza-data: " + jaiotzaData.toString();
+                ", jaiotza-data: " + jaiotzadata.toString();
     }
 
 }

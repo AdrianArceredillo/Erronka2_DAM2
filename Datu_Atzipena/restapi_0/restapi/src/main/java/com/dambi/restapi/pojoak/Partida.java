@@ -1,4 +1,4 @@
-package com.dambi.restapi;
+package com.dambi.restapi.pojoak;
 
 import java.sql.Timestamp;
 

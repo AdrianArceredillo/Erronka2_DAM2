@@ -1,11 +1,17 @@
-package com.dambi.restapi;
+package com.dambi.restapi.pojoak;
+
 
 import java.sql.Timestamp;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlType;
 
 @Entity
+
+
+
+@XmlType(propOrder = { "email", "izena", "user", "jaiotzadata", "taldea" })
 @Table(name = "langilea")
 public class Langilea {
     @Id

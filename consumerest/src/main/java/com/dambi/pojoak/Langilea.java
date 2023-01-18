@@ -46,7 +46,7 @@ public class Langilea {
         return jaiotzadata;
     }
 
-    public void setData(String jaiotzaData) {
+    public void setJaiotzaData(String jaiotzaData) {
         this.jaiotzadata = jaiotzaData;
     }
 
@@ -62,7 +62,7 @@ public class Langilea {
 
     @Override
     public String toString() {
-        return String.format("Langilea[UwU]");
+        return "Langilea[E-mail:" + this.getEmail() + ", izena: " + this.getIzena() + ", user:" + this.getUser() + ", jaiotza-data:" + this.getJaiotzaData() + " taldea:" + this.getTaldea() + "]";
     }
 
 }

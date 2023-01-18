@@ -21,38 +21,45 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.dambi.pojoak.Langilea;
+import com.dambi.pojoak.Langileak;
+
 import java.io.IOException;
 
 // import org.json.simple.JSONObject;
 // import org.json.simple.parser.JSONParser;
 
-import com.dambi.pojoak.Partida;
-import com.dambi.pojoak.Partidak;
 
 import java.io.FileReader;
 
 
-public class JsonaP {
+public class JsonaL {
 
         public static void irakurri( String strFileIn) {
 
-        Partidak partidak = null;
+        Langileak langileak = null;
+
         try {
             JsonReader reader = Json.createReader(new FileReader(strFileIn));
             JsonStructure jsonst = reader.read();
             JsonArray jsonarray = jsonst.asJsonArray();
-            partidak = new Partidak();
+            langileak = new Langileak();
             for (int i = 0; i < jsonarray.size(); i++) {
                 JsonObject jsonobj = jsonarray.getJsonObject(i);
-                Partida partida = new Partida();
-                partida.setId(jsonobj.getInt("id"));
+                Langilea langilea = new Langilea();
+                langilea.setEmail(Garbitzailea.garbitu(jsonobj.getString("email")));
 
-                partida.setUser(Garbitzailea.garbitu(jsonobj.getString("user")));
+                langilea.setIzena(Garbitzailea.garbitu(jsonobj.getString("izena")));
 
-                partida.setPuntuazioa(jsonobj.getInt("puntuazioa"));
-                partida.setData(jsonobj.getString("data"));
-                System.out.println(partida);
-                partidak.add(partida);
+                langilea.setUser(Garbitzailea.garbitu(jsonobj.getString("user")));
+
+                langilea.setJaiotzaData(jsonobj.getString("jaiotzaData"));
+                langilea.setTaldea(jsonobj.getInt("taldea"));
+
+
+
+                System.out.println(langilea);
+                langileak.add(langilea);
             }
             
         } catch (Exception e) {

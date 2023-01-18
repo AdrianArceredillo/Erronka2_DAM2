@@ -63,7 +63,7 @@ public class JsonaPartida {
 
                 
                 DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-                Date date = formatter.parse(jsonobj.getString("jaiotzadata"));
+                Date date = formatter.parse(jsonobj.getString("data"));
                 Timestamp partida_Data = new Timestamp(date.getTime());
                 partida.setData(partida_Data);
 
@@ -73,7 +73,7 @@ public class JsonaPartida {
             }
             
         } catch (Exception e) {
-            System.out.println("Arazoak String-a irakurtzerakoan.");
+            //System.out.println("Arazoak String-a irakurtzerakoan.");
         }
     }
 }

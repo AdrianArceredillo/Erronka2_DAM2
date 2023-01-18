@@ -20,6 +20,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.dambi.restapi.LangileaRepository;
 import com.dambi.restapi.PartidaRepository;
+import com.dambi.restapi.atzipenekoak.JsonaLangilea;
 import com.dambi.restapi.pojoak.Langilea;
 import com.dambi.restapi.pojoak.Partida;
 
@@ -96,6 +97,7 @@ public class MainController {
 
         langileaRepository.save(l);
         return "Saved";
+
     }
 
     @GetMapping(path = "/all_Langilea")

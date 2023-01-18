@@ -4,9 +4,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Scanner;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -14,8 +11,8 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
-import org.apache.tomcat.util.json.JSONParser;
 
+import com.dambi.restapi.atzipenekoak.JsonaLangilea;
 import com.dambi.restapi.atzipenekoak.JsonaPartida;
 
 public class pruebasJSON {
@@ -26,24 +23,41 @@ public class pruebasJSON {
 
         String content = "";
         HttpClient client = HttpClientBuilder.create().build();
-        HttpGet request = new HttpGet("http://localhost:8080/demo/all_Partida");
+        HttpGet request_Partidak = new HttpGet("http://localhost:8080/demo/all_Partida");
+        HttpGet request_Langileak = new HttpGet("http://localhost:8080/demo/all_Langilea");
+        // HttpGet request_Langileak = new HttpGet("http://localhost:8080/demo/LangileaBat");
 
         try {
-            HttpResponse response = client.execute(request);
-            HttpEntity entity = response.getEntity();
-            content = EntityUtils.toString(entity);
+            // PARTIDAK
+            HttpResponse response_Partidak = client.execute(request_Partidak);
+            HttpEntity entity_P = response_Partidak.getEntity();
+            content = EntityUtils.toString(entity_P);
             System.out.println(content);
-            
-            System.out.println(new File("").getAbsolutePath());
-            String fitxategia = "./restapi/src/main/java/com/dambi/data/informazioa.json";
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fitxategia));
-            writer.write(content);
-            writer.close();
 
-            JsonaPartida.irakurri(fitxategia);
+            System.out.println(new File("").getAbsolutePath());
+            String fitxategia_P = "./restapi/src/main/java/com/dambi/data/informazioaPartidak.json";
+            BufferedWriter writer_P = new BufferedWriter(new FileWriter(fitxategia_P));
+            writer_P.write(content);
+            writer_P.close();
+
+            JsonaPartida.irakurri(fitxategia_P);
+
+            // LANGILEAK
+            HttpResponse response_Langileak = client.execute(request_Langileak);
+            HttpEntity entity_L = response_Langileak.getEntity();
+            content = EntityUtils.toString(entity_L);
+            System.out.println(content);
+
+            System.out.println(new File("").getAbsolutePath());
+            String fitxategia_L = "./restapi/src/main/java/com/dambi/data/informazioaLangileak.json";
+            BufferedWriter writer_L = new BufferedWriter(new FileWriter(fitxategia_L));
+            writer_L.write(content);
+            writer_L.close();
+
+            JsonaLangilea.irakurri(fitxategia_L);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-}
+    }
 }

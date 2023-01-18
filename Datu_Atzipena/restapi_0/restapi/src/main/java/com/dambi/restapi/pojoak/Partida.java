@@ -1,5 +1,6 @@
 package com.dambi.restapi.pojoak;
 
+import java.sql.Time;
 import java.sql.Timestamp;
 
 import javax.persistence.Entity;

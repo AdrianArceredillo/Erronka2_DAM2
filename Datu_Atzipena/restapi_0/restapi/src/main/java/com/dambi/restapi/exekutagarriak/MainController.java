@@ -1,4 +1,4 @@
-package com.dambi.restapi;
+package com.dambi.restapi.exekutagarriak;
 
 import java.sql.Timestamp;
 import java.text.DateFormat;
@@ -7,18 +7,19 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
 
-import javax.validation.Valid;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.dambi.restapi.LangileaRepository;
+import com.dambi.restapi.PartidaRepository;
 import com.dambi.restapi.pojoak.Langilea;
 import com.dambi.restapi.pojoak.Partida;
 
@@ -58,6 +59,7 @@ public class MainController {
     public @ResponseBody Iterable<Partida> getAllPartida() {
         // This returns a JSON or XML with the users
         return partidaRepository.findAll();
+
     }
 
     @GetMapping(path = "/PartidaBat")
@@ -100,6 +102,7 @@ public class MainController {
     public @ResponseBody Iterable<Langilea> getAllLangilea() {
         // This returns a JSON or XML with the users
         return langileaRepository.findAll();
+
     }
 
     @GetMapping(path = "/LangileaBat")
@@ -113,16 +116,13 @@ public class MainController {
 
         // final String uri = "http://192.168.65.6:8080/demo/all_Partida";
         final String uri = "http://" + ip + ":8080/demo/all_Langilea";
-        String a = "HJaima".substring(1);
-        System.out.println(a);
 
         RestTemplate restTemplate = new RestTemplate();
-        String result = restTemplate.getForObject(uri, String.class) + 
-        "\naaaaaaaaaaaaaa";
+        String result = restTemplate.getForObject(uri, String.class) +
+                "\naaaaaaaaaaaaaa";
+
         return result;
     }
-
-    
 
 }
 

@@ -99,6 +99,13 @@ public class MainController {
         return langileaRepository.findAll();
     }
 
+    @GetMapping(path = "/all_Langileaid")
+    public @ResponseBody Iterable<Langilea> getAllLangileaid() {
+        // This returns a JSON or XML with the users
+        return langileaRepository.findAll();
+    }
+
+
     @GetMapping(path = "/LangileaBat")
     public @ResponseBody Optional<Langilea> getLangileaBat(String langileaEmail) {
         // This returns a JSON or XML with the users

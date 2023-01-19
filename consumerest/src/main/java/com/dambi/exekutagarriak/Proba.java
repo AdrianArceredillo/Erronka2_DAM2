@@ -6,28 +6,11 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import com.dambi.atzipenekoak.JsonaL;
-import com.dambi.atzipenekoak.JsonaP;
-import com.dambi.pojoak.Langilea;
 import com.dambi.pojoak.Langileak;
-import com.dambi.pojoak.Partida;
-import com.dambi.pojoak.Partidak;
-
 import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
-
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
-import javax.json.JsonStructure;
 
 public class Proba {
 
@@ -38,8 +21,8 @@ public class Proba {
 
         String content = "";
         HttpClient client = HttpClientBuilder.create().build();
-        // HttpGet request = new HttpGet("http://localhost:8080/demo/all_Langilea");
-        HttpGet request = new HttpGet("http://localhost:8080/demo/all_Partida");
+        HttpGet request = new HttpGet("http://localhost:8080/demo/all_Langilea");
+        // HttpGet request = new HttpGet("http://localhost:8080/demo/all_Partida");
 
         try {
             HttpResponse response = client.execute(request);
@@ -52,12 +35,12 @@ public class Proba {
             writer.write(content);
             writer.close();
 
-            // Langileak langileak = JsonaL.irakurri(fitxategia);
-            // System.out.println(langileak);
+            Langileak langileak = JsonaL.irakurri(fitxategia);
+            System.out.println(langileak);
             
 
-            Partidak partidak = JsonaP.irakurri(fitxategia);
-            System.out.println(partidak);
+            // Partidak partidak = JsonaP.irakurri(fitxategia);
+            // System.out.println(partidak);
 
         } catch (IOException e) {
             e.printStackTrace();

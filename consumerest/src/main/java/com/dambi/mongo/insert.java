@@ -2,6 +2,7 @@ package com.dambi.mongo;
 
 import com.dambi.atzipenekoak.JsonaP;
 import com.dambi.pojoak.Partida;
+
 import com.dambi.pojoak.Partidak;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;

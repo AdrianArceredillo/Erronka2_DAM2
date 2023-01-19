@@ -34,7 +34,7 @@ import java.io.FileReader;
 
 public class JsonaP {
 
-        public static void irakurri( String strFileIn) {
+        public static Partidak irakurri( String strFileIn) {
 
         Partidak partidak = null;
         try {
@@ -51,13 +51,13 @@ public class JsonaP {
 
                 partida.setPuntuazioa(jsonobj.getInt("puntuazioa"));
                 partida.setData(jsonobj.getString("data"));
-                System.out.println(partida);
                 partidak.add(partida);
             }
             
         } catch (Exception e) {
             System.out.println("Arazoak String-a irakurtzerakoan.");
         }
+        return partidak;
     }
 
 }

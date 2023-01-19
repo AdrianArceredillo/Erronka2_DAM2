@@ -35,7 +35,7 @@ import java.io.FileReader;
 
 public class JsonaL {
 
-        public static void irakurri( String strFileIn) {
+        public static Langileak irakurri( String strFileIn) {
 
         Langileak langileak = null;
 
@@ -56,15 +56,13 @@ public class JsonaL {
                 langilea.setJaiotzaData(jsonobj.getString("jaiotzaData"));
                 langilea.setTaldea(jsonobj.getInt("taldea"));
 
-
-
-                System.out.println(langilea);
                 langileak.add(langilea);
             }
             
         } catch (Exception e) {
             System.out.println("Arazoak String-a irakurtzerakoan.");
         }
+        return langileak;
     }
 
 }

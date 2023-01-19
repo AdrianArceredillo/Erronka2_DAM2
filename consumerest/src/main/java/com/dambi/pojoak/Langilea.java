@@ -62,7 +62,7 @@ public class Langilea {
 
     @Override
     public String toString() {
-        return "Langilea[E-mail:" + this.getEmail() + ", izena: " + this.getIzena() + ", user:" + this.getUser() + ", jaiotza-data:" + this.getJaiotzaData() + " taldea:" + this.getTaldea() + "]";
+        return "Langilea[E-mail:" + this.getEmail() + ", izena: " + this.getIzena() + ", user:" + this.getUser() + ", jaiotza-data:" + this.getJaiotzaData() + ", taldea:" + this.getTaldea() + "]";
     }
 
 }

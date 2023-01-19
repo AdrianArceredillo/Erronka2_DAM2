@@ -1,4 +1,16 @@
-package com.dambi.exekutagarriak;
+package com.dambi.mongo;
+
+import com.dambi.atzipenekoak.JsonaP;
+import com.dambi.pojoak.Partida;
+import com.dambi.pojoak.Partidak;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -6,31 +18,9 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONException;
-import org.json.JSONObject;
+import org.bson.Document;
 
-import com.dambi.atzipenekoak.JsonaL;
-import com.dambi.atzipenekoak.JsonaP;
-import com.dambi.pojoak.Langilea;
-import com.dambi.pojoak.Langileak;
-import com.dambi.pojoak.Partida;
-import com.dambi.pojoak.Partidak;
-
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
-import javax.json.JsonStructure;
-
-public class Proba {
-
+public class insert {
     public static void main(String[] args) {
 
         System.out.print("\033[H\033[2J");
@@ -38,14 +28,15 @@ public class Proba {
 
         String content = "";
         HttpClient client = HttpClientBuilder.create().build();
-        // HttpGet request = new HttpGet("http://localhost:8080/demo/all_Langilea");
+
         HttpGet request = new HttpGet("http://localhost:8080/demo/all_Partida");
+
+        Partidak partidak = null;
 
         try {
             HttpResponse response = client.execute(request);
             HttpEntity entity = response.getEntity();
             content = EntityUtils.toString(entity);
-            System.out.println(content);
 
             String fitxategia = "./src/main/java/com/dambi/data/informazioa.json";
             BufferedWriter writer = new BufferedWriter(new FileWriter(fitxategia));
@@ -54,13 +45,31 @@ public class Proba {
 
             // Langileak langileak = JsonaL.irakurri(fitxategia);
             // System.out.println(langileak);
-            
 
-            Partidak partidak = JsonaP.irakurri(fitxategia);
+            partidak = JsonaP.irakurri(fitxategia);
             System.out.println(partidak);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+
+        MongoClient mongo = MongoClients.create("mongodb://127.0.0.1:27017");
+
+        MongoDatabase db = mongo.getDatabase("Erronka2");
+
+        for (Partida partida : partidak.getPartidak()) {
+
+            Document doc = new Document("id", partida.getId())
+                    .append("user", partida.getUser())
+                    .append("puntuazioa", partida.getPuntuazioa())
+                    .append("data", partida.getData());
+
+            db.getCollection("partida").insertOne(doc);
+
+        }
+
+        mongo.close();
     }
 }

@@ -2,6 +2,11 @@ package com.dambi.restapi.pojoak;
 
 
 import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -49,8 +54,13 @@ public class Langilea {
         return jaiotzadata.toString();
     }
 
-    public void setJaiotzaData(Timestamp jaiotzadata) {
-        this.jaiotzadata = jaiotzadata;
+    public void setJaiotzaData(String jaiotzadata) throws ParseException {
+
+        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = formatter.parse(jaiotzadata);
+        Timestamp jaiotza_Data = new Timestamp(date.getTime());
+        
+        this.jaiotzadata = jaiotza_Data;
     }
 
     public int getTaldea() {

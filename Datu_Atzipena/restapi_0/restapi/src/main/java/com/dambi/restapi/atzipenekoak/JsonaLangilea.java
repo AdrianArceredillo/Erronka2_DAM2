@@ -1,5 +1,6 @@
 package com.dambi.restapi.atzipenekoak;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
@@ -24,7 +25,7 @@ import com.dambi.restapi.pojoak.Partidak;
 
 public class JsonaLangilea {
 
-    public static void irakurri(String strFileIn) {
+    public static Langileak irakurri(String strFileIn) {
 
         Langileak langileak = null;
         try {
@@ -32,65 +33,34 @@ public class JsonaLangilea {
             JsonStructure jsonst = reader.read();
             JsonArray jsonarray = jsonst.asJsonArray();
             langileak = new Langileak();
+            
             for (int i = 0; i < jsonarray.size(); i++) {
                 JsonObject jsonobj = jsonarray.getJsonObject(i);
 
                 // Langilea objektu berri bat sortu
                 Langilea langilea = new Langilea();
-                langilea.setEmail(jsonobj.getString("email"));
-                langilea.setIzena(jsonobj.getString("izena"));
-                langilea.setUser(jsonobj.getString("user"));
+                langilea.setEmail(Garbitzailea.Garbitu(jsonobj.getString("email")));
+                langilea.setIzena(Garbitzailea.Garbitu(jsonobj.getString("izena")));
+                langilea.setUser(Garbitzailea.Garbitu(jsonobj.getString("user")));
 
-                DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-                Date date = formatter.parse(jsonobj.getString("jaiotzadata"));
-                Timestamp jaiotza_Data = new Timestamp(date.getTime());
-                langilea.setJaiotzaData(jaiotza_Data);
+                // DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+                // Date date = formatter.parse(jsonobj.getString("jaiotzadata"));
+                // Timestamp jaiotza_Data = new Timestamp(date.getTime());
+                // langilea.setJaiotzaData(jaiotza_Data);
+                langilea.setJaiotzaData(jsonobj.getString("jaiotzaData"));
+                langilea.setTaldea(jsonobj.getInt("taldea"));
 
                 System.out.println(langilea);
                 langileak.add(langilea);
             }
 
         } catch (Exception e) {
-            // System.out.println("Arazoak String-a irakurtzerakoan.");
+             System.out.println(e);
         }
+
+        return langileak;
     }
 
-    public static void emailaFiltratu(String email_Sartutakoa) {
+    
 
-        Langileak langileak = null;
-        String fitxategia_L = "./restapi/src/main/java/com/dambi/data/informazioaLangileak.json";
-
-        try {
-            JsonReader reader = Json.createReader(new FileReader(fitxategia_L));
-            JsonStructure jsonst = reader.read();
-            JsonArray jsonarray = jsonst.asJsonArray();
-            langileak = new Langileak();
-            for (int i = 0; i < jsonarray.size(); i++) {
-
-                JsonObject jsonobj = jsonarray.getJsonObject(i);
-
-                // Langilea objektu berri bat sortu
-                Langilea langilea = new Langilea();
-                langilea.setEmail(jsonobj.getString("email"));
-                langilea.setIzena(jsonobj.getString("izena"));
-                langilea.setUser(jsonobj.getString("user"));
-
-                DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-                Date date = formatter.parse(jsonobj.getString("jaiotzadata"));
-                Timestamp jaiotza_Data = new Timestamp(date.getTime());
-                langilea.setJaiotzaData(jaiotza_Data);
-
-                if (langilea.getEmail().equals(email_Sartutakoa)) {
-                    System.out.println(langilea);
-                    langileak.add(langilea);
-                }
-
-                // System.out.println(langilea);
-                // langileak.add(langilea);
-            }
-
-        } catch (Exception e) {
-            // System.out.println("Arazoak String-a irakurtzerakoan.");
-        }
-    }
 }

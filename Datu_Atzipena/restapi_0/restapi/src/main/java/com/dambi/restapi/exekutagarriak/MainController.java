@@ -1,5 +1,8 @@
 package com.dambi.restapi.exekutagarriak;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -7,8 +10,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
 
-
-
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.util.EntityUtils;
+import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,8 +29,15 @@ import org.springframework.web.client.RestTemplate;
 import com.dambi.restapi.LangileaRepository;
 import com.dambi.restapi.PartidaRepository;
 import com.dambi.restapi.atzipenekoak.JsonaLangilea;
+import com.dambi.restapi.atzipenekoak.JsonaPartida;
+import com.dambi.restapi.atzipenekoak.a;
 import com.dambi.restapi.pojoak.Langilea;
+import com.dambi.restapi.pojoak.Langileak;
 import com.dambi.restapi.pojoak.Partida;
+import com.dambi.restapi.pojoak.Partidak;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoDatabase;
 
 @RestController // This means that this class is a Controller
 @RequestMapping(path = "/demo") // This means URL's start with /demo (after Application path)
@@ -46,11 +61,7 @@ public class MainController {
         Partida p = new Partida();
         p.setUser(user);
         p.setPuntuazioa(puntuazioa);
-
-        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = formatter.parse(data);
-        Timestamp partida_Data = new Timestamp(date.getTime());
-        p.setData(partida_Data);
+        p.setData(data);
 
         partidaRepository.save(p);
         return "Saved";
@@ -58,14 +69,20 @@ public class MainController {
 
     @GetMapping(path = "/all_Partida")
     public @ResponseBody Iterable<Partida> getAllPartida() {
-        // This returns a JSON or XML with the users
+
+        // HttpGet request_PartidaGuztiak = new HttpGet("http://localhost:8080/demo/all_Partida");
+        // a.infoObjetos(request_PartidaGuztiak, "P");
+
         return partidaRepository.findAll();
 
     }
 
     @GetMapping(path = "/PartidaBat")
     public @ResponseBody Optional<Partida> getPartidaBat(int partidaId) {
-        // This returns a JSON or XML with the users
+
+        // HttpGet request_PartidaBat = new HttpGet("http://localhost:8080/demo/PartidaBat");
+        // a.infoObjetos(request_PartidaBat, "P");
+
         return partidaRepository.findById(partidaId);
     }
 
@@ -87,12 +104,7 @@ public class MainController {
         l.setEmail(email);
         l.setIzena(izena);
         l.setUser(user);
-
-        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = formatter.parse(jaiotzadata);
-        Timestamp jaiotza_Data = new Timestamp(date.getTime());
-        l.setJaiotzaData(jaiotza_Data);
-
+        l.setJaiotzaData(jaiotzadata);
         l.setTaldea(taldea);
 
         langileaRepository.save(l);
@@ -102,17 +114,25 @@ public class MainController {
 
     @GetMapping(path = "/all_Langilea")
     public @ResponseBody Iterable<Langilea> getAllLangilea() {
-        // This returns a JSON or XML with the users
+
+        // HttpGet request_LangileaGuztiak = new HttpGet("http://localhost:8080/demo/all_Langilea");
+        // a.infoObjetos(request_LangileaGuztiak, "L");
+
         return langileaRepository.findAll();
 
     }
 
     @GetMapping(path = "/LangileaBat")
     public @ResponseBody Optional<Langilea> getLangileaBat(String langileaEmail) {
-        // This returns a JSON or XML with the users
+
+        HttpGet request_LangileBat = new HttpGet("http://localhost:8080/demo/LangileaBat");
+        // a.infoObjetos(request_LangileBat, "L");
+        a.request_Langileak = request_LangileBat;
+        a.main(null);
         return langileaRepository.findById(langileaEmail);
     }
 
+    // elegir a qué RestAPI nos queremos conectar
     @GetMapping(path = "/AukeratuRestapia")
     public @ResponseBody String getLangileakAlain(String ip) {
 
@@ -121,11 +141,12 @@ public class MainController {
 
         RestTemplate restTemplate = new RestTemplate();
         String result = restTemplate.getForObject(uri, String.class) +
-                "\naaaaaaaaaaaaaa";
+                "\n";
 
         return result;
     }
 
+    
 }
 
 // INFO:

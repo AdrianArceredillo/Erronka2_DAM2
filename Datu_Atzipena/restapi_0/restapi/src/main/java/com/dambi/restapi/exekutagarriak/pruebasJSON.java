@@ -25,16 +25,15 @@ public class pruebasJSON {
         HttpClient client = HttpClientBuilder.create().build();
         HttpGet request_Partidak = new HttpGet("http://localhost:8080/demo/all_Partida");
         HttpGet request_Langileak = new HttpGet("http://localhost:8080/demo/all_Langilea");
-        // HttpGet request_Langileak = new HttpGet("http://localhost:8080/demo/LangileaBat");
+        // HttpGet request_Langileak = new
+        // HttpGet("http://localhost:8080/demo/LangileaBat");
 
         try {
             // PARTIDAK
             HttpResponse response_Partidak = client.execute(request_Partidak);
             HttpEntity entity_P = response_Partidak.getEntity();
             content = EntityUtils.toString(entity_P);
-            System.out.println(content);
 
-            System.out.println(new File("").getAbsolutePath());
             String fitxategia_P = "./restapi/src/main/java/com/dambi/data/informazioaPartidak.json";
             BufferedWriter writer_P = new BufferedWriter(new FileWriter(fitxategia_P));
             writer_P.write(content);
@@ -46,15 +45,13 @@ public class pruebasJSON {
             HttpResponse response_Langileak = client.execute(request_Langileak);
             HttpEntity entity_L = response_Langileak.getEntity();
             content = EntityUtils.toString(entity_L);
-            System.out.println(content);
 
-            System.out.println(new File("").getAbsolutePath());
             String fitxategia_L = "./restapi/src/main/java/com/dambi/data/informazioaLangileak.json";
             BufferedWriter writer_L = new BufferedWriter(new FileWriter(fitxategia_L));
             writer_L.write(content);
             writer_L.close();
 
-            JsonaLangilea.irakurri(fitxategia_L);
+            //JsonaLangilea.irakurri(fitxategia_L);
 
         } catch (IOException e) {
             e.printStackTrace();

@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 
 
-@XmlRootElement(name = "Langileak")
+@XmlRootElement(name = "langileak")
 public class Langileak {
 
     List<Langilea> langileak;

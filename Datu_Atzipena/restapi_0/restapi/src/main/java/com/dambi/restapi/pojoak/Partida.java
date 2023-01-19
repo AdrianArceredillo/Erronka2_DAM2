@@ -2,6 +2,10 @@ package com.dambi.restapi.pojoak;
 
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -45,10 +49,14 @@ public class Partida {
         return data.toString();
     }
 
-    public void setData(Timestamp data) {
-        this.data = data;
+    public void setData(String data) throws ParseException {
+        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Date fecha_Date = formatter.parse(data);
+        Timestamp partida_Data = new Timestamp(fecha_Date.getTime());
+
+        this.data = partida_Data;
     }
-    
+
     @Override
     public String toString() {
         return "Partida[id: " + id +

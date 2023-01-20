@@ -1,5 +1,6 @@
 package com.dambi.atzipenekoak;
 
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
@@ -27,40 +28,55 @@ import com.dambi.pojoak.Langileak;
 import java.io.IOException;
 
 // import org.json.simple.JSONObject;
+
 // import org.json.simple.parser.JSONParser;
 
-
 import java.io.FileReader;
-
+import java.io.FileWriter;
 
 public class JsonaL {
 
-        public static Langileak irakurri( String strFileIn) {
+    public static Langileak irakurri(String link, String fitxategia) {
 
+        String content = "";
+        HttpClient client = HttpClientBuilder.create().build();
+        HttpGet request = new HttpGet(link);
         Langileak langileak = null;
-
         try {
-            JsonReader reader = Json.createReader(new FileReader(strFileIn));
-            JsonStructure jsonst = reader.read();
-            JsonArray jsonarray = jsonst.asJsonArray();
-            langileak = new Langileak();
-            for (int i = 0; i < jsonarray.size(); i++) {
-                JsonObject jsonobj = jsonarray.getJsonObject(i);
-                Langilea langilea = new Langilea();
-                langilea.setEmail(Garbitzailea.garbitu(jsonobj.getString("email")));
+            HttpResponse response = client.execute(request);
+            HttpEntity entity = response.getEntity();
+            content = EntityUtils.toString(entity);
 
-                langilea.setIzena(Garbitzailea.garbitu(jsonobj.getString("izena")));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fitxategia)); //Idatzi
+            writer.write(content);
+            writer.close();
 
-                langilea.setUser(Garbitzailea.garbitu(jsonobj.getString("user")));
+            try {
+                JsonReader reader = Json.createReader(new FileReader(fitxategia)); //Irakurri
+                JsonStructure jsonst = reader.read();
+                JsonArray jsonarray = jsonst.asJsonArray();
+                langileak = new Langileak();
+                for (int i = 0; i < jsonarray.size(); i++) {
+                    JsonObject jsonobj = jsonarray.getJsonObject(i);
+                    Langilea langilea = new Langilea();
+                    langilea.setEmail(Garbitzailea.garbitu(jsonobj.getString("email")));
 
-                langilea.setJaiotzaData(jsonobj.getString("jaiotzaData"));
-                langilea.setTaldea(jsonobj.getInt("taldea"));
+                    langilea.setIzena(Garbitzailea.garbitu(jsonobj.getString("izena")));
 
-                langileak.add(langilea);
+                    langilea.setUser(Garbitzailea.garbitu(jsonobj.getString("user")));
+
+                    langilea.setJaiotzaData(jsonobj.getString("jaiotzadata"));
+                    langilea.setTaldea(jsonobj.getInt("taldea"));
+
+                    langileak.add(langilea);
+                }
+
+            } catch (Exception e) {
+                System.out.println("Arazoak String-a irakurtzerakoan.");
             }
-            
-        } catch (Exception e) {
-            System.out.println("Arazoak String-a irakurtzerakoan.");
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return langileak;
     }

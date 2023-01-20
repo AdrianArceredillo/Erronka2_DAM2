@@ -8,6 +8,8 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import com.dambi.atzipenekoak.JsonaL;
 import com.dambi.pojoak.Langileak;
+import com.dambi.pojoak.Partidak;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -16,34 +18,17 @@ public class Proba {
 
     public static void main(String[] args) {
 
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+        String linkLangilea = "http://localhost:8080/query?id=0";
+        //String linkPartida = "http://localhost:8080/demo/all_Langilea";
+        String fitxategia = "./src/main/java/com/dambi/data/informazioa.json";
 
-        String content = "";
-        HttpClient client = HttpClientBuilder.create().build();
-        HttpGet request = new HttpGet("http://localhost:8080/demo/all_Langilea");
-        // HttpGet request = new HttpGet("http://localhost:8080/demo/all_Partida");
 
-        try {
-            HttpResponse response = client.execute(request);
-            HttpEntity entity = response.getEntity();
-            content = EntityUtils.toString(entity);
-            System.out.println(content);
+        Langileak langileak = JsonaL.irakurri(linkLangilea, fitxategia);
+        //Partidak partidak = JsonaL.irakurri(linkPartida, fitxategia);
+        System.out.println(langileak);
 
-            String fitxategia = "./src/main/java/com/dambi/data/informazioa.json";
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fitxategia));
-            writer.write(content);
-            writer.close();
+        // Partidak partidak = JsonaP.irakurri(fitxategia);
+        // System.out.println(partidak);
 
-            Langileak langileak = JsonaL.irakurri(fitxategia);
-            System.out.println(langileak);
-            
-
-            // Partidak partidak = JsonaP.irakurri(fitxategia);
-            // System.out.println(partidak);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

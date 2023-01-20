@@ -1,6 +1,5 @@
 package com.dambi.restapi.pojoak;
 
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;

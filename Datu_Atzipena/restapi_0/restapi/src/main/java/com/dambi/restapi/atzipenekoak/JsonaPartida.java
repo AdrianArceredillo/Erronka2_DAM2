@@ -1,15 +1,6 @@
 package com.dambi.restapi.atzipenekoak;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-
 import java.io.FileReader;
-import java.io.IOException;
-import java.sql.Timestamp;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import javax.json.Json;
 import javax.json.JsonArray;
@@ -17,14 +8,12 @@ import javax.json.JsonObject;
 import javax.json.JsonReader;
 import javax.json.JsonStructure;
 
-import com.dambi.restapi.pojoak.Langilea;
-import com.dambi.restapi.pojoak.Langileak;
 import com.dambi.restapi.pojoak.Partida;
 import com.dambi.restapi.pojoak.Partidak;
 
 public class JsonaPartida {
 
-    public static Partidak irakurri( String strFileIn) {
+    public static Partidak irakurri(String strFileIn) {
 
         Partidak partidak = null;
         try {
@@ -32,7 +21,7 @@ public class JsonaPartida {
             JsonStructure jsonst = reader.read();
             JsonArray jsonarray = jsonst.asJsonArray();
             partidak = new Partidak();
-            
+
             for (int i = 0; i < jsonarray.size(); i++) {
                 JsonObject jsonobj = jsonarray.getJsonObject(i);
 
@@ -47,7 +36,7 @@ public class JsonaPartida {
             }
 
         } catch (Exception e) {
-             System.out.println(e);
+            System.out.println(e);
         }
 
         return partidak;

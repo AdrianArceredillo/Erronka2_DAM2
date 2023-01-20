@@ -1,7 +1,6 @@
 package com.dambi.restapi.exekutagarriak;
 
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -12,7 +11,6 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
-import com.dambi.restapi.atzipenekoak.JsonaLangilea;
 import com.dambi.restapi.atzipenekoak.JsonaPartida;
 
 public class infoToJSON {
@@ -25,7 +23,7 @@ public class infoToJSON {
         HttpClient client = HttpClientBuilder.create().build();
         HttpGet request_Partidak = new HttpGet("http://localhost:8080/demo/all_Partida");
         HttpGet request_Langileak = new HttpGet("http://localhost:8080/demo/all_Langilea");
-        
+
         // HttpGet request_Langileak = new
         // HttpGet("http://localhost:8080/demo/LangileaBat");
 
@@ -52,7 +50,7 @@ public class infoToJSON {
             writer_L.write(content);
             writer_L.close();
 
-            //JsonaLangilea.irakurri(fitxategia_L);
+            // JsonaLangilea.irakurri(fitxategia_L);
 
         } catch (IOException e) {
             e.printStackTrace();

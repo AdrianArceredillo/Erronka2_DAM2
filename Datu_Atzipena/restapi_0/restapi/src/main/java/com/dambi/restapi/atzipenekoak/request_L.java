@@ -3,8 +3,6 @@ package com.dambi.restapi.atzipenekoak;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -18,7 +16,6 @@ import com.dambi.restapi.pojoak.Langilea;
 import com.dambi.restapi.pojoak.Langileak;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
 public class request_L {

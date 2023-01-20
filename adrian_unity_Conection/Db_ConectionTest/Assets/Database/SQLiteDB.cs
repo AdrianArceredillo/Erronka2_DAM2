@@ -1,9 +1,11 @@
 using UnityEngine;
-//using Mono.Data.Sqlite;
 using System.Data;
 using Unity.VisualScripting.Dependencies.Sqlite;
 using Mono.Data.Sqlite;
+using System.IO;
 //using Microsoft.Data.Sqlite;
+
+
 
 public class SQLiteDB : MonoBehaviour
 {
@@ -15,9 +17,48 @@ public class SQLiteDB : MonoBehaviour
     }
     void Start()
     {
-        CreateTable();
-        Query("INSERT INTO user (name, password) VALUES ('Jonny', '123456');");
-        Query("SELECT * FROM user;");
+
+        // Create database
+        string connection = "URI=file:" + Application.persistentDataPath + "/" + "Database";
+
+        // Open connection
+        IDbConnection dbcon = new SqliteConnection(connection);
+        dbcon.Open();
+
+        // Create table
+        IDbCommand dbcmd;
+        dbcmd = dbcon.CreateCommand();
+        string q_createTable = "CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY, name VARCAHR(50), password VARCAHR(50) )";
+
+        dbcmd.CommandText = q_createTable;
+        dbcmd.ExecuteReader();
+
+        // Insert values in table
+        IDbCommand cmnd = dbcon.CreateCommand();
+        cmnd.CommandText = "INSERT INTO user (id, name, password) VALUES (0, 'test', 'pwd')";
+        cmnd.ExecuteNonQuery();
+
+        // Read and print all values in table
+        IDbCommand cmnd_read = dbcon.CreateCommand();
+        IDataReader reader;
+        string query = "SELECT * FROM user";
+        cmnd_read.CommandText = query;
+        reader = cmnd_read.ExecuteReader();
+
+        while (reader.Read())
+        {
+            Debug.Log("id: " + reader[0].ToString());
+            Debug.Log("name: " + reader[1].ToString());
+            Debug.Log("password: " + reader[2].ToString());
+        }
+
+        // Close connection
+        dbcon.Close();
+
+
+        //CreateTable();
+        //Query("INSERT INTO user (name, password) VALUES ('Jonny', '123456');");
+        //Query("SELECT * FROM user;");
     }
 
     private void CreateTable()
@@ -70,3 +111,9 @@ public class SQLiteDB : MonoBehaviour
         }
     }
 }
+
+
+
+
+
+//https://medium.com/@rizasif92/sqlite-and-unity-how-to-do-it-right-31991712190

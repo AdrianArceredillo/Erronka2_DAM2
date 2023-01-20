@@ -39,7 +39,7 @@ public class JsonaPartida {
                 Partida partida = new Partida();
                 partida.setId(jsonobj.getInt("id"));
                 partida.setUser(Garbitzailea.Garbitu(jsonobj.getString("user")));
-                partida.setPuntuazioa(jsonobj.getInt("id"));
+                partida.setPuntuazioa(jsonobj.getInt("puntuazioa"));
                 partida.setData(jsonobj.getString("data"));
 
                 System.out.println(partida);

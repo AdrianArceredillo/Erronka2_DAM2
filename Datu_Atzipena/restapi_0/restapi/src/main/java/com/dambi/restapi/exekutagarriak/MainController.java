@@ -1,22 +1,8 @@
 package com.dambi.restapi.exekutagarriak;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.sql.Timestamp;
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Optional;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.util.EntityUtils;
-import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,16 +14,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.dambi.restapi.LangileaRepository;
 import com.dambi.restapi.PartidaRepository;
-import com.dambi.restapi.atzipenekoak.JsonaLangilea;
-import com.dambi.restapi.atzipenekoak.JsonaPartida;
-import com.dambi.restapi.atzipenekoak.a;
-import com.dambi.restapi.pojoak.Langilea;
-import com.dambi.restapi.pojoak.Langileak;
-import com.dambi.restapi.pojoak.Partida;
-import com.dambi.restapi.pojoak.Partidak;
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoDatabase;
+import com.dambi.restapi.pojoak.*;
 
 @RestController // This means that this class is a Controller
 @RequestMapping(path = "/demo") // This means URL's start with /demo (after Application path)
@@ -70,7 +47,8 @@ public class MainController {
     @GetMapping(path = "/all_Partida")
     public @ResponseBody Iterable<Partida> getAllPartida() {
 
-        // HttpGet request_PartidaGuztiak = new HttpGet("http://localhost:8080/demo/all_Partida");
+        // HttpGet request_PartidaGuztiak = new
+        // HttpGet("http://localhost:8080/demo/all_Partida");
         // a.infoObjetos(request_PartidaGuztiak, "P");
 
         return partidaRepository.findAll();
@@ -80,7 +58,8 @@ public class MainController {
     @GetMapping(path = "/PartidaBat")
     public @ResponseBody Optional<Partida> getPartidaBat(int partidaId) {
 
-        // HttpGet request_PartidaBat = new HttpGet("http://localhost:8080/demo/PartidaBat");
+        // HttpGet request_PartidaBat = new
+        // HttpGet("http://localhost:8080/demo/PartidaBat?partidaId=0");
         // a.infoObjetos(request_PartidaBat, "P");
 
         return partidaRepository.findById(partidaId);
@@ -115,7 +94,8 @@ public class MainController {
     @GetMapping(path = "/all_Langilea")
     public @ResponseBody Iterable<Langilea> getAllLangilea() {
 
-        // HttpGet request_LangileaGuztiak = new HttpGet("http://localhost:8080/demo/all_Langilea");
+        // HttpGet request_LangileaGuztiak = new
+        // HttpGet("http://localhost:8080/demo/all_Langilea");
         // a.infoObjetos(request_LangileaGuztiak, "L");
 
         return langileaRepository.findAll();
@@ -125,10 +105,13 @@ public class MainController {
     @GetMapping(path = "/LangileaBat")
     public @ResponseBody Optional<Langilea> getLangileaBat(String langileaEmail) {
 
-        HttpGet request_LangileBat = new HttpGet("http://localhost:8080/demo/LangileaBat");
+        // HttpGet request_LangileBat = new
+        // HttpGet("http://localhost:8080/demo/LangileaBat?langileaEmail=aaa");
         // a.infoObjetos(request_LangileBat, "L");
-        a.request_Langileak = request_LangileBat;
-        a.main(null);
+        // a.request_Langileak = request_LangileBat;
+
+        // a.main(null);
+
         return langileaRepository.findById(langileaEmail);
     }
 
@@ -146,10 +129,11 @@ public class MainController {
         return result;
     }
 
-    
 }
 
 // INFO:
 
 // 1.-
 // https://howtodoinjava.com/spring-boot2/resttemplate/spring-restful-client-resttemplate-example/
+// 2.-
+// https://zetcode.com/java/getpostrequest/

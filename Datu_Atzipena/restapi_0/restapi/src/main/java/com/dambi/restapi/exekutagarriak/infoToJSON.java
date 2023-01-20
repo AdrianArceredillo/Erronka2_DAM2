@@ -15,7 +15,7 @@ import org.apache.http.util.EntityUtils;
 import com.dambi.restapi.atzipenekoak.JsonaLangilea;
 import com.dambi.restapi.atzipenekoak.JsonaPartida;
 
-public class pruebasJSON {
+public class infoToJSON {
     public static void main(String[] args) {
 
         System.out.print("\033[H\033[2J");
@@ -25,6 +25,7 @@ public class pruebasJSON {
         HttpClient client = HttpClientBuilder.create().build();
         HttpGet request_Partidak = new HttpGet("http://localhost:8080/demo/all_Partida");
         HttpGet request_Langileak = new HttpGet("http://localhost:8080/demo/all_Langilea");
+        
         // HttpGet request_Langileak = new
         // HttpGet("http://localhost:8080/demo/LangileaBat");
 
@@ -34,7 +35,7 @@ public class pruebasJSON {
             HttpEntity entity_P = response_Partidak.getEntity();
             content = EntityUtils.toString(entity_P);
 
-            String fitxategia_P = "./restapi/src/main/java/com/dambi/data/informazioaPartidak.json";
+            String fitxategia_P = "./src/main/java/com/dambi/data/informazioaPartidak.json";
             BufferedWriter writer_P = new BufferedWriter(new FileWriter(fitxategia_P));
             writer_P.write(content);
             writer_P.close();
@@ -46,7 +47,7 @@ public class pruebasJSON {
             HttpEntity entity_L = response_Langileak.getEntity();
             content = EntityUtils.toString(entity_L);
 
-            String fitxategia_L = "./restapi/src/main/java/com/dambi/data/informazioaLangileak.json";
+            String fitxategia_L = "./src/main/java/com/dambi/data/informazioaLangileak.json";
             BufferedWriter writer_L = new BufferedWriter(new FileWriter(fitxategia_L));
             writer_L.write(content);
             writer_L.close();

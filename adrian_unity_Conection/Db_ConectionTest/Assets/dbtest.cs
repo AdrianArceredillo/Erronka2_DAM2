@@ -2,11 +2,13 @@ using UnityEngine;
 using Mono.Data.Sqlite;
 using System.Data;
 using System;
+using UnityEngine.UI;
 
 public class dbtest : MonoBehaviour
 {
 
     private void Start()
+
     {
         ReadDatabase();
     }

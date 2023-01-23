@@ -3,7 +3,10 @@ package com.dambi;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  *
@@ -73,15 +76,35 @@ public class InsertApp {
         }
     }
 
+    public ArrayList<String> selectAll(){
+        ArrayList<String> result = new ArrayList<String>();
+        String sql = "SELECT id, user, puntuazioa, data FROM partida";
+        
+        try (Connection conn = this.connect();
+             Statement stmt  = conn.createStatement();
+             ResultSet rs    = stmt.executeQuery(sql)){
+            
+            // loop through the result set
+            while (rs.next()) {
+                System.out.println(rs.getInt("id") +  "\t" + 
+                                   rs.getString("user") + "\t" +
+                                   rs.getDouble("puntuazioa"));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return null;
+    }
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public ArrayList<String> informazioa() {
 
         InsertApp app = new InsertApp();
-        // insert three new rows
-        app.insertLangilea("alain@gmail.com", "Alain", "alainUNI", "2000/09/19", 1);
-        app.insertPartida("Alain", 420,"2023/01/12" );
+        return app.selectAll();
+
     }
 
 }

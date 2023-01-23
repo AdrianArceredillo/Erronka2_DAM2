@@ -123,7 +123,9 @@ public class MainController {
     
         @GetMapping
         public List<Map<String, Object>> executeQuery(@RequestParam("id") String id) {
-            String query = "SELECT * FROM partida WHERE id > " + id + "order by id asc";
+            //String query = "SELECT * FROM partida WHERE id > " + id + "order by id asc";
+            String query = id;
+
             return jdbcTemplate.queryForList(query);
         }
     }

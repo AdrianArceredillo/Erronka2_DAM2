@@ -21,10 +21,9 @@ public class Erabiltzailea {
         OutputStream outputStream = Cliente.getOutputStream();
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
 
-        String izena = sc.nextLine();
-        int puntuazioa = sc.nextInt();
+        Datuak datuak = new Datuak();
 
-        Partida partida = new Partida(izena, puntuazioa);
+        // datuak.setLangilea();
 
         objectOutputStream.writeObject(partida);
 

@@ -29,13 +29,10 @@ public class Zerbitzaria {
 
         String sqlPT = "INSERT INTO proba(izena, puntuazioa)";
 
-
         sqlPT += "VALUES('" + partida.getIzena() + "', "+partida.getPuntuazioa()+")";
         exekuzioa(sqlPT);
-
-
-
     }
+    
     public static void exekuzioa(String sql) {
         Konexioa konekzioa = new Konexioa();
         Statement st;

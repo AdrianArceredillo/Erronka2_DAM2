@@ -1,9 +1,12 @@
-package com.dambi;
+package com.dambi.tcp;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.sql.Statement;
+import java.util.ArrayList;
+
+import com.dambi.object.Datuak;
 public class Zerbitzaria {
     public static void main(String[] arg) throws IOException, ClassNotFoundException {
 
@@ -22,15 +25,22 @@ public class Zerbitzaria {
 
         ObjectInputStream objectInputStream = new ObjectInputStream(inputStream);
 
-        Partida partida = (Partida) objectInputStream.readObject();
+        Datuak datuak = new Datuak();
+        datuak = (Datuak) objectInputStream.readObject();
 
-        System.out.println(partida.getIzena());
-        System.out.println(partida.getPuntuazioa());
+        System.out.println(datuak.getPartida());
+        //System.out.println(datuak.getLangilea());
 
-        String sqlPT = "INSERT INTO proba(izena, puntuazioa)";
+        String sql = "INSERT INTO partida VALUES " + sqlPrestatu(datuak.getPartida());
+        System.out.println(sql);
+        exekuzioa(sql);
 
-        sqlPT += "VALUES('" + partida.getIzena() + "', "+partida.getPuntuazioa()+")";
-        exekuzioa(sqlPT);
+        sql = "INSERT INTO langilea VALUES " + sqlPrestatu(datuak.getLangilea());
+        System.out.println(sql);
+        exekuzioa(sql);
+
+
+        
     }
     
     public static void exekuzioa(String sql) {
@@ -43,4 +53,19 @@ public class Zerbitzaria {
             System.out.println("Exception: " + ex);
         }
     }
+
+    public static String sqlPrestatu(ArrayList<String> list) {
+        System.out.println(list);
+
+        String result = "";
+
+        for (String string : list) {
+            result += "(" + string + "), ";
+        }
+
+
+        return result = result.substring(0, result.length() - 2);
+    }
+
+
 }

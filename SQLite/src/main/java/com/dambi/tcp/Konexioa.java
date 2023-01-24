@@ -1,4 +1,4 @@
-package com.dambi;
+package com.dambi.tcp;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,7 +7,7 @@ public class Konexioa {
     public Connection connectDatabase() {
         String host = "127.0.0.1";
         String port = "5432"; 
-        String database = "Erronka2"; 
+        String database = "proba"; 
         String user = "admin"; 
         String password = "admin123"; 
         String url = "";

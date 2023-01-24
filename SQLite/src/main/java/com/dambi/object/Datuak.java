@@ -1,4 +1,5 @@
-package com.dambi;
+package com.dambi.object;
+
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -27,11 +28,5 @@ public class Datuak implements Serializable {
         return langilea;
     }
 
-    public String sqlPrestatu(ArrayList<String> list) {
-        String result = "";
-        for (String string : list) {
-            result += result + "(" + string + "), ";
-        }
-        return result = result.substring(0, result.length() - 1);
-    }
+
 }

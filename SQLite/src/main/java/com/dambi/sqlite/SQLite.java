@@ -1,4 +1,4 @@
-package com.dambi;
+package com.dambi.sqlite;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,18 +8,16 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- *
- * @author sqlitetutorial.net
- */
-public class InsertApp {
+
+public class SQLite {
 
     /**
      * Connect to the test.db database
      *
      * @return the Connection object
      */
-    private Connection connect() {
+
+    private static Connection connect() {
         // SQLite connection string
         String url = "jdbc:sqlite:C:/sqlite/db/test.db";
         Connection conn = null;
@@ -44,7 +42,7 @@ public class InsertApp {
     public void insertLangilea(String email, String izena, String user, String jaiotzaData, int taldea) {
         String sql = "INSERT INTO Langilea(Email,Izena,User,JaiotzaData,Taldea) VALUES(?,?,?,?,?)";
 
-        try (Connection conn = this.connect();
+        try (Connection conn = SQLite.connect();
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, email);
             pstmt.setString(2, izena);
@@ -65,7 +63,7 @@ public class InsertApp {
     public void insertPartida(String user, float puntuazioa, String data) {
         String sql = "INSERT INTO Partida(User,Puntuazioa,Data) VALUES(?,?,?)";
 
-        try (Connection conn = this.connect();
+        try (Connection conn = SQLite.connect();
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, user);
             pstmt.setDouble(2, puntuazioa);
@@ -76,35 +74,41 @@ public class InsertApp {
         }
     }
 
-    public ArrayList<String> selectAll(){
+    public static ArrayList<String> selectAll(String taula) {
         ArrayList<String> result = new ArrayList<String>();
-        String sql = "SELECT id, user, puntuazioa, data FROM partida";
-        
-        try (Connection conn = this.connect();
-             Statement stmt  = conn.createStatement();
-             ResultSet rs    = stmt.executeQuery(sql)){
-            
+        String sql = "SELECT * FROM " + taula;
+
+        try (Connection conn = connect();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery(sql)) {
+
             // loop through the result set
-            while (rs.next()) {
-                System.out.println(rs.getInt("id") +  "\t" + 
-                                   rs.getString("user") + "\t" +
-                                   rs.getDouble("puntuazioa"));
+            if (taula.equals("partida")) {
+                while (rs.next()) {
+                    String datuak = rs.getInt("id") + ", '" +
+                            rs.getString("user") + "', " +
+                            rs.getDouble("puntuazioa") + ", '" +
+                            rs.getString("data") + "'";
+                    result.add(datuak);
+                }
+            } else {
+                while (rs.next()) {
+                    String datuak = "'" + rs.getString("email") + "', '" +
+                            rs.getString("izena") + "', '" +
+                            rs.getString("user") + "', '" +
+                            rs.getString("jaiotzadata") + "', " +
+                            rs.getInt("taldea");
+                    result.add(datuak);
+                }
             }
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-
-        return null;
+        return result;
     }
 
     /**
      * @param args the command line arguments
      */
-    public ArrayList<String> informazioa() {
-
-        InsertApp app = new InsertApp();
-        return app.selectAll();
-
-    }
-
 }

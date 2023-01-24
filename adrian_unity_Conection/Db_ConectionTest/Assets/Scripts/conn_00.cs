@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class conn_00 : MonoBehaviour
@@ -28,7 +29,11 @@ public class conn_00 : MonoBehaviour
         {
             //Debug.Log("Prueba del loggg");
 
-            insertNewPartida();
+            
+            StateNameController.usuario = texto_User.text;
+            SceneManager.LoadScene("FinishGameScene");
+
+            //insertNewPartida();
             ReadDatabase();
         }
     }

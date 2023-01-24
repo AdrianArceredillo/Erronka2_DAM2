@@ -14,9 +14,11 @@ public class GameController : MonoBehaviour
         usuarioText.text = StateNameController.usuario;
     }
 
-    public void returnBack()
+
+    public void returnBack(Text last_Player)
     {
-        SceneManager.LoadScene("SampleScene");
+        StateNameController.usuario = last_Player.text;
+        SceneManager.LoadScene("StartScene");
     }
 }
 

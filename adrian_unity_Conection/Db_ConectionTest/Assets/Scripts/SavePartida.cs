@@ -13,6 +13,7 @@ public class SavePartida : MonoBehaviour
     public Text texto_Puntuazioa;
     public Text texto_Data;
 
+
     // Start is called before the first frame update
     void Start()
     {

@@ -11,9 +11,19 @@ public class SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void goBack()
+    //public void goBack()
+    //{
+    //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    //}
+
+    public void returnToGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("GameScene");
+    }
+
+    public void exitGame()
+    {
+        SceneManager.LoadScene("StartScene");
     }
 
 }

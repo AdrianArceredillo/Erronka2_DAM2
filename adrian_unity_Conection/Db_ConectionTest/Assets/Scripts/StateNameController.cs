@@ -5,4 +5,6 @@ using UnityEngine;
 public class StateNameController : MonoBehaviour
 {
     public static string usuario;
+    public static string score;
+    public static string date;
 }

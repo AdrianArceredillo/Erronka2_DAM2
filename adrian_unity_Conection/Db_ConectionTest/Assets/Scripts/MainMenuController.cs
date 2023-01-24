@@ -9,8 +9,26 @@ public class MainMenuController : MonoBehaviour
 
     public void loadGame(Text user_Jugador)
     {
+        //StateNameController.usuario = user_Jugador.text;
+        //SceneManager.LoadScene("Third");
+
         StateNameController.usuario = user_Jugador.text;
-        SceneManager.LoadScene("Third");
+        SceneManager.LoadScene("GameScene");
+
+    }
+
+    public void exitGame()
+    {
+        //StateNameController.usuario = user_Jugador.text;
+        SceneManager.LoadScene("StartScene");
+
+    }
+
+    public void resumenPartida(Text user_Jugador, Text puntuazioa, Text data)
+    {
+        StateNameController.usuario = user_Jugador.text;
+        SceneManager.LoadScene("FinishGameScene");
+
     }
 
     //tutorial video

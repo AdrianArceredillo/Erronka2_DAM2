@@ -53,6 +53,9 @@ public class MainController {
     @GetMapping(path = "/all_Partida")
     public @ResponseBody Iterable<Partida> getAllPartida() {
         // This returns a JSON or XML with the users
+
+
+
         return partidaRepository.findAll();
     }
 

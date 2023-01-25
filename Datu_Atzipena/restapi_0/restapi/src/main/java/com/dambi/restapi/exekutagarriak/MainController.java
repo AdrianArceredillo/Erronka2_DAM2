@@ -120,7 +120,14 @@ public class MainController {
     public @ResponseBody String getLangileakAlain(String ip) {
 
         // final String uri = "http://192.168.65.6:8080/demo/all_Partida";
-        final String uri = "http://" + ip + ":8080/demo/all_Langilea";
+        // final String uri = "http://" + ip + ":8080/demo/all_Langilea";
+        final String uri = "http://" + ip + ":8080/Langileak/getLangileak";
+
+
+        //final String uri2 = "http://" + ip + ":8080/swagger-ui/index.html#/";
+
+        //http://localhost:8080/demo/AukeratuRestapia?ip=192.168.65.15
+        //http://192.168.65.15:8080/swagger-ui/index.html#/
 
         RestTemplate restTemplate = new RestTemplate();
         String result = restTemplate.getForObject(uri, String.class) +

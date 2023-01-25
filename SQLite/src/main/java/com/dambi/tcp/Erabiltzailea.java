@@ -12,23 +12,41 @@ public class Erabiltzailea {
         System.out.print("\033[H\033[2J");
         System.out.flush();
 
-        String Host = "127.0.0.1"; //"localhost" ipintzea berdina da
+        String Host = "127.0.0.1"; // "localhost" ipintzea berdina da
         // String Host = "192.168.65.16";
         int Puerto = 6000;
-        
-        Socket Cliente = new Socket(Host, Puerto);
 
-        OutputStream outputStream = Cliente.getOutputStream();
-        ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
+        try {
+            Socket Cliente = new Socket(Host, Puerto);
 
-        Datuak datuak = new Datuak();
-        datuak.setLangilea(SQLite.selectAll("langilea"));
-        datuak.setPartida(SQLite.selectAll("partida"));
+            OutputStream outputStream = Cliente.getOutputStream();
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
 
-        objectOutputStream.writeObject(datuak);
+            Datuak datuak = new Datuak();
+            datuak.setLangilea(SQLite.selectAll("langilea"));
+            datuak.setPartida(SQLite.selectAll("partida"));
 
-        Cliente.close();
-        System.out.print("");
+            objectOutputStream.writeObject(datuak);
+
+            DataInputStream flujoEntrada = new DataInputStream(Cliente.getInputStream());
+            // EL SERVIDOR ME ENVIA UN MENSAJE
+
+            String mezua = flujoEntrada.readUTF();
+            
+
+            if (mezua.equals("org.postgresql.util.PSQLException: No results were returned by the query.\norg.postgresql.util.PSQLException: No results were returned by the query.\n")){
+                System.out.println("Dena ondo");
+            } else {
+                System.out.println("Zerbitzaritik jasotzen: \n" + mezua);
+            }
+            // CERRAR STREAMS Y SOCKETS
+            flujoEntrada.close();
+            Cliente.close();
+
+        } catch (Exception e) {
+            System.out.println("Zerbitzaria ez dago piztuta");
+        }
+
     } // main
 
 }

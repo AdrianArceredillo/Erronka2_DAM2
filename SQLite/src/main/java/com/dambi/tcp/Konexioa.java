@@ -7,7 +7,7 @@ public class Konexioa {
     public Connection connectDatabase() {
         String host = "127.0.0.1";
         String port = "5432"; 
-        String database = "proba"; 
+        String database = "erlazio_proba"; 
         String user = "admin"; 
         String password = "admin123"; 
         String url = "";

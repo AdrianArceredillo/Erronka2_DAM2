@@ -7,7 +7,8 @@ import java.util.ArrayList;
 public class Datuak implements Serializable {
 
     public ArrayList<String> partida = new ArrayList<String>();
-    public ArrayList<String> langilea = new ArrayList<String>();
+    public String mezua;
+    //public ArrayList<String> langilea = new ArrayList<String>();
 
     public Datuak() {
     }
@@ -20,13 +21,13 @@ public class Datuak implements Serializable {
         return partida;
     }
 
-    public void setLangilea(ArrayList<String> list) {
-        this.langilea = list;
-    }
+    // public void setLangilea(ArrayList<String> list) {
+    //     this.langilea = list;
+    // }
 
-    public ArrayList<String> getLangilea() {
-        return langilea;
-    }
+    // public ArrayList<String> getLangilea() {
+    //     return langilea;
+    // }
 
 
 }

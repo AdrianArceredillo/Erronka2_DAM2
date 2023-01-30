@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MovimientoJugador : MonoBehaviour
 {
+
+    public GameObject disparo;
+    public GameObject personaje;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +67,49 @@ public class MovimientoJugador : MonoBehaviour
 
         }
 
+
+        //disparar
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            //disparo.gameObject.SetActive(true);
+            //Invoke(nameof(estado_Disparando),0.0f);
+
+
+
+            personaje.gameObject.SetActive(false);  //desactivar personaje
+            //animación de disparos en la misma posición que está el personaje
+            disparo.gameObject.transform.position = personaje.gameObject.GetComponent<Rigidbody2D>().transform.position;
+
+            disparo.gameObject.SetActive(true);
+            Invoke(nameof(disp),1.0f);
+        }
     }
 
 
+    void disp()
+    {
+        //desactivar disparos
+        disparo.gameObject.SetActive(false);
+        //activar personaje
+        personaje.gameObject.SetActive(true);
+    }
+
+    IEnumerator estado_Disparando()
+    {
+        //Print the time of when the function is first called.
+        Debug.Log("Disparando... " + Time.time);
+        disparo.gameObject.SetActive(true);
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(2);
+
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Alto el fuego! " + Time.time);
+        disparo.gameObject.SetActive(false);
+    }
+
 }
+
+
+
+//free assets: https://craftpix.net/freebies/page/5/

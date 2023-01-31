@@ -74,8 +74,6 @@ public class MovimientoJugador : MonoBehaviour
             //disparo.gameObject.SetActive(true);
             //Invoke(nameof(estado_Disparando),0.0f);
 
-
-
             personaje.gameObject.SetActive(false);  //desactivar personaje
             //animación de disparos en la misma posición que está el personaje
             disparo.gameObject.transform.position = personaje.gameObject.GetComponent<Rigidbody2D>().transform.position;

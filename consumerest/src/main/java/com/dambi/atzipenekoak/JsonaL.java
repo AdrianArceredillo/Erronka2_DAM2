@@ -35,7 +35,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 public class JsonaL {
-
+ 
     public static Langileak irakurri(String link, String fitxategia) {
 
         String content = "";

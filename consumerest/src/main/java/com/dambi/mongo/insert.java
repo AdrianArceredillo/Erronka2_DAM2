@@ -70,7 +70,7 @@ public class insert {
             db.getCollection("partida").insertOne(doc);
 
         }
-
+ 
         mongo.close();
     }
 }

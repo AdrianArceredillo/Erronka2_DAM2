@@ -1,5 +1,5 @@
 package com.dambi.atzipenekoak;
-
+ 
 public class Garbitzailea {
     public static String garbitu(String textoa) {
 

@@ -23,7 +23,7 @@ public class Erabiltzailea {
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
 
             Datuak datuak = new Datuak();
-            datuak.setLangilea(SQLite.selectAll("langilea"));
+            //datuak.setLangilea(SQLite.selectAll("langilea"));
             datuak.setPartida(SQLite.selectAll("partida"));
 
             objectOutputStream.writeObject(datuak);

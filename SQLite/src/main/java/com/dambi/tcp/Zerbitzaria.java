@@ -46,10 +46,10 @@ public class Zerbitzaria {
         // exekuzioa(sql);
 
         sql = "INSERT INTO partida VALUES (129, 'alainnnn', 2349057, '2023-01-25')";
-        exekuzioa(sql);
+        //exekuzioa(sql);
 
         sql = "INSERT INTO partida VALUES (130, 'alainnnn', 2349057, '2023-01-25')";
-        exekuzioa(sql);
+        //exekuzioa(sql);
 
         OutputStream salida = null;
         salida = clienteConectado.getOutputStream();

@@ -96,7 +96,7 @@ public class MainController {
         langileaRepository.save(l);
         return "Saved";
     }
-
+ 
     @GetMapping(path = "/all_Langilea")
     public @ResponseBody Iterable<Langilea> getAllLangilea() {
         // This returns a JSON or XML with the users

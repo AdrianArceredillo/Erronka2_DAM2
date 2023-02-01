@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+ 
 @Entity
 @Table(name = "langilea")
 public class Langilea {

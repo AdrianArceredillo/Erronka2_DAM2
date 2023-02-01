@@ -43,7 +43,7 @@ public class Partida {
     public String getData() {
         return data.toString();
     }
-
+ 
     public void setData(Timestamp data) {
         this.data = data;
     }

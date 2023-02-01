@@ -1,0 +1,6 @@
+ SELECT res_partner.name AS erabiltzailea,
+    max(library_partida.puntuazioa) AS max
+   FROM res_partner
+     JOIN library_partida ON res_partner.id = library_partida.langilea
+  GROUP BY res_partner.name
+  ORDER BY (max(library_partida.puntuazioa)) DESC;

@@ -1,18 +1,8 @@
-package com.dambi.restapi;
+package com.dambi.mongo_restapi;
 
 import java.sql.Timestamp;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-
-
-@Entity
-@Table(name = "partida")
 public class Partida {
-    @Id
-    // @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String user;
     private int puntuazioa;
@@ -45,7 +35,7 @@ public class Partida {
     public String getData() {
         return data.toString();
     }
-
+ 
     public void setData(Timestamp data) {
         this.data = data;
     }

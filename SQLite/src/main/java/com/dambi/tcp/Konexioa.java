@@ -5,11 +5,11 @@ import java.sql.DriverManager;
 
 public class Konexioa {
     public Connection connectDatabase() {
-        String host = "127.0.0.1";
+        String host = "192.168.65.90";
         String port = "5432"; 
-        String database = "erlazio_proba"; 
-        String user = "admin"; 
-        String password = "admin123"; 
+        String database = "ProbakOdooBarria"; 
+        String user = "postgres"; 
+        String password = "joseba"; 
         String url = "";
         Connection connection = null;
         try {

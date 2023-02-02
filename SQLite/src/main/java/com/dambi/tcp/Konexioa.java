@@ -8,7 +8,7 @@ public class Konexioa {
         String host = "192.168.65.90";
         String port = "5432"; 
         String database = "ProbakOdooBarria"; 
-        String user = "postgres"; 
+        String user = "uni"; 
         String password = "joseba"; 
         String url = "";
         Connection connection = null;

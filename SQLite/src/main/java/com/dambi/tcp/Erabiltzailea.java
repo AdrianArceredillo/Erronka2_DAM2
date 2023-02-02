@@ -34,7 +34,7 @@ public class Erabiltzailea {
             String mezua = flujoEntrada.readUTF();
             
 
-            if (mezua.equals("org.postgresql.util.PSQLException: No results were returned by the query.\norg.postgresql.util.PSQLException: No results were returned by the query.\n")){
+            if (mezua.equals("org.postgresql.util.PSQLException: No results were returned by the query.")){
                 System.out.println("Dena ondo");
             } else {
                 System.out.println("Zerbitzaritik jasotzen: \n" + mezua);

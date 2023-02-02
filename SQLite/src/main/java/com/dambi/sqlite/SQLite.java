@@ -30,49 +30,12 @@ public class SQLite {
     }
 
     /**
-     * Insert a new row into the warehouses table
-     *
-     * @param Email
-     * @param izena
-     * @param user
-     * @param jaiotzaData
-     * @param taldea
-     * 
+     * Metodo honek partiden taulako datuak jasotzen ditu eta ArrayList batetan sartzen ditu.
+     * @param taula taularen izena behar du. partida edo langilea.
+     * @return ArrayList bat aukeratutako taularen balioekin.
      */
-    public void insertLangilea(String email, String izena, String user, String jaiotzaData, int taldea) {
-        String sql = "INSERT INTO Langilea(Email,Izena,User,JaiotzaData,Taldea) VALUES(?,?,?,?,?)";
 
-        try (Connection conn = SQLite.connect();
-                PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, email);
-            pstmt.setString(2, izena);
-            pstmt.setString(3, user);
-            pstmt.setString(4, jaiotzaData);
-            pstmt.setInt(5, taldea);
-            pstmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-    }
 
-    /**
-     * @param user
-     * @param puntuazioa
-     * @param data
-     */
-    public void insertPartida(String user, float puntuazioa, String data) {
-        String sql = "INSERT INTO Partida(User,Puntuazioa,Data) VALUES(?,?,?)";
-
-        try (Connection conn = SQLite.connect();
-                PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, user);
-            pstmt.setDouble(2, puntuazioa);
-            pstmt.setString(3, data);
-            pstmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-    }
 
     public static ArrayList<String> selectAll(String taula) {
         ArrayList<String> result = new ArrayList<String>();
@@ -108,7 +71,51 @@ public class SQLite {
         return result;
     }
 
-    /**
-     * @param args the command line arguments
-     */
+
+    // /**
+    //  * Insert a new row into the warehouses table
+    //  *
+    //  * @param Email
+    //  * @param izena
+    //  * @param user
+    //  * @param jaiotzaData
+    //  * @param taldea
+    //  * 
+    //  */
+    // public void insertLangilea(String email, String izena, String user, String jaiotzaData, int taldea) {
+    //     String sql = "INSERT INTO Langilea(Email,Izena,User,JaiotzaData,Taldea) VALUES(?,?,?,?,?)";
+
+    //     try (Connection conn = SQLite.connect();
+    //             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+    //         pstmt.setString(1, email);
+    //         pstmt.setString(2, izena);
+    //         pstmt.setString(3, user);
+    //         pstmt.setString(4, jaiotzaData);
+    //         pstmt.setInt(5, taldea);
+    //         pstmt.executeUpdate();
+    //     } catch (SQLException e) {
+    //         System.out.println(e.getMessage());
+    //     }
+    // }
+
+    // /**
+    //  * @param user
+    //  * @param puntuazioa
+    //  * @param data
+    //  */
+    // public void insertPartida(String user, float puntuazioa, String data) {
+    //     String sql = "INSERT INTO Partida(User,Puntuazioa,Data) VALUES(?,?,?)";
+
+    //     try (Connection conn = SQLite.connect();
+    //             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+    //         pstmt.setString(1, user);
+    //         pstmt.setDouble(2, puntuazioa);
+    //         pstmt.setString(3, data);
+    //         pstmt.executeUpdate();
+    //     } catch (SQLException e) {
+    //         System.out.println(e.getMessage());
+    //     }
+    // }
+
+
 }

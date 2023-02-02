@@ -11,10 +11,12 @@ import com.dambi.object.Datuak;
 public class Zerbitzaria {
 
     public static String mezua;
+    public static int kont;
     public static ArrayList<String> iDak;
 
     public static void main(String[] arg) throws IOException, ClassNotFoundException {
         mezua = "";
+        kont = 0;
         iDak = new ArrayList<String>();
         System.out.print("\033[H\033[2J");
         System.out.flush();
@@ -45,10 +47,27 @@ public class Zerbitzaria {
         // System.out.println(sql);
         // exekuzioa(sql);
 
-        sql = "INSERT INTO partida VALUES (129, 'alainnnn', 2349057, '2023-01-25')";
-        //exekuzioa(sql);
+        sql = "INSERT INTO aa_proba_taula VALUES (19, 'Proba', 420)";
+        System.out.println(exekuzioa(sql));
 
-        sql = "INSERT INTO partida VALUES (130, 'alainnnn', 2349057, '2023-01-25')";
+        sql = "INSERT INTO aa_proba_taula VALUES (19, 'Proba', 420)";
+        System.out.println(exekuzioa(sql));
+
+
+        sql = "INSERT INTO aa_proba_taula VALUES (20, 'Proba', 420)";
+        System.out.println(exekuzioa(sql));
+
+
+        sql = "INSERT INTO aa_proba_taula VALUES (20, 'Proba', 420)";
+        System.out.println(exekuzioa(sql));
+
+
+        sql = "INSERT INTO aa_proba_taula VALUES (21, 'Proba', 420)";
+        System.out.println(exekuzioa(sql));
+
+
+
+        //sql = "INSERT INTO partida VALUES (130, 'alainnnn', 2349057, '2023-01-25')";
         //exekuzioa(sql);
 
         OutputStream salida = null;
@@ -63,6 +82,9 @@ public class Zerbitzaria {
         servidor.close();
 
     }
+
+
+
 
     public static void exekuzioa(ArrayList<String> list) {
         Konexioa konekzioa = new Konexioa();
@@ -91,6 +113,35 @@ public class Zerbitzaria {
         }
 
     }
+
+
+/**
+ * Metodo honek sql agindu bat exekutzatzen du
+ * 
+ * @param sql SQL agindua
+ * @return Errore kantitatea bueltatzen du.
+ */
+
+
+    public static String exekuzioa(String sql) {
+        mezua = "Errore kopurua: ";
+        Konexioa konekzioa = new Konexioa();
+        Statement st;
+            try {
+                st = konekzioa.connectDatabase().createStatement();
+                st.executeQuery(sql);
+            } catch (Exception ex) {
+
+                String exceptionMessage = ex.toString();
+
+                if (!exceptionMessage.equals("org.postgresql.util.PSQLException: No results were returned by the query.")){
+                    kont++;
+                }
+            }
+            return mezua += kont;
+    }
+
+
 
     public static String sqlPrestatu(ArrayList<String> list) {
         // System.out.println(list);

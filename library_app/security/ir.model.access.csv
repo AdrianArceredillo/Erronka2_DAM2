@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_partida_user,PartidaUser,model_library_partida,library_group_user,1,1,1,0
+access_partidak_manager,PartidaManager,model_library_partida,library_group_manager,1,1,1,1
+access_partidak_ordenatuta,partidak.ordenatuta,model_partidak_ordenatuta,base.group_system,1,1,1,1
+
+
+

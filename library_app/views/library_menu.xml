@@ -1,0 +1,26 @@
+<odoo>
+
+  <!-- Library App Menu -->
+  <menuitem id="menu_library" name="Jokua" />
+
+  <!-- Action to open the Partidak list -->
+  <record id="action_library_partida" model="ir.actions.act_window">
+    <field name="name">Jokua Partidak</field>
+    <field name="res_model">library.partida</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <!-- Old act_window, deprecated
+  <act_window id="action_library_partida"
+    name="Jokua Partidak"
+    res_model="library.partida"
+    view_mode="tree,form"
+  />
+  -->
+  <!-- Menu item to open the Book list -->
+  <menuitem id="menu_library_partida"
+    name="Partidak"
+    parent="menu_library"
+    action="action_library_partida"
+  />
+
+</odoo>

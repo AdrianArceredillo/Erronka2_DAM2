@@ -12,147 +12,111 @@ public class Zerbitzaria {
 
     public static String mezua;
     public static int kont;
-    public static ArrayList<String> iDak;
+    public static int datuKop;
+    //public static ArrayList<String> iDak;
 
     public static void main(String[] arg) throws IOException, ClassNotFoundException {
-        mezua = "";
-        kont = 0;
-        iDak = new ArrayList<String>();
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+        while (true) {
+            mezua = "Errore kopurua: ";
+            kont = 0;
+            datuKop = 0;
+            
+            //iDak = new ArrayList<String>();
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
 
-        int numeroPuerto = 6000;// Puerto
-        ServerSocket servidor = new ServerSocket(numeroPuerto);
-        Socket clienteConectado = null;
-        System.out.println("Esperando al cliente ");
-        clienteConectado = servidor.accept();
+            int numeroPuerto = 6000;// Puerto
+            ServerSocket servidor = new ServerSocket(numeroPuerto);
+            Socket clienteConectado = null;
 
-        // inStream = new ObjectInputStream(socket.getInputStream());
+            System.out.println("Erabiltzailearen zain:");
+            clienteConectado = servidor.accept();
 
-        InputStream inputStream = clienteConectado.getInputStream();
+            
 
-        ObjectInputStream objectInputStream = new ObjectInputStream(inputStream);
+            InputStream inputStream = clienteConectado.getInputStream();
 
-        Datuak datuak = new Datuak();
-        datuak = (Datuak) objectInputStream.readObject();
+            ObjectInputStream objectInputStream = new ObjectInputStream(inputStream);
 
-        // System.out.println(datuak.getPartida());
-        // System.out.println(datuak.getLangilea());
+            Datuak datuak = new Datuak();
+            datuak = (Datuak) objectInputStream.readObject();
 
-        String sql = "INSERT INTO partida VALUES " + sqlPrestatu(datuak.getPartida());
-        // System.out.println(sql);
-        // exekuzioa(sql);
+            // exekuzioa(datuak.getPartida());
+            for (String string : datuak.getPartida()) {
 
-        // sql = "INSERT INTO langilea VALUES " + sqlPrestatu(datuak.getLangilea());
-        // System.out.println(sql);
-        // exekuzioa(sql);
+                String sql = "INSERT INTO library_partida(langilea, puntuazioa, data, active) VALUES (" + string + ")";
+                exekuzioa(sql);
 
-        sql = "INSERT INTO aa_proba_taula VALUES (19, 'Proba', 420)";
-        System.out.println(exekuzioa(sql));
-
-        sql = "INSERT INTO aa_proba_taula VALUES (19, 'Proba', 420)";
-        System.out.println(exekuzioa(sql));
-
-
-        sql = "INSERT INTO aa_proba_taula VALUES (20, 'Proba', 420)";
-        System.out.println(exekuzioa(sql));
-
-
-        sql = "INSERT INTO aa_proba_taula VALUES (20, 'Proba', 420)";
-        System.out.println(exekuzioa(sql));
-
-
-        sql = "INSERT INTO aa_proba_taula VALUES (21, 'Proba', 420)";
-        System.out.println(exekuzioa(sql));
-
-
-
-        //sql = "INSERT INTO partida VALUES (130, 'alainnnn', 2349057, '2023-01-25')";
-        //exekuzioa(sql);
-
-        OutputStream salida = null;
-        salida = clienteConectado.getOutputStream();
-        DataOutputStream flujoSalida = new DataOutputStream(salida);
-
-        flujoSalida.writeUTF(mezua);
-
-        salida.close();
-        flujoSalida.close();
-        clienteConectado.close();
-        servidor.close();
-
-    }
-
-
-
-
-    public static void exekuzioa(ArrayList<String> list) {
-        Konexioa konekzioa = new Konexioa();
-        Statement st;
-
-        for (String datuak : list) {
-            try {
-                String sql = "INSERT INTO partida VALUES " + datuak;
-                st = konekzioa.connectDatabase().createStatement();
-                st.executeQuery(sql);
-            } catch (Exception ex) {
-                System.out.println("Exception: " + ex);
-                // Errorerik ez bada egon datuak sartzeko orduan
-                if (ex.equals("org.postgresql.util.PSQLException: No results were returned by the query.")) {
-
-                    String[] parts1 = datuak.split(","); //Datuak banatu "INSERT INTO partida VALUES (130" <- horrelako zerbait lortuz
-                    String part1 = parts1[0];
-                    String[] parts2 = part1.split("("); //Berriro banatu "130" lortuz, hau da, ID-a. Datu hau gero berriro erabiltzailera bidaliko da id-horrek dituen datuak ezabatzeko
-                    String id = parts2[0];
-                    iDak.add(id);
-                } else {
-                    mezua += ex + "\n";
-                }
             }
 
+            OutputStream salida = null;
+            salida = clienteConectado.getOutputStream();
+            DataOutputStream flujoSalida = new DataOutputStream(salida);
+
+            flujoSalida.writeUTF(mezua + kont);
+
+            salida.close();
+            flujoSalida.close();
+            clienteConectado.close();
+
+            servidor.close();
+
+            System.out.println(datuKop + "datu gehitu dira.");
         }
 
     }
 
+    // public static void exekuzioa(ArrayList<String> list) {
+    //     Konexioa konekzioa = new Konexioa();
+    //     Statement st;
 
-/**
- * Metodo honek sql agindu bat exekutzatzen du
- * 
- * @param sql SQL agindua
- * @return Errore kantitatea bueltatzen du.
- */
+    //     for (String datuak : list) {
+    //         try {
+    //             String sql = "INSERT INTO partida VALUES " + datuak;
+    //             st = konekzioa.connectDatabase().createStatement();
+    //             st.executeQuery(sql);
+    //         } catch (Exception ex) {
+    //             System.out.println("Exception: " + ex);
+    //             // Errorerik ez bada egon datuak sartzeko orduan
+    //             if (ex.equals("org.postgresql.util.PSQLException: No results were returned by the query.")) {
 
+    //                 String[] parts1 = datuak.split(","); // Datuak banatu "INSERT INTO partida VALUES (130" <- horrelako
+    //                                                      // zerbait lortuz
+    //                 String part1 = parts1[0];
+    //                 String[] parts2 = part1.split("("); // Berriro banatu "130" lortuz, hau da, ID-a. Datu hau gero
+    //                                                     // berriro erabiltzailera bidaliko da id-horrek dituen datuak
+    //                                                     // ezabatzeko
+    //                 String id = parts2[0];
+    //                 iDak.add(id);
+    //             } else {
+    //                 mezua += ex + "\n";
+    //             }
+    //         }
 
-    public static String exekuzioa(String sql) {
-        mezua = "Errore kopurua: ";
+    //     }
+
+    // }
+
+    /**
+     * Metodo honek sql agindu bat exekutzatzen du
+     * 
+     * @param sql SQL agindua
+     * @return Errore kantitatea bueltatzen du.
+     */
+
+    public static void exekuzioa(String sql) {
         Konexioa konekzioa = new Konexioa();
         Statement st;
-            try {
-                st = konekzioa.connectDatabase().createStatement();
-                st.executeQuery(sql);
-            } catch (Exception ex) {
-
-                String exceptionMessage = ex.toString();
-
-                if (!exceptionMessage.equals("org.postgresql.util.PSQLException: No results were returned by the query.")){
-                    kont++;
-                }
+        try {
+            st = konekzioa.connectDatabase().createStatement();
+            st.executeQuery(sql);
+        } catch (Exception ex) {
+            String exceptionMessage = ex.toString();
+            if (!exceptionMessage.equals("org.postgresql.util.PSQLException: No results were returned by the query.")) {
+                kont++;
             }
-            return mezua += kont;
-    }
-
-
-
-    public static String sqlPrestatu(ArrayList<String> list) {
-        // System.out.println(list);
-
-        String result = "";
-
-        for (String string : list) {
-            result += "(" + string + "), ";
+            datuKop++;
         }
-
-        return result = result.substring(0, result.length() - 2);
     }
 
 }

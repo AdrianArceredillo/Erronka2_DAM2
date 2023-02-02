@@ -10,7 +10,8 @@ public class MovimientoJugador : MonoBehaviour
 
     Rigidbody2D rb_Disparando;
 
-    public GameObject oneWayPlat;    //plataforma unidireccional
+    //public GameObject oneWayPlat;    //plataforma unidireccional
+    private GameObject oneWayPlat;    //plataforma unidireccional
     //[SerializeField] private PolygonCollider2D playerCollider;
     [SerializeField] private BoxCollider2D playerCollider;
 
@@ -35,11 +36,11 @@ public class MovimientoJugador : MonoBehaviour
         rb_Disparando.gameObject.transform.position =
             personaje.gameObject.GetComponent<Rigidbody2D>().transform.position;
 
-        if (move < 0 && facingRight)    //si al pulsar Izq. está mirando a la derecha, mirar IZQUIERDA
+        if (move < 0 && facingRight)    //si al pulsar Izq. estÃ¡ mirando a la derecha, mirar IZQUIERDA
         {
             flip();
         }
-        else if (move > 0 && !facingRight)    //si al pulsar Der. está mirando a la izquierda, mirar DERECHA
+        else if (move > 0 && !facingRight)    //si al pulsar Der. estÃ¡ mirando a la izquierda, mirar DERECHA
         {
             flip();
         }
@@ -132,7 +133,7 @@ public class MovimientoJugador : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             personaje.gameObject.SetActive(false);  //desactivar personaje
-            //animación de disparos en la misma posición que está el personaje
+            //animaciÃ³n de disparos en la misma posiciÃ³n que estÃ¡ el personaje
             disparando.gameObject.transform.position = personaje.gameObject.GetComponent<Rigidbody2D>().transform.position;
 
             disparando.gameObject.SetActive(true);
@@ -142,7 +143,7 @@ public class MovimientoJugador : MonoBehaviour
         //lanzar_Granadas
         if (Input.GetKeyDown(KeyCode.R))
         {
-            //activar algún escudo o algún tipo de habilidad
+            //activar algÃºn escudo o algÃºn tipo de habilidad
 
 
             //personaje.gameObject.SetActive(false);  //desactivar personaje
@@ -174,7 +175,7 @@ public class MovimientoJugador : MonoBehaviour
     private IEnumerator DisableCollision()
     {
         BoxCollider2D platformCollider = oneWayPlat.GetComponent<BoxCollider2D>();
-        
+
         Physics2D.IgnoreCollision(playerCollider, platformCollider);
         yield return new WaitForSeconds(0.25f);
         Physics2D.IgnoreCollision(playerCollider, platformCollider, false);

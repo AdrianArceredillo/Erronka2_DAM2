@@ -8,8 +8,8 @@ public class FlipCharacter : MonoBehaviour
     public float speed;
     public Rigidbody2D normal;              //rigidbody2d jugador normal
     public GameObject disparando;           //jugador disparando
-    public GameObject lanzandoGranadas;     //jugador lanzando granadas
-    public GameObject humo_Granada;         //humo de la granada
+    //public GameObject lanzandoGranadas;     //jugador lanzando granadas
+    //public GameObject humo_Granada;         //humo de la granada
 
     bool facingRight = true;
 
@@ -30,12 +30,12 @@ public class FlipCharacter : MonoBehaviour
             normal.gameObject.GetComponent<Rigidbody2D>().transform.position;
 
         //lanzandoGranadas
-        lanzandoGranadas.gameObject.transform.position =
-            normal.gameObject.GetComponent<Rigidbody2D>().transform.position;
+        //lanzandoGranadas.gameObject.transform.position =
+        //    normal.gameObject.GetComponent<Rigidbody2D>().transform.position;
 
         //humo granada
-        humo_Granada.gameObject.transform.position =
-            normal.gameObject.GetComponent<Rigidbody2D>().transform.position;
+        //humo_Granada.gameObject.transform.position =
+        //    normal.gameObject.GetComponent<Rigidbody2D>().transform.position;
 
 
         if (move < 0 && facingRight)    //si al pulsar Izq. está mirando a la derecha, mirar IZQUIERDA
@@ -53,8 +53,8 @@ public class FlipCharacter : MonoBehaviour
     {
         facingRight = !facingRight; //cambiar el estado de la variable facingRight
         disparando.transform.Rotate(0f, 180f, 0f);
-        lanzandoGranadas.transform.Rotate(0f, 180f, 0f);
-        humo_Granada.transform.Rotate(0f, 180f, 0f);
+        //lanzandoGranadas.transform.Rotate(0f, 180f, 0f);
+        //humo_Granada.transform.Rotate(0f, 180f, 0f);
     }
 
 

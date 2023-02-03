@@ -24,6 +24,10 @@ import org.bson.Document;
 public class insert {
     public static void main(String[] args) {
 
+
+
+
+        
         System.out.print("\033[H\033[2J");
         System.out.flush();
 
@@ -32,7 +36,7 @@ public class insert {
 
         HttpGet request = new HttpGet("http://localhost:8080/demo/all_Partida");
 
-        Partidak partidak = null;
+        Partidak partidak = new Partidak();
 
         try {
             HttpResponse response = client.execute(request);
@@ -47,8 +51,7 @@ public class insert {
             // Langileak langileak = JsonaL.irakurri(fitxategia);
             // System.out.println(langileak);
 
-            partidak = JsonaP.irakurri(fitxategia);
-            System.out.println(partidak);
+            partidak = JsonaP.irakurri(fitxategia, 3);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -63,9 +66,10 @@ public class insert {
         for (Partida partida : partidak.getPartidak()) {
 
             Document doc = new Document("id", partida.getId())
-                    .append("user", partida.getUser())
+                    .append("user", partida.getLangilea())
                     .append("puntuazioa", partida.getPuntuazioa())
-                    .append("data", partida.getData());
+                    .append("data", partida.getData())
+                    .append("taldea", partida.getTaldea());
 
             db.getCollection("partida").insertOne(doc);
 

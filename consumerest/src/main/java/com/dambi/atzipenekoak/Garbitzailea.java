@@ -65,4 +65,10 @@ public class Garbitzailea {
         return dataOndo;
     }
 
+
+    public static void garbituPantaila(){
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+
 }

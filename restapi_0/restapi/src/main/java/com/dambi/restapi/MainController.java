@@ -108,7 +108,7 @@ public class MainController {
                     "ELSE 'balio okerra'" +
                     "END AS langilea" +
                     "FROM library_partida" +
-                    "WHERE id > " + id;
+                    "WHERE id > " + id + " AND langilea = 43 or langilea = 44 or langilea = 52 or langilea = 46";
 
             return jdbcTemplate.queryForList(sql);
         }

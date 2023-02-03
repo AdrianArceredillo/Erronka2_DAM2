@@ -10,3 +10,4 @@
 [03/02/2023 09:35:01][2 Taldea] Alain-ek erabili du id: 2 balioarekin.
 [03/02/2023 09:56:00][3 Taldea][Alain erabiltzailea][queryIdPartida, id= 10]
 [03/02/2023 09:57:10][3 Taldea][Alain][queryIdPartida, id= 10]
+[03/02/2023 12:34:59][2 Taldea][gh][queryIdPartida, id= 10]

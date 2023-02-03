@@ -5,13 +5,13 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
-@XmlType(propOrder = { "id", "user", "puntuazioa", "data"})
+@XmlType(propOrder = { "id", "langilea", "puntuazioa", "data"})
 @XmlRootElement(name = "Partida")
 
 public class Partida {
 
-    int id, puntuazioa;
-    String user, data;
+    int id, puntuazioa, taldea;
+    String langilea, data;
 
     @XmlElement(name = "Id")
     public int getId(){
@@ -21,12 +21,12 @@ public class Partida {
         this.id = id;
     }
 
-    @XmlElement(name = "User")
-    public String getUser() {
-        return user;
+    @XmlElement(name = "Langilea")
+    public String getLangilea() {
+        return langilea;
     }
-    public void setUser(String user) {
-        this.user = user;
+    public void setLangilea(String langilea) {
+        this.langilea = langilea;
     }
 
     @XmlElement(name = "Puntuazioa")
@@ -45,9 +45,19 @@ public class Partida {
         this.data = data;
     }
 
+    
+    @XmlElement(name = "Taldea")
+    public int getTaldea() {
+        return taldea;
+    }
+    public void setTaldea(int taldea) {
+        this.taldea = taldea;
+    }
+
+
     @Override
     public String toString() { 
-        return String.format("Partida[ID:" + this.getId() + ", User:" + this.getUser() + ", Puntuazioa: " + this.getPuntuazioa() + ", Data: " + this.getData() + "]");
+        return String.format("Partida[ID:" + this.getId() + ", User:" + this.getLangilea() + ", Puntuazioa: " + this.getPuntuazioa() + ", Data: " + this.getData() + "]");
     }
 
 }

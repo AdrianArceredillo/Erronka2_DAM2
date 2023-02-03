@@ -61,7 +61,7 @@ public class Langilea {
                 ", taldea: " + taldea +
                 ", izena: " + izena +
                 ", email: " + email +
-                ", jaiotza-data: " + jaiotzadata.toString();
+                ", jaiotzadata: " + jaiotzadata.toString();
     }
 
 }

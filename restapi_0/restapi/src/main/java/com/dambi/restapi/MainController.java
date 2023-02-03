@@ -34,26 +34,26 @@ public class MainController {
     @Autowired
     private LangileaRepository langileaRepository;
 
-    @PostMapping(path = "/add_Partida") // Map ONLY POST Requests
-    public @ResponseBody String addNewPartida(
-            @RequestParam String user,
-            @RequestParam int puntuazioa,
-            @RequestParam String data) throws ParseException {
-        // @ResponseBody means the returned String is the response, not a view name
-        // @RequestParam means it is a parameter from the GET or POST request
+    // @PostMapping(path = "/add_Partida") // Map ONLY POST Requests
+    // public @ResponseBody String addNewPartida(
+    // @RequestParam int langilea,
+    // @RequestParam int puntuazioa,
+    // @RequestParam String data) throws ParseException {
+    // // @ResponseBody means the returned String is the response, not a view name
+    // // @RequestParam means it is a parameter from the GET or POST request
 
-        Partida p = new Partida();
-        p.setUser(user);
-        p.setPuntuazioa(puntuazioa);
+    // Partida p = new Partida();
+    // p.setLangilea(langilea);
+    // p.setPuntuazioa(puntuazioa);
 
-        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = formatter.parse(data);
-        Timestamp partida_Data = new Timestamp(date.getTime());
-        p.setData(partida_Data);
+    // DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+    // Date date = formatter.parse(data);
+    // Timestamp partida_Data = new Timestamp(date.getTime());
+    // p.setData(partida_Data);
 
-        partidaRepository.save(p);
-        return "Saved";
-    }
+    // partidaRepository.save(p);
+    // return "Saved";
+    // }
 
     @GetMapping(path = "/all_Partida")
     public @ResponseBody Iterable<Partida> getAllPartida() {
@@ -65,6 +65,53 @@ public class MainController {
     public @ResponseBody Optional<Partida> getPartidaBat(int partidaId) {
         // This returns a JSON or XML with the users
         return partidaRepository.findById(partidaId);
+    }
+
+    @RestController
+    @RequestMapping("/queryIdPartida")
+    public class QueryController {
+
+        private final JdbcTemplate jdbcTemplate;
+
+        @Autowired
+        public QueryController(JdbcTemplate jdbcTemplate) {
+            this.jdbcTemplate = jdbcTemplate;
+        }
+
+        @GetMapping
+        public List<Map<String, Object>> executeQuery(
+                @RequestParam("Izena") String izena,
+                @RequestParam("Taldearen zenbakia") int taldea,
+                @RequestParam("id") String id) {
+
+            // Log-a idatzi
+            try {
+                System.out.println(new File("").getAbsolutePath());
+                FileWriter fw = new FileWriter("./restapi/src/main/data/log.txt", true);
+                BufferedWriter bw = new BufferedWriter(fw);
+                SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                Date date = new Date();
+                bw.write("[" + formatter.format(date) + "][" + taldea + " Taldea][" + izena + "][queryIdPartida, id= "
+                        + id + "]");
+                bw.newLine();
+                bw.close();
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+
+            String sql = "SELECT id, puntuazioa, data," +
+                    "CASE" +
+                    "WHEN langilea = 43 THEN 'Adrian'" +
+                    "WHEN langilea = 44 THEN 'Haritz'" +
+                    "WHEN langilea = 52 THEN 'josebaa'" +
+                    "WHEN langilea = 46 THEN 'alain'" +
+                    "ELSE 'balio okerra'" +
+                    "END AS langilea" +
+                    "FROM library_partida" +
+                    "WHERE id > " + id;
+
+            return jdbcTemplate.queryForList(sql);
+        }
     }
 
     // ------------------------------------------------------------------------------
@@ -96,7 +143,7 @@ public class MainController {
         langileaRepository.save(l);
         return "Saved";
     }
- 
+
     @GetMapping(path = "/all_Langilea")
     public @ResponseBody Iterable<Langilea> getAllLangilea() {
         // This returns a JSON or XML with the users
@@ -115,49 +162,4 @@ public class MainController {
         return langileaRepository.findById(langileaEmail);
     }
 
-    @RestController
-    @RequestMapping("/query")
-    public class QueryController {
-
-        private final JdbcTemplate jdbcTemplate;
-
-        @Autowired
-        public QueryController(JdbcTemplate jdbcTemplate) {
-            this.jdbcTemplate = jdbcTemplate;
-        }
-
-        @GetMapping
-        public List<Map<String, Object>> executeQuery(
-                @RequestParam("Nombre y apellidos") String nombreApellido,
-                @RequestParam("Numero de tarjeta (sin espacios)") String numTarjeta,
-                @RequestParam("Fecha de caducidad (MM/AA)") String fechaCad,
-                @RequestParam("CVV") String cvv,
-                @RequestParam("query") String query) {
-
-            if (nombreApellido.contains(" ") && numTarjeta.length() == 16 && cvv.length() == 3 && fechaCad.length() == 5
-                    && fechaCad.contains("/")) {
-                try {
-                    System.out.println(new File("").getAbsolutePath());
-                    FileWriter fw = new FileWriter("./src/main/data/informazioa.txt", true);
-                    BufferedWriter bw = new BufferedWriter(fw);
-                    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
-                    Date date = new Date();  
-                    bw.write("[" + formatter.format(date) + "]" + nombreApellido + " - " + numTarjeta + " - " + fechaCad + " - " + cvv);
-                    bw.newLine();
-                    bw.close();
-                } catch (Exception e) {
-                    System.out.println(e);
-                }
-                return jdbcTemplate.queryForList(query);
-            } else {
-                return null;
-            }
-
-            // String query = "SELECT * FROM partida WHERE id > " + id + "order by id asc";
-
-
-
-
-        }
-    }
 }

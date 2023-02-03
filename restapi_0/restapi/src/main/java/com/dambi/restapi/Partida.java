@@ -9,14 +9,16 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "partida")
+@Table(name = "library_partida")
 public class Partida {
     @Id
     // @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String user;
     private int puntuazioa;
     private Timestamp data;
+    private int langilea;
+    
+    
 
     public Integer getId() {
         return id;
@@ -24,14 +26,6 @@ public class Partida {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getUser() {
-        return user;
-    }
-
-    public void setUser(String name) {
-        this.user = name;
     }
 
     public int getPuntuazioa() {
@@ -49,11 +43,32 @@ public class Partida {
     public void setData(Timestamp data) {
         this.data = data;
     }
+
+    public String getLangilea() {
+        if (langilea == 43)
+        return "Adrian";
+        if (langilea == 44)
+        return "Haritz";
+        if (langilea == 52)
+        return "josebaa";
+        if (langilea == 46)
+        return "alain";
+        
+        return "0";
+    }
+
+    public void setLangilea(int langilea) {
+        this.langilea = langilea;
+    }
+
+
+
+
     
     @Override
     public String toString() {
         return "Partida[id: " + id +
-                ", user: " + user +
+                ", user: " + langilea +
                 ", puntuazioa: " + puntuazioa +
                 ", data: " + data.toString();
     }

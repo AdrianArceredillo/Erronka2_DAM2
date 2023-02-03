@@ -72,8 +72,7 @@ public class SQLite {
                             rs.getDouble("puntuazioa") + ", '" +
                             rs.getString("data") +
                             "', true";
-                    result.add(datuak); // Adb.: id, 46, puntuazioa, 'data'
-                                        // 46, 123456, '2023-02-02', true
+                    result.add(datuak); // 46, 123456, '2023-02-02', true
                 }
             } else {
                 while (rs.next()) {

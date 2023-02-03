@@ -44,6 +44,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Primer Plano
+    uniqueID: 3150592751
+    locked: 0
   - name: Fondo
     uniqueID: 3660004873
     locked: 0

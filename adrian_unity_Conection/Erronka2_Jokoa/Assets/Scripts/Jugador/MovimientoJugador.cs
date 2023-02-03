@@ -71,6 +71,7 @@ public class MovimientoJugador : MonoBehaviour
         else if (collision.transform.tag == "OneWayPlatform")
         {
             oneWayPlat = collision.gameObject;
+
         }
         else if (collision.transform.tag == "otro")
         {
@@ -117,7 +118,7 @@ public class MovimientoJugador : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.W))
         if (Input.GetKeyDown(KeyCode.W))
         {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 8f));
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 15f));
         }
 
         //if (Input.GetKeyDown(KeyCode.S))

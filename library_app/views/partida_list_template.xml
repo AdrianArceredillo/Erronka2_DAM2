@@ -3,7 +3,7 @@
 <template id="partida_list_template" name="Partida List">
 <html>
 <head>
-  
+
   <style>
     h1{
       font-family: arial, sans-serif;
@@ -29,52 +29,94 @@
     }
 
     body {
+      font-family: Arial, Helvetica, sans-serif;
       background-color: Lightgray;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-around;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+    .a1{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .eskuma {
+      width: 40%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .ezkerra {
+      width: 40%;
+      align-items: left;
+    }
+
+    .eskuma > .links a:hover {
+    color: #EAEBE7;
+    letter-spacing: 2px;
+    transition: 0.8s;
+    }
+
+    .eskuma > .links  {
+      padding-left: 5%;
+    }
+
+    @media (max-width: 700px) {
+      .eskuma, .links {   
+        flex-direction: column;
+      }
     }
 
   </style>
 </head>   
 <body>
-  <div class="center-column">
-    <!-- barra menu -->
-    <div class="links-wrapper">
-        <div class="nav-link">
-            <a href="/library/partidak">PARTIDAK</a>
+  <div class="header">
+    <div class="a1">
+      <div class="ezkerra">
+        <div class="logo">
+          <h2 style= "text-align:center">ENPRESA TXAPELKETA</h2>
         </div>
-        <div class="nav-link">
-            <a href="/partidak_ordenatuta">PODIUM</a>
+      </div>
+      <div class="eskuma">
+        <div class="links">
+          <a href="/partidak">PARTIDAK</a>
         </div>
-        <div class="nav-link">
-            <a href="menu.html">Menu</a>
+        <div class="links">
+          <a href="/partidak_ordenatuta">PODIUM</a>
         </div>
-        <div class="nav-link">
-            <a href="contact.html">Contact</a>
+        <div class="links">
+          <a href="/">ODOO</a>
         </div>
-
+      </div>
     </div>
   </div>
+  
   <div >
-    <div id="wrap" class="container" >  
-    <h1 style= "text-align:center">ENPRESA TXAPELKETA</h1>
-      <div class = "partidaGuztiak"> 
-        <h2 style= "text-align:center">Partida Guztiak</h2>
-        <table border="2" >
-          <tr bgcolor="#EAEBE7">
-            <th style="text-align:center">Partida Id</th>
-            <th style="text-align:center">Langilea</th>
-            <th style="text-align:center">Puntuazioa</th>
-            <th style="text-align:center">Data</th>
+    <div class = "partidaGuztiak"> 
+      <h2 style= "text-align:center">Partida Guztiak</h2>
+      <table border="2" >
+        <tr bgcolor="#EAEBE7">
+          <th style="text-align:center">Partida Id</th>
+          <th style="text-align:center">Langilea</th>
+          <th style="text-align:center">Puntuazioa</th>
+          <th style="text-align:center">Data</th>
+        </tr>
+        <t t-foreach="partidak" t-as="partida">
+          <tr bgcolor="white">
+            <td><span t-field="partida.id" /></td>
+            <td><span t-field="partida.langilea" /></td>
+            <td style="text-align:right"><span t-field="partida.puntuazioa" /></td>
+            <td style="text-align:right"><span t-field="partida.data" /></td>
           </tr>
-          <t t-foreach="partidak" t-as="partida">
-            <tr bgcolor="white">
-              <td><span t-field="partida.id" /></td>
-              <td><span t-field="partida.langilea" /></td>
-              <td><span t-field="partida.puntuazioa" /></td>
-              <td><span t-field="partida.data" /></td>
-            </tr>
-          </t>
-        </table>
-      </div>
+        </t>
+      </table>
     </div>
   </div>
 </body>
@@ -82,10 +124,5 @@
 </template>
 
 </odoo>
-
-          <!-- <t t-foreach="partidak" t-as="partida[user!='Adrian']"> 
-         <xsl:for-each select="liburutegia/liburua[idazlea!='Ken Follett']">
--->
-
 
 

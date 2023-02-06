@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
+//using System.Diagnostics;
 using UnityEngine;
 
 
@@ -17,12 +17,13 @@ public class Zombie : MonoBehaviour
     Rigidbody2D rb_Personaje;               //rigidbody del jugador
 
     //[SerializeField] private PolygonCollider2D playerCollider;
-    [SerializeField] private BoxCollider2D zombieCollider;
+    //[SerializeField] private BoxCollider2D zombieCollider;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        movimiento_Zombie.gameObject.SetActive(true);
+        movimiento_Zombie.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-400f * Time.deltaTime, 0));
     }
 
     // Update is called once per frame
@@ -75,22 +76,23 @@ public class Zombie : MonoBehaviour
             movimiento_Zombie.gameObject.transform.position = zombie.gameObject.GetComponent<Rigidbody2D>().transform.position;
 
 
-            //movimiento_Zombie.gameObject.transform.position = new Vector2(-100f * Time.deltaTime, 0);
+            movimiento_Zombie.gameObject.transform.position = new Vector2(-100f * Time.deltaTime, 0);
+            Debug.Log("adsdasdasds");
 
-            while (movimiento_Zombie.gameObject.transform.position.x < rb_Personaje.gameObject.transform.position.x)
-            {
-                movimiento_Zombie.gameObject.SetActive(true);
+            //while (movimiento_Zombie.gameObject.transform.position.x < rb_Personaje.gameObject.transform.position.x)
+            //{
+            //    movimiento_Zombie.gameObject.SetActive(true);
 
-                //desplazar el zombie (anim. caminando)
-                movimiento_Zombie.gameObject.transform.position = new Vector3(
-                    movimiento_Zombie.gameObject.transform.position.x * 5f * Time.deltaTime,
-                    movimiento_Zombie.gameObject.transform.position.y,
-                    movimiento_Zombie.gameObject.transform.position.z
-                );
+            //    //desplazar el zombie (anim. caminando)
+            //    movimiento_Zombie.gameObject.transform.position = new Vector3(
+            //        movimiento_Zombie.gameObject.transform.position.x * 5f * Time.deltaTime,
+            //        movimiento_Zombie.gameObject.transform.position.y,
+            //        movimiento_Zombie.gameObject.transform.position.z
+            //    );
 
 
-                Invoke(nameof(caminar_Zombie), 5.0f);
-            }
+            //    Invoke(nameof(caminar_Zombie), 5.0f);
+            //}
         }
 
     }

@@ -832,9 +832,10 @@ GameObject:
   - component: {fileID: 181387542}
   - component: {fileID: 181387543}
   - component: {fileID: 181387545}
+  - component: {fileID: 181387546}
   m_Layer: 0
   m_Name: Disparos
-  m_TagString: Untagged
+  m_TagString: Player_Disparando
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -965,6 +966,25 @@ PolygonCollider2D:
       - {x: 0.3772979, y: -0.098356776}
       - {x: 0.58778536, y: -0.018600643}
       - {x: 0.6138251, y: 0.16081418}
+--- !u!114 &181387546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181387541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335520857c99dd440a998a2da0cf93bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 2
+  Enemigo: {fileID: 1531501178}
+  Enemigo_Movimiento: {fileID: 1560080505}
+  maxX: 7
+  minX: -7
+  maxY: 2
+  minY: -3
 --- !u!1 &186281740
 GameObject:
   m_ObjectHideFlags: 0
@@ -6248,7 +6268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264456535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.35, y: -2.25, z: 0.016821023}
+  m_LocalPosition: {x: 13.97, y: 0.42, z: 0.016821023}
   m_LocalScale: {x: 1.8933613, y: 1.409983, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6476,7 +6496,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 2
   Enemigo: {fileID: 1531501178}
-  maxX: 7
+  Enemigo_Movimiento: {fileID: 0}
+  maxX: 20
   minX: -7
   maxY: 2
   minY: -3
@@ -6883,7 +6904,6 @@ MonoBehaviour:
   personaje: {fileID: 1264456535}
   zombie: {fileID: 1334325038}
   movimiento_Zombie: {fileID: 1560080505}
-  zombieCollider: {fileID: 1334325043}
 --- !u!50 &1334325041
 Rigidbody2D:
   serializedVersion: 4
@@ -8134,7 +8154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531501178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.25, y: -2.02, z: 0}
+  m_LocalPosition: {x: 1.34, y: -1.94, z: 0}
   m_LocalScale: {x: 3.6981905, y: 3.0724, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8321,7 +8341,6 @@ MonoBehaviour:
   personaje: {fileID: 1264456535}
   zombie: {fileID: 1531501178}
   movimiento_Zombie: {fileID: 1560080505}
-  zombieCollider: {fileID: 1531501183}
 --- !u!1 &1560080505
 GameObject:
   m_ObjectHideFlags: 0
@@ -8338,7 +8357,7 @@ GameObject:
   - component: {fileID: 1560080511}
   m_Layer: 0
   m_Name: Zombie Andando
-  m_TagString: enemigo
+  m_TagString: enemigo_mov
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -41,22 +41,23 @@ public class Plat_Edificio : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "Player")
+        if (collision.transform.tag == "Player_Disparando")
         {
-            Debug.Log("s");
-
             zombie.gameObject.SetActive(false);  //desactivar personaje
 
             //animación de disparos en la misma posición que está el personaje
             movimiento_Zombie.gameObject.transform.position = zombie.gameObject.GetComponent<Rigidbody2D>().transform.position;
 
 
-            //movimiento_Zombie.gameObject.SetActive(true);
+            
+
+            //movimiento_Zombie.gameObject.transform.position = new Vector3(4f, 2f, 0f);
+            //movimiento_Zombie.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-400f * Time.deltaTime, 0));
+
+
             movimiento_Zombie.gameObject.SetActive(true);
+            movimiento_Zombie.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-400f * Time.deltaTime, 0));
 
-            movimiento_Zombie.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-100f * Time.deltaTime, 0));
-
-            Debug.Log("LEJOS! ");
 
             //movimiento_Zombie.gameObject.transform.position = Vector3.MoveTowards(
             //            transform.position,
@@ -64,19 +65,7 @@ public class Plat_Edificio : MonoBehaviour
             //            2f * Time.deltaTime
             //            );
 
-
             Invoke(nameof(caminar_Zombie), 3.0f);
-
-
-            ////desplazar zombie (anim. caminando) hasta el personaje del jugador
-            //while (movimiento_Zombie.gameObject.transform.position.x < rb_Personaje.gameObject.transform.position.x)
-            //{
-            //    movimiento_Zombie.gameObject.SetActive(true);
-            //    //desplazar el zombie (anim. caminando)
-            //    movimiento_Zombie.gameObject.transform.position = new Vector3(12f, 4f, 0f);
-            //    Invoke(nameof(caminar_Zombie), 5.0f);
-            //}
-
         }
     }
 
@@ -85,6 +74,7 @@ public class Plat_Edificio : MonoBehaviour
     {
         //desactivar movimiento zombie
         movimiento_Zombie.gameObject.SetActive(false);
+        movimiento_Zombie.gameObject.transform.position = zombie.gameObject.GetComponent<Rigidbody2D>().transform.position;
         //activar zombie quieto
         zombie.gameObject.SetActive(true);
     }

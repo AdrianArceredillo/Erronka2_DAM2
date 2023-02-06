@@ -13,6 +13,8 @@ TagManager:
   - enemigo
   - fence
   - plat_fence
+  - enemigo_mov
+  - Player_Disparando
   layers:
   - Default
   - TransparentFX

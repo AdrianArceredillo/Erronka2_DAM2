@@ -35,8 +35,6 @@ public class Zombie : MonoBehaviour
         //obtener la posición del jugador
         rb_Personaje = personaje.GetComponent<Rigidbody2D>();
 
-
-
         //float move = Input.GetAxisRaw("Horizontal");
         //rb_Movimiento_Zombie.velocity = new Vector2(move * 5f, rb_Movimiento_Zombie.velocity.y);
 
@@ -59,8 +57,6 @@ public class Zombie : MonoBehaviour
             //UnityEngine.Debug.Log("AAA");
         }
 
-
-
     }
 
     public void detectarMovimientoPlayer()
@@ -79,10 +75,10 @@ public class Zombie : MonoBehaviour
             movimiento_Zombie.gameObject.transform.position = zombie.gameObject.GetComponent<Rigidbody2D>().transform.position;
 
 
+            //movimiento_Zombie.gameObject.transform.position = new Vector2(-100f * Time.deltaTime, 0);
 
             while (movimiento_Zombie.gameObject.transform.position.x < rb_Personaje.gameObject.transform.position.x)
             {
-
                 movimiento_Zombie.gameObject.SetActive(true);
 
                 //desplazar el zombie (anim. caminando)
@@ -94,21 +90,8 @@ public class Zombie : MonoBehaviour
 
 
                 Invoke(nameof(caminar_Zombie), 5.0f);
-
-
             }
-
-
-
-            //movimiento_Zombie.gameObject.SetActive(true);
-            //Invoke(nameof(caminar_Zombie), 5.0f);
         }
-
-
-
-
-
-
 
     }
 

@@ -12,6 +12,9 @@ public class MovimientoJugador : MonoBehaviour
 
     //public GameObject oneWayPlat;    //plataforma unidireccional
     private GameObject oneWayPlat;    //plataforma unidireccional
+    private GameObject oneWayFence;
+    private GameObject oneWayPlat_Fence;
+
     //[SerializeField] private PolygonCollider2D playerCollider;
     [SerializeField] private BoxCollider2D playerCollider;
 
@@ -51,6 +54,18 @@ public class MovimientoJugador : MonoBehaviour
             {
                 StartCoroutine(DisableCollision());
             }
+
+            if (oneWayFence != null)
+            {
+                StartCoroutine(DisableCollisionF());
+            }
+
+            if (oneWayPlat_Fence != null)
+            {
+                StartCoroutine(DisableCollision_PF());
+            }
+            //oneWayPlat_Fence
+
         }
 
     }
@@ -73,6 +88,18 @@ public class MovimientoJugador : MonoBehaviour
             oneWayPlat = collision.gameObject;
 
         }
+        else if (collision.transform.tag == "fence")
+        {
+            //oneWayPlat = collision.gameObject;
+            oneWayFence = collision.gameObject;
+
+        }
+        else if (collision.transform.tag == "plat_fence")
+        {
+            //oneWayPlat = collision.gameObject;
+            oneWayPlat_Fence = collision.gameObject;
+
+        }
         else if (collision.transform.tag == "otro")
         {
             gameObject.GetComponent<Rigidbody2D>().transform.position = new Vector3(-45.8f, 24.7f, 0);
@@ -90,6 +117,14 @@ public class MovimientoJugador : MonoBehaviour
         else if (collision.transform.tag == "OneWayPlatform")
         {
             oneWayPlat = null;
+        }
+        else if (collision.transform.tag == "fence")
+        {
+            oneWayFence = null;
+        }
+        else if (collision.transform.tag == "plat_fence")
+        {
+            oneWayPlat_Fence = null;
         }
         else if (collision.transform.tag == "otro")
         {
@@ -180,6 +215,24 @@ public class MovimientoJugador : MonoBehaviour
         Physics2D.IgnoreCollision(playerCollider, platformCollider);
         yield return new WaitForSeconds(0.25f);
         Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
+    }
+
+    private IEnumerator DisableCollisionF()
+    {
+        PolygonCollider2D fenceCollider = oneWayFence.GetComponent<PolygonCollider2D>();
+
+        Physics2D.IgnoreCollision(playerCollider, fenceCollider);
+        yield return new WaitForSeconds(0.25f);
+        Physics2D.IgnoreCollision(playerCollider, fenceCollider, false);
+    }
+
+    private IEnumerator DisableCollision_PF()
+    {
+        PolygonCollider2D plat_fenceCollider = oneWayPlat_Fence.GetComponent<PolygonCollider2D>();
+
+        Physics2D.IgnoreCollision(playerCollider, plat_fenceCollider);
+        yield return new WaitForSeconds(0.25f);
+        Physics2D.IgnoreCollision(playerCollider, plat_fenceCollider, false);
     }
 
 }

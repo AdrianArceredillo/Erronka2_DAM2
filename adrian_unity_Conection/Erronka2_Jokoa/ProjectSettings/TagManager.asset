@@ -10,6 +10,9 @@ TagManager:
   - Margen Top
   - plataforma
   - OneWayPlatform
+  - enemigo
+  - fence
+  - plat_fence
   layers:
   - Default
   - TransparentFX

@@ -1,27 +1,45 @@
 package com.dambi.mongo_restapi;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
+@Document(collection = "partida")
 public class Partida {
-    private Integer id;
-    private String user;
+    @Id
+    private ObjectId _id;
+    private Integer partidaId;
+    private String langilea;
     private int puntuazioa;
-    private Timestamp data;
-
-    public Integer getId() {
-        return id;
+    private int taldea;
+    private String data;
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
+    
+    // Getters and setters for each field
+    public ObjectId get_id() {
+        return _id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void set_id(ObjectId _id) {
+        this._id = _id;
     }
 
-    public String getUser() {
-        return user;
+    public Integer getPartidaId() {
+        return partidaId;
     }
 
-    public void setUser(String name) {
-        this.user = name;
+    public void setPartidaId(Integer id) {
+        this.partidaId = id;
+    }
+
+    public String getLangilea() {
+        return langilea;
+    }
+
+    public void setLangilea(String user) {
+        this.langilea = user;
     }
 
     public int getPuntuazioa() {
@@ -32,20 +50,24 @@ public class Partida {
         this.puntuazioa = puntuazioa;
     }
 
-    public String getData() {
-        return data.toString();
-    }
- 
-    public void setData(Timestamp data) {
-        this.data = data;
-    }
-    
-    @Override
-    public String toString() {
-        return "Partida[id: " + id +
-                ", user: " + user +
-                ", puntuazioa: " + puntuazioa +
-                ", data: " + data.toString();
+    public int getTaldea() {
+        return taldea;
     }
 
+    public void setTaldea(int taldea) {
+        this.taldea = taldea;
+    }
+
+
+    public Date getData() {
+        try {
+            return dateFormat.parse(data);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public void setData(Date data) {
+        this.data = dateFormat.format(data);
+    }
 }

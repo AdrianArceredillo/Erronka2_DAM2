@@ -34,7 +34,7 @@ import java.io.FileReader;
 
 public class JsonaP {
 
-        public static Partidak irakurri(String strFileIn, int taldea) {
+        public static Partidak irakurri(String strFileIn) {
 
         Partidak partidak = null;
         try {
@@ -49,7 +49,6 @@ public class JsonaP {
                 partida.setLangilea("langilea");
                 partida.setPuntuazioa(jsonobj.getInt("puntuazioa"));
                 partida.setData(jsonobj.getString("data"));
-                partida.setTaldea(taldea);
                 partidak.add(partida);
             }
             

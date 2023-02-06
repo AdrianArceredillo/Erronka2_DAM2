@@ -9,11 +9,19 @@ import java.util.List;
 @RequestMapping("/api")
 public class MainController {
     @Autowired
-    private PartidaRepository repository;
+    private PartidaRepository PartidaRepository;
 
-    @GetMapping("/partidas")
+    @Autowired
+    private LangileaRepository LangileaRepository;
+
+    @GetMapping("/partidak")
     public List<Partida> getAllPartidas() {
-        return repository.findAll();
+        return PartidaRepository.findAll();
+    }
+
+    @GetMapping("/langileak")
+    public List<Langilea> getAllLangileak() {
+        return LangileaRepository.findAll();
     }
 
     // @GetMapping("/partidas/{id}")

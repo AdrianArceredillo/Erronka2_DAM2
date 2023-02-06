@@ -22,6 +22,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 // import org.json.simple.JSONObject;
 // import org.json.simple.parser.JSONParser;
@@ -47,8 +49,10 @@ public class JsonaP {
                 Partida partida = new Partida();
                 partida.setId(jsonobj.getInt("id"));
                 partida.setLangilea(jsonobj.getString("langilea"));
-                partida.setPuntuazioa(jsonobj.getInt("puntuazioa"));
-                partida.setData(jsonobj.getString("data"));
+                partida.setPuntuazioa((jsonobj.getInt("puntuazioa")));
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
+                Date date = sdf.parse(jsonobj.getString("data"));
+                partida.setData(date);
                 partidak.add(partida);
             }
             

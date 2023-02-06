@@ -13,7 +13,7 @@ public class Partida {
     private Integer partidaId;
     private String langilea;
     private int puntuazioa;
-    // private String data;
+    private Date data;
     // private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
     
     // Getters and setters for each field
@@ -50,15 +50,11 @@ public class Partida {
     }
 
 
-    // public Date getData() {
-    //     try {
-    //         return dateFormat.parse(data);
-    //     } catch (Exception e) {
-    //         return null;
-    //     }
-    // }
+    public Date getData() {
+        return data;
+    }
 
-    // public void setData(Date data) {
-    //     this.data = dateFormat.format(data);
-    // }
+    public void setData(Date data) {
+        this.data = data;
+    }
 }

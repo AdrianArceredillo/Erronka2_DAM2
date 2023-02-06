@@ -1,5 +1,7 @@
 package com.dambi.pojoak;
 
+import java.util.Date;
+
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
@@ -11,7 +13,8 @@ import jakarta.xml.bind.annotation.XmlType;
 public class Partida {
 
     int id, puntuazioa;
-    String langilea, data;
+    String langilea;
+    Date data;
 
     @XmlElement(name = "Id")
     public int getId(){
@@ -38,10 +41,10 @@ public class Partida {
     }
 
     @XmlElement(name = "Data")
-    public String getData() {
+    public Date getData() {
         return data;
     }
-    public void setData(String data) {
+    public void setData(Date data) {
         this.data = data;
     }
 

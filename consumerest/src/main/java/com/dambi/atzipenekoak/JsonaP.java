@@ -46,7 +46,7 @@ public class JsonaP {
                 JsonObject jsonobj = jsonarray.getJsonObject(i);
                 Partida partida = new Partida();
                 partida.setId(jsonobj.getInt("id"));
-                partida.setLangilea("langilea");
+                partida.setLangilea(jsonobj.getString("langilea"));
                 partida.setPuntuazioa(jsonobj.getInt("puntuazioa"));
                 partida.setData(jsonobj.getString("data"));
                 partidak.add(partida);

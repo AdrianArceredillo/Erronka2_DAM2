@@ -13,9 +13,8 @@ public class Partida {
     private Integer partidaId;
     private String langilea;
     private int puntuazioa;
-    private int taldea;
-    private String data;
-    private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
+    // private String data;
+    // private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
     
     // Getters and setters for each field
     public ObjectId get_id() {
@@ -50,24 +49,16 @@ public class Partida {
         this.puntuazioa = puntuazioa;
     }
 
-    public int getTaldea() {
-        return taldea;
-    }
 
-    public void setTaldea(int taldea) {
-        this.taldea = taldea;
-    }
+    // public Date getData() {
+    //     try {
+    //         return dateFormat.parse(data);
+    //     } catch (Exception e) {
+    //         return null;
+    //     }
+    // }
 
-
-    public Date getData() {
-        try {
-            return dateFormat.parse(data);
-        } catch (Exception e) {
-            return null;
-        }
-    }
-
-    public void setData(Date data) {
-        this.data = dateFormat.format(data);
-    }
+    // public void setData(Date data) {
+    //     this.data = dateFormat.format(data);
+    // }
 }

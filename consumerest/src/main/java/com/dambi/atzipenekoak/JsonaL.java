@@ -63,7 +63,7 @@ public class JsonaL {
 
                     langilea.setIzena(Garbitzailea.garbitu(jsonobj.getString("izena")));
 
-                    langilea.setUser(Garbitzailea.garbitu(jsonobj.getString("user")));
+                    langilea.setUser(Garbitzailea.garbitu(jsonobj.getString("langilea")));
 
                     langilea.setJaiotzaData(jsonobj.getString("jaiotzadata"));
                     langilea.setTaldea(jsonobj.getInt("taldea"));

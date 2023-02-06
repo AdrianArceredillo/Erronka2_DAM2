@@ -1,0 +1,57 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#searchForm {
+    padding-top: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#searchForm > .btn {
+    margin-left: 20px;
+}
+
+.bg-menua {
+    background-color: #dddada !important;
+}
+
+.erlatiboa {
+    position: relative;
+}
+
+.full-width.dropdown {
+    position: static;
+}
+
+    .full-width.dropdown > .dropdown-menu {
+        left: 0;
+    }
+
+        .full-width.dropdown > .dropdown-menu > li > a {
+            white-space: normal;
+        }
+
+#printzipala {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#printzipala > .navbar  {
+    padding: 10px;
+}

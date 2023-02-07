@@ -41,32 +41,18 @@ public class Plat_Edificio : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "Player_Disparando")
-        {
-            zombie.gameObject.SetActive(false);  //desactivar personaje
+        //if (collision.transform.tag == "Player_Disparando")
+        //{
+        //    zombie.gameObject.SetActive(false);  //desactivar personaje
 
-            //animación de disparos en la misma posición que está el personaje
-            movimiento_Zombie.gameObject.transform.position = zombie.gameObject.GetComponent<Rigidbody2D>().transform.position;
+        //    //animación de disparos en la misma posición que está el personaje
+        //    movimiento_Zombie.gameObject.transform.position = zombie.gameObject.GetComponent<Rigidbody2D>().transform.position;
 
+        //    movimiento_Zombie.gameObject.SetActive(true);
+        //    movimiento_Zombie.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-400f * Time.deltaTime, 0));
 
-            
-
-            //movimiento_Zombie.gameObject.transform.position = new Vector3(4f, 2f, 0f);
-            //movimiento_Zombie.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-400f * Time.deltaTime, 0));
-
-
-            movimiento_Zombie.gameObject.SetActive(true);
-            movimiento_Zombie.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-400f * Time.deltaTime, 0));
-
-
-            //movimiento_Zombie.gameObject.transform.position = Vector3.MoveTowards(
-            //            transform.position,
-            //            rb_Personaje.gameObject.transform.position,
-            //            2f * Time.deltaTime
-            //            );
-
-            Invoke(nameof(caminar_Zombie), 3.0f);
-        }
+        //    Invoke(nameof(caminar_Zombie), 3.0f);
+        //}
     }
 
 

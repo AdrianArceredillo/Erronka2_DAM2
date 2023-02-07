@@ -52,11 +52,34 @@ public class Roca_Suelo : MonoBehaviour
 
 
             movimiento_Zombie.gameObject.SetActive(true);
-            movimiento_Zombie.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-100f * Time.deltaTime, 0));
+            //movimiento_Zombie.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-100f * Time.deltaTime, 0));
+            movimiento_Zombie.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-400f * Time.deltaTime, 0));
             //personaje.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(100f * Time.deltaTime, 0));
 
 
-            Invoke(nameof(caminar_Zombie), 3.0f);
+            //Invoke(nameof(caminar_Zombie), 3.0f);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Player")
+        {
+            //zombie.gameObject.SetActive(false);  //desactivar personaje
+
+            //zombie.gameObject.GetComponent<Rigidbody2D>().transform.position = personaje.gameObject.GetComponent<Rigidbody2D>().transform.position;
+
+
+            //animación de disparos en la misma posición que está el personaje
+            //movimiento_Zombie.gameObject.transform.position = zombie.gameObject.GetComponent<Rigidbody2D>().transform.position;
+
+            //movimiento_Zombie.gameObject.SetActive(true);
+            //movimiento_Zombie.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(400f * Time.deltaTime, 0));
+
+
+            movimiento_Zombie.gameObject.SetActive(false);
+            zombie.gameObject.SetActive(true);
+
+            //Invoke(nameof(caminar_Zombie), 3.0f);
         }
     }
 

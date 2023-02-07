@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovimientoJugador : MonoBehaviour
 {
-
+    
     public GameObject personaje;
     public GameObject disparando;
 
@@ -19,11 +20,12 @@ public class MovimientoJugador : MonoBehaviour
     [SerializeField] private BoxCollider2D playerCollider;
 
     bool facingRight = true;
+    public Text puntuacion;         //texto que indica la puntuación
 
     // Start is called before the first frame update
     void Start()
     {
-
+        puntuacion.text = "0";
     }
 
     // Update is called once per frame

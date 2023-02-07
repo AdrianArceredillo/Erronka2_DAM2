@@ -3,7 +3,6 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Document(collection = "partida")
@@ -14,9 +13,8 @@ public class Partida {
     private String langilea;
     private int puntuazioa;
     private Date data;
-    // private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
     
-    // Getters and setters for each field
+    //ID
     public ObjectId get_id() {
         return _id;
     }
@@ -24,7 +22,7 @@ public class Partida {
     public void set_id(ObjectId _id) {
         this._id = _id;
     }
-
+    //PARTIDA
     public Integer getPartidaId() {
         return partidaId;
     }
@@ -32,7 +30,7 @@ public class Partida {
     public void setPartidaId(Integer id) {
         this.partidaId = id;
     }
-
+    //LANGILEA
     public String getLangilea() {
         return langilea;
     }
@@ -40,7 +38,7 @@ public class Partida {
     public void setLangilea(String user) {
         this.langilea = user;
     }
-
+    //PUNTUAZIOA
     public int getPuntuazioa() {
         return puntuazioa;
     }
@@ -48,8 +46,7 @@ public class Partida {
     public void setPuntuazioa(int puntuazioa) {
         this.puntuazioa = puntuazioa;
     }
-
-
+    //DATA
     public Date getData() {
         return data;
     }

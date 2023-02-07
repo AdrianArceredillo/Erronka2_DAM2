@@ -14,13 +14,13 @@ public class Langilea {
     private String email;
     private String izena;
     private String user;
-    // private Date jaiotzadata;
+    private Date jaiotzadata;
     private int taldea;
     // private String data;
     // private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd
     // HH:mm:ss.S");
 
-    // Getters and setters for each field
+    // ID
     public ObjectId get_id() {
         return _id;
     }
@@ -28,15 +28,15 @@ public class Langilea {
     public void set_id(ObjectId _id) {
         this._id = _id;
     }
-
+    //EMAIL
     public String getEmail() {
         return email;
     }
 
-    public void setPartidaId(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
-
+    //IZENA
     public String getIzena() {
         return izena;
     }
@@ -44,15 +44,14 @@ public class Langilea {
     public void setIzena(String izena) {
         this.izena = izena;
     }
-
+    //USER
     public String getUser() {
         return user;
     }
-
     public void setUser(String user) {
         this.user = user;
     }
-
+    //TALDEA
     public int getTaldea() {
         return taldea;
     }
@@ -60,16 +59,12 @@ public class Langilea {
     public void setTaldea(int puntuazioa) {
         this.taldea = puntuazioa;
     }
+    //DATA
+    public Date getJaiotzadata() {
+        return jaiotzadata;
+    }
 
-    // public Date getData() {
-    // try {
-    // return dateFormat.parse(data);
-    // } catch (Exception e) {
-    // return null;
-    // }
-    // }
-
-    // public void setData(Date data) {
-    // this.data = dateFormat.format(data);
-    // }
+    public void setJaiotzadata(Date jaiotzadata) {
+        this.jaiotzadata = jaiotzadata;
+    }
 }

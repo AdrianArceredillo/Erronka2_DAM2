@@ -1,5 +1,6 @@
 package com.dambi.mongo_restapi;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,32 +10,35 @@ import java.util.List;
 @RequestMapping("/api")
 public class MainController {
     @Autowired
-    private PartidaRepository PartidaRepository;
+    private PartidaRepository partidaRepository;
 
     @Autowired
-    private LangileaRepository LangileaRepository;
+    private LangileaRepository langileaRepository;
+
+    @Autowired
+    private BalorazioaRepository balorazioaRepository;
 
     @GetMapping("/partidak")
     public List<Partida> getAllPartidas() {
-        return PartidaRepository.findAll();
+        return partidaRepository.findAll();
     }
 
     @GetMapping("/langileak")
     public List<Langilea> getAllLangileak() {
-        return LangileaRepository.findAll();
+        return langileaRepository.findAll();
     }
 
-    // @GetMapping("/partidas/{id}")
-    // public Partida getPartidaById(@PathVariable ObjectId id) {
-    //     return repository.findById(id).orElse(null);
-    // }
+    @GetMapping("/balorazioak")
+    public List<Balorazioa> getAllBalorazioak() {
+        return balorazioaRepository.findAll();
+    }
 
-    // @PostMapping("/partidas")
-    // public Partida createPartida(@RequestBody Partida partida) {
-    //     partida.set_id(ObjectId.get());
-    //     repository.save(partida);
-    //     return partida;
-    // }
+    @PostMapping("/partidas")
+    public Partida createPartida(@RequestBody Partida partida) {
+        partida.set_id(ObjectId.get());
+        partidaRepository.save(partida);
+        return partida;
+    }
 
     // @PutMapping("/partidas/{id}")
     // public Partida updatePartida(@PathVariable ObjectId id, @RequestBody Partida partida) {

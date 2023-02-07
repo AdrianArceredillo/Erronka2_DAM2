@@ -118,48 +118,48 @@ public class MainController {
     // --------------- LANGILEA ----------------------------------------------------
     // ------------------------------------------------------------------------------
 
-    // @PostMapping(path = "/add_Langilea") // Map ONLY POST Requests
-    // public @ResponseBody String addNewLangilea(
-    //         @RequestParam String email,
-    //         @RequestParam String izena,
-    //         @RequestParam String user,
-    //         @RequestParam String jaiotzadata,
-    //         @RequestParam int taldea) throws ParseException {
-    //     // @ResponseBody means the returned String is the response, not a view name
-    //     // @RequestParam means it is a parameter from the GET or POST request
+    @PostMapping(path = "/add_Langilea") // Map ONLY POST Requests
+    public @ResponseBody String addNewLangilea(
+            @RequestParam String email,
+            @RequestParam String izena,
+            @RequestParam String user,
+            @RequestParam String jaiotzadata,
+            @RequestParam int taldea) throws ParseException {
+        // @ResponseBody means the returned String is the response, not a view name
+        // @RequestParam means it is a parameter from the GET or POST request
 
-    //     Langilea l = new Langilea();
-    //     l.setEmail(email);
-    //     l.setIzena(izena);
-    //     l.setUser(user);
+        Langilea l = new Langilea();
+        l.setEmail(email);
+        l.setIzena(izena);
+        l.setUser(user);
 
-    //     DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-    //     Date date = formatter.parse(jaiotzadata);
-    //     Timestamp jaiotza_Data = new Timestamp(date.getTime());
-    //     l.setJaiotzaData(jaiotza_Data);
+        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = formatter.parse(jaiotzadata);
+        Timestamp jaiotza_Data = new Timestamp(date.getTime());
+        l.setJaiotzaData(jaiotza_Data);
 
-    //     l.setTaldea(taldea);
+        l.setTaldea(taldea);
 
-    //     langileaRepository.save(l);
-    //     return "Saved";
-    // }
+        langileaRepository.save(l);
+        return "Saved";
+    }
 
-    // @GetMapping(path = "/all_Langilea")
-    // public @ResponseBody Iterable<Langilea> getAllLangilea() {
-    //     // This returns a JSON or XML with the users
-    //     return langileaRepository.findAll();
-    // }
+    @GetMapping(path = "/all_Langilea")
+    public @ResponseBody Iterable<Langilea> getAllLangilea() {
+        // This returns a JSON or XML with the users
+        return langileaRepository.findAll();
+    }
 
-    // @GetMapping(path = "/all_Langileaid")
-    // public @ResponseBody Iterable<Langilea> getAllLangileaid() {
+    @GetMapping(path = "/all_Langileaid")
+    public @ResponseBody Iterable<Langilea> getAllLangileaid() {
 
-    //     return langileaRepository.findAll();
-    // }
+        return langileaRepository.findAll();
+    }
 
-    // @GetMapping(path = "/LangileaBat")
-    // public @ResponseBody Optional<Langilea> getLangileaBat(String langileaEmail) {
-    //     // This returns a JSON or XML with the users
-    //     return langileaRepository.findById(langileaEmail);
-    // }
+    @GetMapping(path = "/LangileaBat")
+    public @ResponseBody Optional<Langilea> getLangileaBat(String langileaEmail) {
+        // This returns a JSON or XML with the users
+        return langileaRepository.findById(langileaEmail);
+    }
 
 }

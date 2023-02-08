@@ -11,3 +11,4 @@
 [03/02/2023 09:56:00][3 Taldea][Alain erabiltzailea][queryIdPartida, id= 10]
 [03/02/2023 09:57:10][3 Taldea][Alain][queryIdPartida, id= 10]
 [03/02/2023 12:34:59][2 Taldea][gh][queryIdPartida, id= 10]
+[08/02/2023 13:43:58][3 Taldea][Erlantz][queryIdPartida, id= 1]

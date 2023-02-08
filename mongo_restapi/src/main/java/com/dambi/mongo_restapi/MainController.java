@@ -4,6 +4,12 @@ import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import com.dambi.mongo_restapi.pojoak.Balorazioa;
+import com.dambi.mongo_restapi.pojoak.Jokoa;
+import com.dambi.mongo_restapi.pojoak.Langilea;
+import com.dambi.mongo_restapi.pojoak.Partida;
+
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -18,10 +24,19 @@ public class MainController {
     @Autowired
     private BalorazioaRepository balorazioaRepository;
 
+    @Autowired
+    private JokoaRepository jokoaRepository;
+
     @GetMapping("/partidak")
     public List<Partida> getAllPartidas() {
         return partidaRepository.findAll();
     }
+
+    @GetMapping("/partidak/{jokoa}")
+    public List<Partida> getPartidas(@PathVariable int jokoa) {
+        return partidaRepository.findByJokoaEquals(jokoa);
+    }
+
 
     @GetMapping("/langileak")
     public List<Langilea> getAllLangileak() {
@@ -33,22 +48,33 @@ public class MainController {
         return balorazioaRepository.findAll();
     }
 
-    @PostMapping("/partidas")
-    public Partida createPartida(@RequestBody Partida partida) {
-        partida.set_id(ObjectId.get());
-        partidaRepository.save(partida);
-        return partida;
+    @GetMapping("/jokoak")
+    public List<Jokoa> getAllJokoak() {
+        return jokoaRepository.findAll();
     }
 
-    // @PutMapping("/partidas/{id}")
-    // public Partida updatePartida(@PathVariable ObjectId id, @RequestBody Partida partida) {
-    //     partida.set_id(id);
-    //     repository.save(partida);
+    @GetMapping("/jokoak/{taldea}")
+    public Jokoa getJokoaByTaldea(@PathVariable int taldea) {
+        return jokoaRepository.findByTaldea(taldea);
+    }
+
+    // @PostMapping("/partidas")
+    // public Partida createPartida(@RequestBody Partida partida) {
+    //     partida.set_id(ObjectId.get());
+    //     partidaRepository.save(partida);
     //     return partida;
+    // }
+
+    // @PutMapping("/partidas/{id}")
+    // public Partida updatePartida(@PathVariable ObjectId id, @RequestBody Partida
+    // partida) {
+    // partida.set_id(id);
+    // repository.save(partida);
+    // return partida;
     // }
 
     // @DeleteMapping("/partidas/{id}")
     // public void deletePartida(@PathVariable ObjectId id) {
-    //     repository.deleteById(id);
+    // repository.deleteById(id);
     // }
 }

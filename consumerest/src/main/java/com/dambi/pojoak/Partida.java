@@ -12,7 +12,7 @@ import jakarta.xml.bind.annotation.XmlType;
 
 public class Partida {
 
-    int id, puntuazioa;
+    int id, puntuazioa, jokoa;
     String langilea;
     Date data;
 
@@ -46,6 +46,14 @@ public class Partida {
     }
     public void setData(Date data) {
         this.data = data;
+    }
+
+    @XmlElement(name = "Jokoa")
+    public int getJokoa() {
+        return jokoa;
+    }
+    public void setJokoa(int jokoa) {
+        this.jokoa = jokoa;
     }
 
 

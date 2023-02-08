@@ -36,7 +36,7 @@ import java.io.FileReader;
 
 public class JsonaP {
 
-        public static Partidak irakurri(String strFileIn) {
+        public static Partidak irakurri(String strFileIn, int jokoa) {
 
         Partidak partidak = null;
         try {
@@ -53,6 +53,7 @@ public class JsonaP {
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
                 Date date = sdf.parse(jsonobj.getString("data"));
                 partida.setData(date);
+                partida.setJokoa(jokoa);
                 partidak.add(partida);
             }
             

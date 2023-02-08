@@ -51,7 +51,7 @@ public class insert {
             // Langileak langileak = JsonaL.irakurri(fitxategia);
             // System.out.println(langileak);
 
-            partidak = JsonaP.irakurri(fitxategia);
+            partidak = JsonaP.irakurri(fitxategia, 1);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -68,7 +68,8 @@ public class insert {
             Document doc = new Document("partidaId", partida.getId())
                     .append("langilea", partida.getLangilea())
                     .append("puntuazioa", partida.getPuntuazioa())
-                    .append("data", partida.getData());
+                    .append("data", partida.getData())
+                    .append("jokoa", partida.getJokoa());
 
             db.getCollection("partida").insertOne(doc);
 

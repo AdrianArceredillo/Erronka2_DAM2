@@ -6,7 +6,8 @@ namespace WebErronka.Services
     {
         Task<IList<LangilePartida>> GetLangilea(int partidaId);
         Task<List<Partida>> GetPartidak();
-        Task<Partida> GetPartida(int id);
+        Task<Partida> GetPartida(int id, int jokoa);
+        Task<List<Partida>> GetPartidakJokuarekiko(int jokuaId);
 
 
 

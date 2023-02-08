@@ -6,7 +6,7 @@ namespace WebErronka.Services
     public class LangileaService : ILangileaService
     {
 
-        private Uri rutaLangilea = new Uri("https://localhost:44367/api/Langilea/");
+        private Uri rutaLangilea = new Uri("https://localhost:44367/api/langileak/");
         public async Task<IList<Langilea>> GetLangileak()
         {
 

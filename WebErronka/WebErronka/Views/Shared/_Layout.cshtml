@@ -28,9 +28,43 @@
                                 PodiumJokoak
                             </a>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Jokoa1</a>
-                              <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Jokoa2</a>
-                              <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Jokoa3</a>
+                                @*<a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-parameterName="@joko1id" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 1 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-parameterName="@joko2id" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 2 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-parameterName="@joko3id" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 3 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-parameterName="@joko4id" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 4 })</a>*@
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                BalorazioaJokoak
+                            </a>
+                            @{
+                                int joko1id = 1;
+                                int joko2id = 2;
+                                int joko3id = 3;
+                                int joko4id = 4;
+                            }
+                            <div class="dropdown-menu">
+@*                                <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko1id" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 1 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko2id" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 2 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko3id" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 3 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko4id" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 4 })</a>*@
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Partaideak
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Talde1</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Talde2</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Talde3</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Talde4</a>
                             </div>
                         </li>
                        

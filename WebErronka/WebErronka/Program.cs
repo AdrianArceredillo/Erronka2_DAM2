@@ -27,6 +27,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ILangileaService, LangileaService>();
 builder.Services.AddScoped<IBalorazioaService, BalorazioaService>();
 builder.Services.AddScoped<IPartidaService, PartidaService>();
+builder.Services.AddScoped<IJokoaService, JokoaService>();
+
 
 
 var app = builder.Build();

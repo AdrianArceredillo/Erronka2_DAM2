@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebErronka", "WebErronka\WebErronka.csproj", "{B264C55B-7F60-409E-881B-24F145CA3EDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B264C55B-7F60-409E-881B-24F145CA3EDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B264C55B-7F60-409E-881B-24F145CA3EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B264C55B-7F60-409E-881B-24F145CA3EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B264C55B-7F60-409E-881B-24F145CA3EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F9B2B62-157D-4A55-904D-93448439D935}
+	EndGlobalSection
+EndGlobal

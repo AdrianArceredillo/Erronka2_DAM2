@@ -19,6 +19,7 @@ TagManager:
   - healthBar - inside
   - efecto sangrado
   - mancha sangre
+  - menu resumen
   layers:
   - Default
   - TransparentFX

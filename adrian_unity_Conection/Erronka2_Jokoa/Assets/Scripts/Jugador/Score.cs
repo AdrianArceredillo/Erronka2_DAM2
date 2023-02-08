@@ -29,6 +29,12 @@ public class Score : MonoBehaviour
     public Text lblScore;   //lbl puntuación de la partida
     public Text lblLives;   //lbl vidas restantes
 
+    [SerializeField] private GameObject personaje_Camina;       //personaje caminando
+    [SerializeField] private GameObject personaje_Disparando;   //personaje disparando
+
+
+    [SerializeField] private GameObject finalPartida_notificacion;      //mensaje de final de partida
+    [SerializeField] private GameObject menuResumen;                    //elemento que será el menú
 
     void Start()
     {
@@ -60,6 +66,10 @@ public class Score : MonoBehaviour
         //lblNombre.color = Color.red;
         //lblScore.color = Color.red;
         //lblLives.color = Color.red;
+
+        //finalPartida_notificacion.SetActive(false);
+        menuResumen.SetActive(false);
+        finalPartida_notificacion.SetActive(false);
 
     }
 
@@ -129,14 +139,20 @@ public class Score : MonoBehaviour
                 color_stain.a = 90f;
                 bloodStain_image.color = color_stain;
 
+
+
                 bloodStain_image.gameObject.SetActive(true);
 
-                ChangeColor_LabelsPartida();
+                personaje_Camina.SetActive(false);      //bloquear movimiento - andar
+                personaje_Disparando.SetActive(false);  //bloquear movimiento - disparar
+
+                finalPartida_notificacion.SetActive(true);
 
 
-                Invoke(nameof(jokoa_itxi), 3.0f);   //finalizar la partida
-                //jokoa_itxi();  
+                //ChangeColor_LabelsPartida();
 
+
+                //Invoke(nameof(jokoa_itxi), 3.0f);   //finalizar la partida
                 Debug.Log("La partida ha terminado...");
             }
 
@@ -197,18 +213,6 @@ public class Score : MonoBehaviour
     {
         Color c = new Color(r, g, b, a);
         bloodEffect_image.color = c;
-    }
-    private void ChangeColor_LabelsPartida()
-    {
-        //etiquetas información (labels)
-        lblNombre.color = Color.black;
-        lblScore.color = Color.black;
-        lblLives.color = Color.black;
-
-        //datos a guardar de la partida
-        MyScoreText.color = Color.white;
-        PlayerText.color = Color.white;
-
     }
 
     #endregion

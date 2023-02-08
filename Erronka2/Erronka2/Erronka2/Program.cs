@@ -17,6 +17,8 @@ builder.Services.AddControllersWithViews();
 
 //Gure zerbitzuak -- Guk ipinitakue
 builder.Services.AddScoped<ILangileaService, LangileaService>();
+builder.Services.AddScoped<IPartidaService, PartidaService>();
+builder.Services.AddScoped<IBalorazioaService, BalorazioaService>();
 
 var app = builder.Build();
 

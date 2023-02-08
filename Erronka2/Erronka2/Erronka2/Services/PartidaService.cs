@@ -4,27 +4,28 @@ using Newtonsoft.Json;
 
 namespace Erronka2.Services
 {
-    public class LangileaService : ILangileaService
+    public class PartidaService : IPartidaService
     {
         private Uri rutaTodos = new Uri("https://localhost:44367/api/Partida/");
 
-        public Task<Langilea> GetLangilea(string user)
+        public Task<Partida> GetPartida(int id)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<List<Langilea>> GetLangileak()  //zerrenda
+        public async Task<List<Partida>> GetPartidak()  //zerrenda
         {
-            List<Langilea> langileaList = new List<Langilea>();
+            List<Partida> partidaList = new List<Partida>();
             using (var httpClient = new HttpClient())
             {
                 using (var response = await httpClient.GetAsync(rutaTodos))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
-                    langileaList = JsonConvert.DeserializeObject<List<Langilea>>(apiResponse);
+                    partidaList = JsonConvert.DeserializeObject<List<Partida>>(apiResponse);
                 }
             }
-            return langileaList;
+            return partidaList;
         }
     }
+    
 }

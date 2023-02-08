@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Erronka2.Models.Balorazioa>
+
+<div class="container">
+    <h3>@ViewBag.izena-ren balorazioak</h3>
+
+
+    <table class="table">
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Erabiltzailea)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Testua)
+                    </td>
+                    <td>
+                        @for (int i = 1; i <= item.Kopurua; i++)
+                        {
+                            <img id="izarra" src="~/images/izarra.png" />
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Data)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p>
+        Balorazioa egiteko: <a asp-action="Create" asp-route-upeltegiaId=@Model.First().LangileaId>Berria</a>
+    </p>
+</div>

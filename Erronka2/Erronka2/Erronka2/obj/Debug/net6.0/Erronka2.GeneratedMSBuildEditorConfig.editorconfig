@@ -19,6 +19,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/arginzoniz.joseba/Desktop/Erronka2_DAM2/Erronka2/Erronka2/Erronka2/Views/Balorazioa/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsb3JhemlvYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/arginzoniz.joseba/Desktop/Erronka2_DAM2/Erronka2/Erronka2/Erronka2/Views/Balorazioa/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsb3JhemlvYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/arginzoniz.joseba/Desktop/Erronka2_DAM2/Erronka2/Erronka2/Erronka2/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -33,6 +41,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/arginzoniz.joseba/Desktop/Erronka2_DAM2/Erronka2/Erronka2/Erronka2/Views/Shared/Langileak/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExhbmdpbGVha1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/arginzoniz.joseba/Desktop/Erronka2_DAM2/Erronka2/Erronka2/Erronka2/Views/Shared/Partidak/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpZGFrXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/arginzoniz.joseba/Desktop/Erronka2_DAM2/Erronka2/Erronka2/Erronka2/Views/Shared/_LoginPartial.cshtml]

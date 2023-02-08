@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Erronka2.Models.Langilea>
+﻿@model IEnumerable<Erronka2.Models.Partida>
 
 @{
     ViewData["Title"] = "Default";
@@ -13,19 +13,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.email)
+                @Html.DisplayNameFor(model => model.partidaId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.izena)
+                @Html.DisplayNameFor(model => model.langilea)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.user)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.jaiotzedata)
+                @Html.DisplayNameFor(model => model.puntuazioa)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.taldea)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.data)
             </th>
             <th></th>
         </tr>
@@ -34,19 +34,19 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.email)
+                @Html.DisplayFor(modelItem => item.partidaId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.izena)
+                @Html.DisplayFor(modelItem => item.langilea)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.user)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.jaiotzedata)
+                @Html.DisplayFor(modelItem => item.puntuazioa)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.taldea)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.data)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |

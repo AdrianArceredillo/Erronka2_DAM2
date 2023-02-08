@@ -88,3 +88,7 @@ public class Combate : MonoBehaviour
     }
 
 }
+
+
+//desplazar enemigo 1: https://www.youtube.com/watch?v=XqSIHjLofCk
+//desplazar enemigo 2: https://www.youtube.com/watch?v=fh4H1bPKGfo

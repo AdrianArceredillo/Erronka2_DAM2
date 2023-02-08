@@ -15,6 +15,10 @@ TagManager:
   - plat_fence
   - enemigo_mov
   - Player_Disparando
+  - healthBar - border
+  - healthBar - inside
+  - efecto sangrado
+  - mancha sangre
   layers:
   - Default
   - TransparentFX
@@ -63,4 +67,7 @@ TagManager:
     locked: 0
   - name: Jugador
     uniqueID: 3881920271
+    locked: 0
+  - name: Indicador Vida
+    uniqueID: 1576790073
     locked: 0

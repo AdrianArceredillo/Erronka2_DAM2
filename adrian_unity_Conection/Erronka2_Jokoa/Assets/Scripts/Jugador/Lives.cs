@@ -6,9 +6,9 @@ public class Lives : MonoBehaviour
 {
 
     public int lives;   //número de vidas
-    public GameObject img_Live1;
-    public GameObject img_Live2;
-    //public GameObject img_Live3;
+    public GameObject heart_1;
+    public GameObject heart_2;
+    public GameObject heart_3;
     //public GameObject img_Live4;
     //public GameObject img_Live5;
 

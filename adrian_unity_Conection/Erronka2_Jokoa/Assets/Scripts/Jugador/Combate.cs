@@ -21,7 +21,7 @@ public class Combate : MonoBehaviour
 
 
     private int num_Vidas = 5;  //número de vidas de la partida
-
+    
     // Start is called before the first frame update
     void Start()
     {

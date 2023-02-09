@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,6 +36,8 @@ public class Score : MonoBehaviour
 
     [SerializeField] private GameObject finalPartida_notificacion;      //mensaje de final de partida
     [SerializeField] private GameObject menuResumen;                    //elemento que será el menú
+
+    private bool ser_herido = false;//indicar si el personaje ha sido herido o no
 
     void Start()
     {
@@ -71,30 +74,14 @@ public class Score : MonoBehaviour
         menuResumen.SetActive(false);
         finalPartida_notificacion.SetActive(false);
 
+
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if (collision.transform.tag == "enemigo")
-        //{
-        //    int puntuacion_Partida = Int32.Parse(MyScoreText.text);
-        //    puntuacion_Partida = puntuacion_Partida + 100;
-        //    MyScoreText.text = puntuacion_Partida.ToString();
-
-        //    int curren_Points = Int32.Parse(MyScoreText.text);
-        //    if (curren_Points > 0)
-        //    {
-        //        MyScoreText.color = Color.green;
-        //    }
-        //    else
-        //    {
-        //        MyScoreText.color = Color.red;
-        //    }
-        //}
-
         if (collision.transform.tag == "Player")
         {
-
             //a += 0.1f;
             //a = Mathf.Clamp(a, 0, 1f);
             //ChangeColor();
@@ -256,10 +243,6 @@ public class Score : MonoBehaviour
     #endregion
 
 
-
-
-
-
     public void jokoa_itxi()
     {
         /*
@@ -268,7 +251,7 @@ public class Score : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-    Application.Quit();
+        Application.Quit();
 #endif
 
         Application.Quit();

@@ -1128,6 +1128,7 @@ GameObject:
   - component: {fileID: 171640877}
   - component: {fileID: 171640879}
   - component: {fileID: 171640878}
+  - component: {fileID: 171640880}
   m_Layer: 5
   m_Name: Laburpena
   m_TagString: Untagged
@@ -1195,6 +1196,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171640876}
   m_CullTransparentMesh: 1
+--- !u!114 &171640880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171640876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144bbf908be772043b701e976a244905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoJugador: {fileID: 1402799240}
+  infoPuntuacion: {fileID: 311852697}
+  infoFechaPartida: {fileID: 1365271734}
 --- !u!1 &181387541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,7 +1224,6 @@ GameObject:
   - component: {fileID: 181387545}
   - component: {fileID: 181387543}
   - component: {fileID: 181387546}
-  - component: {fileID: 181387547}
   m_Layer: 0
   m_Name: Disparos
   m_TagString: Player_Disparando
@@ -1357,37 +1372,10 @@ MonoBehaviour:
   velocidad: 2
   Enemigo: {fileID: 1531501178}
   Enemigo_Movimiento: {fileID: 1560080505}
-  maxX: 7
+  maxX: 40
   minX: -7
   maxY: 2
   minY: -3
---- !u!114 &181387547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181387541}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bf0967e7e8adb548a6774722a3427ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyScoreText: {fileID: 1322158028}
-  PlayerText: {fileID: 0}
-  lives: 0
-  heart_1: {fileID: 0}
-  heart_2: {fileID: 0}
-  heart_3: {fileID: 0}
-  bloodEffect_image: {fileID: 0}
-  bloodStain_image: {fileID: 0}
-  lblNombre: {fileID: 0}
-  lblScore: {fileID: 0}
-  lblLives: {fileID: 0}
-  personaje_Camina: {fileID: 0}
-  personaje_Disparando: {fileID: 0}
-  finalPartida_notificacion: {fileID: 0}
-  menuResumen: {fileID: 0}
 --- !u!1 &186281740
 GameObject:
   m_ObjectHideFlags: 0
@@ -2867,18 +2855,15 @@ PolygonCollider2D:
       - {x: 8.929999, y: -3.81}
       - {x: 8.730005, y: -3.7801948}
       - {x: 8.595035, y: -3.7321556}
-      - {x: 7.1327157, y: -3.7624688}
-      - {x: 7.082627, y: -3.7658114}
-      - {x: 6.998499, y: -3.8008149}
+      - {x: 7.1194763, y: -3.725631}
+      - {x: 6.9819503, y: -3.763977}
       - {x: 6.9126067, y: -3.8274608}
-      - {x: 6.885605, y: -3.8255336}
-      - {x: 6.8185987, y: -3.8472447}
-      - {x: 6.7650633, y: -3.952944}
-      - {x: 6.5992603, y: -4.037846}
-      - {x: 6.4642396, y: -3.9704258}
-      - {x: 6.3660975, y: -4.0028}
-      - {x: 6.249321, y: -3.7877824}
-      - {x: 6.0895724, y: -3.7333167}
+      - {x: 6.8185987, y: -3.8211691}
+      - {x: 6.6576095, y: -3.9013548}
+      - {x: 6.5034547, y: -3.8365908}
+      - {x: 6.323675, y: -3.8404822}
+      - {x: 6.2118354, y: -3.7486682}
+      - {x: 5.897485, y: -3.716075}
       - {x: 2.5947618, y: -3.7252529}
       - {x: 2.58, y: -3.72}
       - {x: 2.5152378, y: -3.7805066}
@@ -4625,6 +4610,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 686549804}
+  - component: {fileID: 686549805}
   m_Layer: 5
   m_Name: Final Partida Notificacion
   m_TagString: Untagged
@@ -4654,6 +4640,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &686549805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686549803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28cb1722b2d467644a154fd423613f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt_jugador: {fileID: 1420744780}
+  txt_puntuacion: {fileID: 1322158028}
 --- !u!1 &694704395
 GameObject:
   m_ObjectHideFlags: 0
@@ -6787,6 +6787,10 @@ MonoBehaviour:
   personaje_Camina: {fileID: 1264456535}
   personaje_Disparando: {fileID: 181387541}
   texto_Fondo: {fileID: 0}
+  txt_jugador: {fileID: 1420744780}
+  txt_puntuacion: {fileID: 1322158028}
+  txt_jugador_resumen: {fileID: 0}
+  txt_puntuacion_resumen: {fileID: 0}
 --- !u!1 &1064441075
 GameObject:
   m_ObjectHideFlags: 0
@@ -7888,7 +7892,6 @@ GameObject:
   - component: {fileID: 1264456543}
   - component: {fileID: 1264456544}
   - component: {fileID: 1264456545}
-  - component: {fileID: 1264456546}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -8154,33 +8157,6 @@ MonoBehaviour:
   heart_1: {fileID: 0}
   heart_2: {fileID: 0}
   heart_3: {fileID: 0}
---- !u!114 &1264456546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264456535}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bf0967e7e8adb548a6774722a3427ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyScoreText: {fileID: 1322158028}
-  PlayerText: {fileID: 0}
-  lives: 0
-  heart_1: {fileID: 0}
-  heart_2: {fileID: 0}
-  heart_3: {fileID: 0}
-  bloodEffect_image: {fileID: 0}
-  bloodStain_image: {fileID: 0}
-  lblNombre: {fileID: 0}
-  lblScore: {fileID: 0}
-  lblLives: {fileID: 0}
-  personaje_Camina: {fileID: 0}
-  personaje_Disparando: {fileID: 0}
-  finalPartida_notificacion: {fileID: 0}
-  menuResumen: {fileID: 0}
 --- !u!1 &1279074993
 GameObject:
   m_ObjectHideFlags: 0
@@ -10281,7 +10257,7 @@ GameObject:
   - component: {fileID: 1531501182}
   - component: {fileID: 1531501184}
   - component: {fileID: 1531501185}
-  - component: {fileID: 1531501186}
+  - component: {fileID: 1531501188}
   - component: {fileID: 1531501187}
   m_Layer: 0
   m_Name: Zombie Quieto
@@ -10485,7 +10461,23 @@ MonoBehaviour:
   personaje: {fileID: 1264456535}
   zombie: {fileID: 1531501178}
   movimiento_Zombie: {fileID: 1560080505}
---- !u!114 &1531501186
+--- !u!114 &1531501187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531501178}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1398c6776e7a7dd42b389d94f6de2eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 3
+  heart_1: {fileID: 1666000858}
+  heart_2: {fileID: 1997451966}
+  heart_3: {fileID: 1987565258}
+--- !u!114 &1531501188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10512,22 +10504,6 @@ MonoBehaviour:
   personaje_Disparando: {fileID: 181387541}
   finalPartida_notificacion: {fileID: 686549803}
   menuResumen: {fileID: 0}
---- !u!114 &1531501187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531501178}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1398c6776e7a7dd42b389d94f6de2eb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lives: 3
-  heart_1: {fileID: 1666000858}
-  heart_2: {fileID: 1997451966}
-  heart_3: {fileID: 1987565258}
 --- !u!1 &1560080505
 GameObject:
   m_ObjectHideFlags: 0
@@ -11043,7 +11019,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0}
+  m_AnchoredPosition: {x: 0.000061035156, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1623673248

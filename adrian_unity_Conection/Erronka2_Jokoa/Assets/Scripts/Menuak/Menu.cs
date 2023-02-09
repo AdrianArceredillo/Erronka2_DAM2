@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
@@ -17,6 +19,14 @@ public class Menu : MonoBehaviour
     private bool juegoPausado = false;
 
     [SerializeField] private GameObject texto_Fondo;    //texto fondo de menú (logo juego)
+
+
+    public Text txt_jugador;        //txt leer
+    public Text txt_puntuacion;     //txt leer
+
+    public Text txt_jugador_resumen;        //txt escribir
+    public Text txt_puntuacion_resumen;     //txt escribir
+
 
     private void Update()
     {
@@ -49,6 +59,19 @@ public class Menu : MonoBehaviour
         finalPartida_notificacion.SetActive(false);
         botonContinuar.SetActive(false);    //deshabilitar el botón de pausa
         menuResumen.SetActive(true);      //activar y visualizar el menú de pausa
+
+
+        StateResumenPartida.jugador = txt_jugador.text;
+        try
+        {
+            int ptos = Int32.Parse(txt_puntuacion.text.Trim());
+            StateResumenPartida.puntuacion = ptos;
+        }
+        catch
+        {
+            StateResumenPartida.puntuacion = 0;
+        }
+
     }
 
     //función para reanudar la partida

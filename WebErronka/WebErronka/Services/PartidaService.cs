@@ -36,7 +36,7 @@ namespace WebErronka.Services
                     sortedList = partidaList.OrderByDescending(x => x.puntuazioa).ToList();
                 }
             }
-            return partidaList;
+            return sortedList;
         }
 
         public async Task<List<Partida>> GetPartidakJokuarekiko(int jokuaId)

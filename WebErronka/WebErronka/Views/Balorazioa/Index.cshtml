@@ -1,0 +1,52 @@
+﻿@model IEnumerable<WebErronka.Models.Balorazioa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Erabiltzailea)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kopurua)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Erabiltzailea)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kopurua)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+        Balorazioa egiteko:
+        <a asp-action="Create" asp-route-upeltegiaId=@Model.First().jokoa>Berria</a>
+
+
+    </tbody>
+</table>

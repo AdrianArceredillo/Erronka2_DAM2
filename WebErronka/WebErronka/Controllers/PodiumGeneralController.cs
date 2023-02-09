@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebErronka.Models;
 using WebErronka.Services;
 using WebErronka.ViewModels;
 
@@ -10,22 +9,23 @@ namespace WebErronka.Controllers
         private readonly IPartidaService _partidaService;
         public async Task<IActionResult> IndexAsync()
         {
-            IList<Partida> balorazioList = new List<Partida>();
+
             var partidaList = await _partidaService.GetPartidak();
 
             //Partida bakoitzaren datuak hartu
-            IList<PodiumJokoakViewModel> podiumVMlist = new List<PodiumJokoakViewModel>();
-            foreach (var x in balorazioList)
+            IList<PodiumGeneralaViewModel> podiumVMlist = new List<PodiumGeneralaViewModel>();
+            foreach (var x in partidaList)
             {
 
-                PodiumJokoakViewModel podiumViewModel = new PodiumJokoakViewModel()
+                PodiumGeneralaViewModel podiumGeneralaViewModel = new PodiumGeneralaViewModel()
                 {
+                    jokoa = x.jokoa,
                     jokalaria = x.langilea,
                     puntuazioa = x.puntuazioa,
                     taldea = x.taldea,
 
                 };
-                podiumVMlist.Add(podiumViewModel);
+                podiumVMlist.Add(podiumGeneralaViewModel);
             }
             var modelberria = new PodiumJokoakViewModel(); //Bistaratuko dugun ViewModel osoa
 

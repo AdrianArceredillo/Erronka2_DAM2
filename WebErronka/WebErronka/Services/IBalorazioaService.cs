@@ -4,7 +4,8 @@ namespace WebErronka.Services
 {
     public interface IBalorazioaService
     {
-        Task<Balorazioa> GetBalorazioa(int id);
+        Task<IList<Balorazioa>> GetBalorazioakJokoarekiko(string jokoa);
         Task<IList<Balorazioa>> GetBalorazioak();
+        Task BalorazioaGehitu(Balorazioa balorazioa);
     }
 }

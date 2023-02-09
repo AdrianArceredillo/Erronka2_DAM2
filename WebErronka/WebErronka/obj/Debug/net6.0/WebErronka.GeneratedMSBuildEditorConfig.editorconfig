@@ -19,12 +19,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/Balorazioa/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsb3JhemlvYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/Balorazioa/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsb3JhemlvYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/PodiumGeneral/IndexAsync.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9kaXVtR2VuZXJhbFxJbmRleEFzeW5jLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/PodiumJokoak/IndexAsync.cshtml]

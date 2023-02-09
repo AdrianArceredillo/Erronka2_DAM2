@@ -13,7 +13,7 @@
 
         public DateTime data;
 
-        public int jokoa;
+        public string jokoa;
 
     }
 }

@@ -33,7 +33,7 @@ public class MainController {
     }
 
     @GetMapping("/partidak/{jokoa}")
-    public List<Partida> getPartidas(@PathVariable int jokoa) {
+    public List<Partida> getPartidas(@PathVariable String jokoa) {
         return partidaRepository.findByJokoaEquals(jokoa);
     }
 

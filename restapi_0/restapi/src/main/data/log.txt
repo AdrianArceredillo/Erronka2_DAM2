@@ -23,3 +23,8 @@
 [09/02/2023 12:15:09][127.0.0.1] /all_Partida metodoa erabili du
 [09/02/2023 12:43:37][127.0.0.1] /all_Partida metodoa erabili du
 [09/02/2023 12:48:13][127.0.0.1] /all_Partida metodoa erabili du
+[09/02/2023 13:27:19][192.168.65.9] /all_Partida metodoa erabili du
+[09/02/2023 13:27:29][192.168.65.9] /all_Langilea metodoa erabili du
+[09/02/2023 13:29:45][192.168.65.7] /all_Partida metodoa erabili du
+[09/02/2023 14:06:27][0:0:0:0:0:0:0:1] /all_Partida metodoa erabili du
+[09/02/2023 14:09:43][0:0:0:0:0:0:0:1] /all_Partida metodoa erabili du

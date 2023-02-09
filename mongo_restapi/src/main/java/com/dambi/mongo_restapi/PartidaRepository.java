@@ -8,6 +8,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import com.dambi.mongo_restapi.pojoak.Partida;
 
 public interface PartidaRepository extends MongoRepository<Partida, ObjectId> {
-    List<Partida> findByJokoaEquals(int jokoa);
+    List<Partida> findByJokoaEquals(String jokoa);
 }
     

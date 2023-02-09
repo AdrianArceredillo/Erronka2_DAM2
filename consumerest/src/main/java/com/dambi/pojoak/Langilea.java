@@ -1,6 +1,7 @@
 package com.dambi.pojoak;
 
 import java.security.Timestamp;
+import java.util.Date;
 
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
@@ -12,7 +13,8 @@ import jakarta.xml.bind.annotation.XmlType;
 public class Langilea {
 
     int taldea;
-    String email, izena, user, jaiotzadata;
+    String email, izena, user;
+    Date jaiotzadata;
 
     @XmlElement(name = "email")
     public String getEmail() {
@@ -42,11 +44,11 @@ public class Langilea {
     }
 
     @XmlElement(name = "JaiotzaData")
-    public String getJaiotzaData() {
+    public Date getJaiotzaData() {
         return jaiotzadata;
     }
 
-    public void setJaiotzaData(String jaiotzaData) {
+    public void setJaiotzaData(Date jaiotzaData) {
         this.jaiotzadata = jaiotzaData;
     }
 

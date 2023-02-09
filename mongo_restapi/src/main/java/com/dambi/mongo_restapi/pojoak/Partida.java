@@ -13,7 +13,7 @@ public class Partida {
     private String langilea;
     private int puntuazioa;
     private Date data;
-    private int jokoa;
+    private String jokoa;
     
     //ID
     // public ObjectId get_id() {
@@ -56,11 +56,11 @@ public class Partida {
         this.data = data;
     }
     //JOKOA
-    public int getJokoa() {
+    public String getJokoa() {
         return jokoa;
     }
 
-    public void setJokoa(int jokoa) {
+    public void setJokoa(String jokoa) {
         this.jokoa = jokoa;
     }
 

@@ -1,6 +1,10 @@
 package com.dambi.mongo;
 
-import com.dambi.atzipenekoak.JsonaP;
+import com.dambi.atzipenekoak.JsonaLangileak;
+import com.dambi.atzipenekoak.JsonaPartidak;
+import com.dambi.atzipenekoak.Log;
+import com.dambi.pojoak.Langilea;
+import com.dambi.pojoak.Langileak;
 import com.dambi.pojoak.Partida;
 
 import com.dambi.pojoak.Partidak;
@@ -22,22 +26,19 @@ import org.apache.http.util.EntityUtils;
 import org.bson.Document;
 
 public class insert {
-    public static void main(String[] args) {
+    public static void insertPartida(String link, String jokoa) {
 
-
-
-
-        
         System.out.print("\033[H\033[2J");
         System.out.flush();
 
         String content = "";
         HttpClient client = HttpClientBuilder.create().build();
 
-        HttpGet request = new HttpGet("http://localhost:8080/demo/all_Partida");
+        HttpGet request = new HttpGet(link);
 
         Partidak partidak = new Partidak();
 
+        // Json fitxategi batean idatzi lortutako informazioa:
         try {
             HttpResponse response = client.execute(request);
             HttpEntity entity = response.getEntity();
@@ -47,19 +48,13 @@ public class insert {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fitxategia));
             writer.write(content);
             writer.close();
-
-            // Langileak langileak = JsonaL.irakurri(fitxategia);
-            // System.out.println(langileak);
-
-            partidak = JsonaP.irakurri(fitxategia, 1);
-
+            // Fitxategia irakurri eta datuak lortu
+            partidak = JsonaPartidak.irakurri(fitxategia, jokoa);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-
-
-        MongoClient mongo = MongoClients.create("mongodb://127.0.0.1:27017");
+        MongoClient mongo = MongoClients.create("mongodb://127.0.0.1:27017"); // Datu Basearen Helbidea
 
         MongoDatabase db = mongo.getDatabase("Erronka2");
 
@@ -74,7 +69,56 @@ public class insert {
             db.getCollection("partida").insertOne(doc);
 
         }
- 
+        Log.logIdatzi(link + " erabiliz, partiden informazioa gorde da.");
         mongo.close();
     }
+
+    public static void insertLangilea(String link) {
+
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+
+        String content = "";
+        HttpClient client = HttpClientBuilder.create().build();
+
+        HttpGet request = new HttpGet(link);
+
+        Langileak langileak = new Langileak();
+
+        // Json fitxategi batean idatzi lortutako informazioa:
+        try {
+            HttpResponse response = client.execute(request);
+            HttpEntity entity = response.getEntity();
+            content = EntityUtils.toString(entity);
+
+            String fitxategia = "./src/main/java/com/dambi/data/informazioa.json";
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fitxategia));
+            writer.write(content);
+            writer.close();
+            // Fitxategia irakurri eta datuak lortu
+            langileak = JsonaLangileak.irakurri(fitxategia);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        MongoClient mongo = MongoClients.create("mongodb://127.0.0.1:27017"); // Datu Basearen Helbidea
+
+        MongoDatabase db = mongo.getDatabase("Erronka2");
+
+        for (Langilea langilea : langileak.getLangileak()) {
+
+            Document doc = new Document("email", langilea.getEmail())
+                    .append("izena", langilea.getIzena())
+                    .append("user", langilea.getUser())
+                    .append("jaiotzadata", langilea.getJaiotzaData())
+                    .append("taldea", langilea.getTaldea());
+
+            db.getCollection("langilea").insertOne(doc);
+
+        }
+
+        Log.logIdatzi(link + " erabiliz, langileen informazioa gorde da.");
+        mongo.close();
+    }
+
 }

@@ -1,4 +1,4 @@
-package com.dambi.atzipenekoak;
+package com.dambi.restapi.erabilgarria;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -11,7 +11,7 @@ public class Log {
                     // Log-a idatzi
                     try {
                         System.out.println(new File("").getAbsolutePath());
-                        FileWriter fw = new FileWriter("./src/main/java/com/dambi/data/log.txt", true);
+                        FileWriter fw = new FileWriter("./restapi/src/main/data/log.txt", true);
                         BufferedWriter bw = new BufferedWriter(fw);
                         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
                         Date date = new Date();

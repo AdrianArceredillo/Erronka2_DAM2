@@ -1,5 +1,6 @@
 package com.dambi.atzipenekoak;
 
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
@@ -21,46 +22,47 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.dambi.pojoak.Langilea;
+import com.dambi.pojoak.Langileak;
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 // import org.json.simple.JSONObject;
+
 // import org.json.simple.parser.JSONParser;
 
-import com.dambi.pojoak.Partida;
-import com.dambi.pojoak.Partidak;
-
 import java.io.FileReader;
+import java.io.FileWriter;
 
+public class JsonaLangileak {
 
-public class JsonaP {
+    public static Langileak irakurri(String strFileIn) {
 
-        public static Partidak irakurri(String strFileIn, int jokoa) {
-
-        Partidak partidak = null;
+        Langileak langileak = null;
         try {
             JsonReader reader = Json.createReader(new FileReader(strFileIn));
             JsonStructure jsonst = reader.read();
             JsonArray jsonarray = jsonst.asJsonArray();
-            partidak = new Partidak();
+            langileak = new Langileak();
             for (int i = 0; i < jsonarray.size(); i++) {
                 JsonObject jsonobj = jsonarray.getJsonObject(i);
-                Partida partida = new Partida();
-                partida.setId(jsonobj.getInt("id"));
-                partida.setLangilea(jsonobj.getString("langilea"));
-                partida.setPuntuazioa((jsonobj.getInt("puntuazioa")));
+                Langilea langilea = new Langilea();
+                langilea.setEmail(jsonobj.getString("email"));
+                langilea.setIzena(jsonobj.getString("izena"));
+                langilea.setUser((jsonobj.getString("user")));
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
-                Date date = sdf.parse(jsonobj.getString("data"));
-                partida.setData(date);
-                partida.setJokoa(jokoa);
-                partidak.add(partida);
+                Date date = sdf.parse(jsonobj.getString("jaiotzadata"));
+                langilea.setJaiotzaData(date);
+                langilea.setTaldea(jsonobj.getInt("taldea"));
+                langileak.add(langilea);
             }
             
         } catch (Exception e) {
             System.out.println("Arazoak String-a irakurtzerakoan.");
         }
-        return partidak;
+        return langileak;
     }
 
 }

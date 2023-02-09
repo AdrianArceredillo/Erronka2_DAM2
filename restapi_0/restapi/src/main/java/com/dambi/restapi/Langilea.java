@@ -39,11 +39,11 @@ public class Langilea {
         this.user = user;
     }
 
-    public String getJaiotzaData() {
+    public String getJaiotzadata() {
         return jaiotzadata.toString();
     }
 
-    public void setJaiotzaData(Timestamp jaiotzadata) {
+    public void setJaiotzadata(Timestamp jaiotzadata) {
         this.jaiotzadata = jaiotzadata;
     }
 

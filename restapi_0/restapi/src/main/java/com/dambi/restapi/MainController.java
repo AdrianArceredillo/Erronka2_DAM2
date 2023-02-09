@@ -12,6 +12,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +22,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.dambi.restapi.erabilgarria.Log;
 
 import antlr.StringUtils;
 
@@ -34,6 +38,26 @@ public class MainController {
     @Autowired
     private LangileaRepository langileaRepository;
 
+
+    private String getClientIpAddress(HttpServletRequest request) {
+        String clientIp = request.getHeader("X-Forwarded-For");
+        if (clientIp == null || clientIp.length() == 0 || "unknown".equalsIgnoreCase(clientIp)) {
+            clientIp = request.getHeader("Proxy-Client-IP");
+        }
+        if (clientIp == null || clientIp.length() == 0 || "unknown".equalsIgnoreCase(clientIp)) {
+            clientIp = request.getHeader("WL-Proxy-Client-IP");
+        }
+        if (clientIp == null || clientIp.length() == 0 || "unknown".equalsIgnoreCase(clientIp)) {
+            clientIp = request.getHeader("HTTP_CLIENT_IP");
+        }
+        if (clientIp == null || clientIp.length() == 0 || "unknown".equalsIgnoreCase(clientIp)) {
+            clientIp = request.getHeader("HTTP_X_FORWARDED_FOR");
+        }
+        if (clientIp == null || clientIp.length() == 0 || "unknown".equalsIgnoreCase(clientIp)) {
+            clientIp = request.getRemoteAddr();
+        }
+        return clientIp;
+    }
     // @PostMapping(path = "/add_Partida") // Map ONLY POST Requests
     // public @ResponseBody String addNewPartida(
     // @RequestParam int langilea,
@@ -56,110 +80,115 @@ public class MainController {
     // }
 
     @GetMapping(path = "/all_Partida")
-    public @ResponseBody Iterable<Partida> getAllPartida() {
-        // This returns a JSON or XML with the users
+    public @ResponseBody Iterable<Partida> getAllPartida(HttpServletRequest request) {
+        String clientIp = getClientIpAddress(request);
+        Log.logIdatzi("[" + clientIp + "] /all_Partida metodoa erabili du");
+        System.out.println("Client IP: " + clientIp);
         return partidaRepository.findAll();
     }
 
-    @GetMapping(path = "/PartidaBat")
-    public @ResponseBody Optional<Partida> getPartidaBat(int partidaId) {
-        // This returns a JSON or XML with the users
-        return partidaRepository.findById(partidaId);
-    }
 
-    @RestController
-    @RequestMapping("/queryIdPartida")
-    public class QueryController {
 
-        private final JdbcTemplate jdbcTemplate;
+    // @GetMapping(path = "/PartidaBat")
+    // public @ResponseBody Optional<Partida> getPartidaBat(int partidaId) {
+    //     // This returns a JSON or XML with the users
+    //     return partidaRepository.findById(partidaId);
+    // }
 
-        @Autowired
-        public QueryController(JdbcTemplate jdbcTemplate) {
-            this.jdbcTemplate = jdbcTemplate;
-        }
+    // @RestController
+    // @RequestMapping("/queryIdPartida")
+    // public class QueryController {
 
-        @GetMapping
-        public List<Map<String, Object>> executeQuery(
-                @RequestParam("Izena") String izena,
-                @RequestParam("Taldearen zenbakia") int taldea,
-                @RequestParam("id") String id) {
+    //     private final JdbcTemplate jdbcTemplate;
 
-            // Log-a idatzi
-            try {
-                System.out.println(new File("").getAbsolutePath());
-                FileWriter fw = new FileWriter("./restapi/src/main/data/log.txt", true);
-                BufferedWriter bw = new BufferedWriter(fw);
-                SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-                Date date = new Date();
-                bw.write("[" + formatter.format(date) + "][" + taldea + " Taldea][" + izena + "][queryIdPartida, id= "
-                        + id + "]");
-                bw.newLine();
-                bw.close();
-            } catch (Exception e) {
-                System.out.println(e);
-            }
+    //     @Autowired
+    //     public QueryController(JdbcTemplate jdbcTemplate) {
+    //         this.jdbcTemplate = jdbcTemplate;
+    //     }
 
-            String sql = "SELECT id, puntuazioa, data," +
-                    "CASE" +
-                    "WHEN langilea = 43 THEN 'Adrian'" +
-                    "WHEN langilea = 44 THEN 'Haritz'" +
-                    "WHEN langilea = 52 THEN 'josebaa'" +
-                    "WHEN langilea = 46 THEN 'alain'" +
-                    "ELSE 'balio okerra'" +
-                    "END AS langilea" +
-                    "FROM library_partida" +
-                    "WHERE id > " + id + " AND langilea = 43 or langilea = 44 or langilea = 52 or langilea = 46";
+    //     @GetMapping
+    //     public List<Map<String, Object>> executeQuery(
+    //             @RequestParam("Izena") String izena,
+    //             @RequestParam("Taldearen zenbakia") int taldea,
+    //             @RequestParam("id") String id) {
 
-            return jdbcTemplate.queryForList(sql);
-        }
-    }
+    //         // Log-a idatzi
+    //         try {
+    //             System.out.println(new File("").getAbsolutePath());
+    //             FileWriter fw = new FileWriter("./restapi/src/main/data/log.txt", true);
+    //             BufferedWriter bw = new BufferedWriter(fw);
+    //             SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+    //             Date date = new Date();
+    //             bw.write("[" + formatter.format(date) + "][" + taldea + " Taldea][" + izena + "][queryIdPartida, id= "
+    //                     + id + "]");
+    //             bw.newLine();
+    //             bw.close();
+    //         } catch (Exception e) {
+    //             System.out.println(e);
+    //         }
+
+    //         String sql = "SELECT id, puntuazioa, data," +
+    //                 "CASE" +
+    //                 "WHEN langilea = 43 THEN 'Adrian'" +
+    //                 "WHEN langilea = 44 THEN 'Haritz'" +
+    //                 "WHEN langilea = 52 THEN 'josebaa'" +
+    //                 "WHEN langilea = 46 THEN 'alain'" +
+    //                 "ELSE 'balio okerra'" +
+    //                 "END AS langilea" +
+    //                 "FROM library_partida" +
+    //                 "WHERE id > " + id + " AND langilea = 43 or langilea = 44 or langilea = 52 or langilea = 46";
+
+    //         return jdbcTemplate.queryForList(sql);
+    //     }
+    // }
 
     // ------------------------------------------------------------------------------
     // --------------- LANGILEA ----------------------------------------------------
     // ------------------------------------------------------------------------------
 
-    @PostMapping(path = "/add_Langilea") // Map ONLY POST Requests
-    public @ResponseBody String addNewLangilea(
-            @RequestParam String email,
-            @RequestParam String izena,
-            @RequestParam String user,
-            @RequestParam String jaiotzadata,
-            @RequestParam int taldea) throws ParseException {
-        // @ResponseBody means the returned String is the response, not a view name
-        // @RequestParam means it is a parameter from the GET or POST request
+    // @PostMapping(path = "/add_Langilea") // Map ONLY POST Requests
+    // public @ResponseBody String addNewLangilea(
+    //         @RequestParam String email,
+    //         @RequestParam String izena,
+    //         @RequestParam String user,
+    //         @RequestParam String jaiotzadata,
+    //         @RequestParam int taldea) throws ParseException {
+    //     // @ResponseBody means the returned String is the response, not a view name
+    //     // @RequestParam means it is a parameter from the GET or POST request
 
-        Langilea l = new Langilea();
-        l.setEmail(email);
-        l.setIzena(izena);
-        l.setUser(user);
+    //     Langilea l = new Langilea();
+    //     l.setEmail(email);
+    //     l.setIzena(izena);
+    //     l.setUser(user);
 
-        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = formatter.parse(jaiotzadata);
-        Timestamp jaiotza_Data = new Timestamp(date.getTime());
-        l.setJaiotzaData(jaiotza_Data);
+    //     DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+    //     Date date = formatter.parse(jaiotzadata);
+    //     Timestamp jaiotza_Data = new Timestamp(date.getTime());
+    //     l.setJaiotzaData(jaiotza_Data);
 
-        l.setTaldea(taldea);
+    //     l.setTaldea(taldea);
 
-        langileaRepository.save(l);
-        return "Saved";
-    }
+    //     langileaRepository.save(l);
+    //     return "Saved";
+    // }
 
     @GetMapping(path = "/all_Langilea")
-    public @ResponseBody Iterable<Langilea> getAllLangilea() {
-        // This returns a JSON or XML with the users
+    public @ResponseBody Iterable<Langilea> getAllLangilea(HttpServletRequest request) {
+        String clientIp = getClientIpAddress(request);
+        Log.logIdatzi("[" + clientIp + "] /all_Langilea metodoa erabili du");
+        System.out.println("Client IP: " + clientIp);
         return langileaRepository.findAll();
     }
 
-    @GetMapping(path = "/all_Langileaid")
-    public @ResponseBody Iterable<Langilea> getAllLangileaid() {
 
-        return langileaRepository.findAll();
-    }
+    // @GetMapping(path = "/all_Langileaid")
+    // public @ResponseBody Iterable<Langilea> getAllLangileaid() {
+    //     return langileaRepository.findAll();
+    // }
 
-    @GetMapping(path = "/LangileaBat")
-    public @ResponseBody Optional<Langilea> getLangileaBat(String langileaEmail) {
-        // This returns a JSON or XML with the users
-        return langileaRepository.findById(langileaEmail);
-    }
-
+    // @GetMapping(path = "/LangileaBat")
+    // public @ResponseBody Optional<Langilea> getLangileaBat(String langileaEmail) {
+    //     // This returns a JSON or XML with the users
+    //     return langileaRepository.findById(langileaEmail);
+    // }
 }

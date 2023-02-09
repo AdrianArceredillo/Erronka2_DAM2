@@ -54,6 +54,7 @@ public class Combate : MonoBehaviour
                 Rigidbody2D rb = Enemigo.GetComponent<Rigidbody2D>();
                 rb.velocity = Vector3.zero;
                 rb.transform.position = new Vector3(UnityEngine.Random.Range(minX, maxX), UnityEngine.Random.Range(maxY, minY), 0f);
+                Enemigo.gameObject.transform.position = rb.transform.position;
                 Enemigo_Movimiento.gameObject.transform.position = rb.transform.position;
                 //rb.transform.position = new Vector2(14f, 0.56f);
             }

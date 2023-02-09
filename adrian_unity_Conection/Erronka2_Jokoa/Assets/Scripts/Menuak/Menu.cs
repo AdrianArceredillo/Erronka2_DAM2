@@ -30,19 +30,19 @@ public class Menu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))   //activar menú al pulsar la tecla Escape
-        {
-            texto_Fondo.SetActive(false);
+        //if (Input.GetKeyDown(KeyCode.Escape))   //activar menú al pulsar la tecla Escape
+        //{
+        //    texto_Fondo.SetActive(false);
 
-            if (juegoPausado)
-            {
-                Reanudar();
-            }
-            else
-            {
-                ResumenPartida();
-            }
-        }
+        //    if (juegoPausado)
+        //    {
+        //        Reanudar();
+        //    }
+        //    else
+        //    {
+        //        ResumenPartida();
+        //    }
+        //}
     }
 
     //función que establecerá "pausa" al juego
@@ -85,21 +85,35 @@ public class Menu : MonoBehaviour
         texto_Fondo.SetActive(true);
     }
 
-    /*
-     Función para resetear la partida y empezar de nuevo:
-        - cuando esto ocurra, otro script que tendrá esta escena, reseteará 
-          la puntuación de la partida
-     */
-    public void Reiniciar()
+    //guardar los datos de la partida y regresar al menú principal
+    public void guardar_partida()
+    {
+        //guardar partida
+
+
+        //regresar al menú después de guardar la partida
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    //resetear la partida
+    public void reiniciar_partida()
     {
         juegoPausado = false;
         Time.timeScale = 1f;
 
-        //cargar la escena actual para simular el reinicio de la partida
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        texto_Fondo.SetActive(true);
     }
 
+    //volver al menú principal
+    public void return_mainMenu()
+    {
+        Time.timeScale = 1f;
+
+        Debug.Log("Volviendo al MENÚ PRINCIPAL");
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    //detener la ejecución completa del juego
     public void CerrarJuego()
     {
         /*
@@ -114,11 +128,6 @@ public class Menu : MonoBehaviour
         texto_Fondo.SetActive(true);
         Application.Quit();
         Debug.Log("Game is exiting");
-    }
-
-    public void VolverMenuMain()
-    {
-        SceneManager.LoadScene("MainMenu");
     }
 
 }

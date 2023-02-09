@@ -128,9 +128,11 @@ public class MovimientoJugador : MonoBehaviour
         {
             oneWayPlat_Fence = null;
         }
-        else if (collision.transform.tag == "otro")
+        else if (collision.transform.tag == "enemigo")
         {
-            gameObject.GetComponent<Rigidbody2D>().transform.position = new Vector3(-45.8f, 24.7f, 0);
+            collision.gameObject.GetComponent<Rigidbody2D>().transform.position = new Vector3(
+                UnityEngine.Random.Range(-7, 40), 
+                UnityEngine.Random.Range(2, -3), 0f);
             //Application.Quit();
         }
 

@@ -13,7 +13,7 @@ import jakarta.xml.bind.annotation.XmlType;
 public class Partida {
 
     int id, puntuazioa;
-    String langilea, jokoa;
+    String user, jokoa;
     Date data;
 
     @XmlElement(name = "Id")
@@ -25,11 +25,11 @@ public class Partida {
     }
 
     @XmlElement(name = "Langilea")
-    public String getLangilea() {
-        return langilea;
+    public String getUser() {
+        return user;
     }
-    public void setLangilea(String langilea) {
-        this.langilea = langilea;
+    public void setUser(String user) {
+        this.user = user;
     }
 
     @XmlElement(name = "Puntuazioa")
@@ -59,7 +59,7 @@ public class Partida {
 
     @Override
     public String toString() { 
-        return String.format("Partida[ID:" + this.getId() + ", User:" + this.getLangilea() + ", Puntuazioa: " + this.getPuntuazioa() + ", Data: " + this.getData() + "]");
+        return String.format("Partida[ID:" + this.getId() + ", User:" + this.getUser() + ", Puntuazioa: " + this.getPuntuazioa() + ", Data: " + this.getData() + "]");
     }
 
 }

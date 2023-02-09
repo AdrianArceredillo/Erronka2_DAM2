@@ -42,7 +42,7 @@ public class Partida {
         this.data = data;
     }
 
-    public String getLangilea() {
+    public String getUser() {
         if (langilea == 43)
         return "Adrian";
         if (langilea == 44)
@@ -55,7 +55,7 @@ public class Partida {
         return "0";
     }
 
-    public void setLangilea(int langilea) {
+    public void setUser(int langilea) {
         this.langilea = langilea;
     }
 

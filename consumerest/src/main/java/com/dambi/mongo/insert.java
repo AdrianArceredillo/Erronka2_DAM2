@@ -58,18 +58,23 @@ public class insert {
 
         MongoDatabase db = mongo.getDatabase("Erronka2");
 
+        int kontagailua = 0;
         for (Partida partida : partidak.getPartidak()) {
+            try {
+                Document doc = new Document("partidaId", partida.getId())
+                        .append("langilea", partida.getUser()) // langile bezala utziko da eta ez user bezala
+                        .append("puntuazioa", partida.getPuntuazioa())
+                        .append("data", partida.getData())
+                        .append("jokoa", partida.getJokoa());
 
-            Document doc = new Document("partidaId", partida.getId())
-                    .append("langilea", partida.getLangilea())
-                    .append("puntuazioa", partida.getPuntuazioa())
-                    .append("data", partida.getData())
-                    .append("jokoa", partida.getJokoa());
-
-            db.getCollection("partida").insertOne(doc);
+                db.getCollection("partida").insertOne(doc);
+                kontagailua++;
+            } catch (Exception e) {
+                
+            }
 
         }
-        Log.logIdatzi(link + " erabiliz, partiden informazioa gorde da.");
+        Log.logIdatzi(link + " erabiliz, partiden informazioa gorde da. (" + kontagailua + ") datu berri gorde dira.");
         mongo.close();
     }
 
@@ -105,19 +110,24 @@ public class insert {
 
         MongoDatabase db = mongo.getDatabase("Erronka2");
 
+        int kontagailua = 0;
         for (Langilea langilea : langileak.getLangileak()) {
 
-            Document doc = new Document("email", langilea.getEmail())
-                    .append("izena", langilea.getIzena())
-                    .append("user", langilea.getUser())
-                    .append("jaiotzadata", langilea.getJaiotzaData())
-                    .append("taldea", langilea.getTaldea());
+            try {
+                Document doc = new Document("email", langilea.getEmail())
+                        .append("izena", langilea.getIzena())
+                        .append("user", langilea.getUser())
+                        .append("jaiotzadata", langilea.getJaiotzaData())
+                        .append("taldea", langilea.getTaldea());
 
-            db.getCollection("langilea").insertOne(doc);
+                db.getCollection("langilea").insertOne(doc);
+                kontagailua++;
+            } catch (Exception e) {
 
+            }
         }
 
-        Log.logIdatzi(link + " erabiliz, langileen informazioa gorde da.");
+        Log.logIdatzi(link + " erabiliz, langileen informazioa gorde da. (" + kontagailua + ") datu berri gorde dira.");
         mongo.close();
     }
 

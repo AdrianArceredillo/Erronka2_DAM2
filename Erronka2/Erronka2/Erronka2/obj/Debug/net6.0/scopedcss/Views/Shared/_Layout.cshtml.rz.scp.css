@@ -52,4 +52,7 @@ button.accept-policy[b-ntt1ojireq] {
         flex-direction: column;
         text-align: center;
     }
+    form[b-ntt1ojireq] {
+        visibility: hidden;
+    }
 }

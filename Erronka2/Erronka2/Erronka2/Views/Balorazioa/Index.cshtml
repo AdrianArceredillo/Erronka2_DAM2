@@ -10,25 +10,25 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Erabiltzailea)
+                        @Html.DisplayFor(modelItem => item.langileaId)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Testua)
+                        @Html.DisplayFor(modelItem => item.testua)
                     </td>
                     <td>
-                        @for (int i = 1; i <= item.Kopurua; i++)
+                        @for (int i = 1; i <= item.kopurua; i++)
                         {
                             <img id="izarra" src="~/images/izarra.png" />
                         }
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Data)
+                        @Html.DisplayFor(modelItem => item.data)
                     </td>
                 </tr>
             }
         </tbody>
     </table>
     <p>
-        Balorazioa egiteko: <a asp-action="Create" asp-route-upeltegiaId=@Model.First().LangileaId>Berria</a>
+        Balorazioa egiteko: <a asp-action="Create" asp-route-upeltegiaId=@Model.First().langileaId>Berria</a>
     </p>
 </div>

@@ -14,11 +14,12 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background: rgb(219,219,219);
+    background: radial-gradient(circle, rgba(219,219,219,1) 0%, rgba(0,0,0,0.49343487394957986) 100%);
 }
 
 #searchForm {
-    padding-top: 10%;
     display: flex;
     justify-content: space-around;
 }
@@ -28,7 +29,7 @@ body {
 }
 
 .bg-menua {
-    background-color: #dddada !important;
+    background-color: whitesmoke !important;
 }
 
 .erlatiboa {
@@ -40,15 +41,14 @@ body {
 }
 
     .full-width.dropdown > .dropdown-menu {
-        left: 0;
     }
 
         .full-width.dropdown > .dropdown-menu > li > a {
             white-space: normal;
+            text-align: center;
         }
 
 #printzipala {
-    margin-top: 20px;
     padding: 10px;
 }
 
@@ -58,4 +58,13 @@ body {
 
 .foro {
     text-decoration: none;
+}
+
+
+.hhh {
+    margin-top: 20px;
+    padding: 10%;
+    width: 100%;
+    height:600px;
+    border: 2px solid yellow;
 }

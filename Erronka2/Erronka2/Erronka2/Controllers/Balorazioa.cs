@@ -19,14 +19,14 @@ namespace Erronka2.Controllers
         public async Task<IActionResult> Index(int id, string izena)
         {
             ViewBag.izena = izena;
-            return View(await _balorazioaService.GetBalorazioak(id));
+            return View(await _balorazioaService.GetBalorazioak());
         }
 
         // GET: Balorazioa/Create
         public IActionResult Create(int langileaId)
         {
             Balorazioa balorazioa = new Balorazioa();
-            balorazioa.LangileaId = langileaId;
+            balorazioa.langileaId = langileaId;
             return View(balorazioa);
         }
 
@@ -36,8 +36,8 @@ namespace Erronka2.Controllers
         {
             if (ModelState.IsValid)
             {
-                balorazioa.Data = DateTime.Today;
-                balorazioa.Erabiltzailea = HttpContext.User.Identity.Name;
+                balorazioa.data = DateTime.Today;
+                balorazioa.erabiltzailea = HttpContext.User.Identity.Name;
                 _balorazioaService.BalorazioaGehitu(balorazioa);
                 return RedirectToAction("Index", "Home");
             }

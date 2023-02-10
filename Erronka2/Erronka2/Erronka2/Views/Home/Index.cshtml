@@ -2,10 +2,6 @@
     ViewData["Title"] = "Home Page";
 }
 
-@*<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>*@
 <div class="container" id="printzipala">
     <nav class="navbar navbar-expand-lg navbar-light bg-light bg-menua">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -13,35 +9,45 @@
             <span class="navbar-toggler-icon"></span>
         </button>       
         <div class="collapse navbar-collapse erlatiboa" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                @*<li class="nav-item dropdown full-width">*@
-                    <div class="orokorra">
-                        <a class="nav-link" href="#"  role="button" 
-                           aria-expanded="false">
-                           PUNTUAZIO OROKORRA
-                        </a>
-@*                      @await Component.InvokeAsync("Partidak", new { id = 1 })
-*@                  </div>
-                    <div class="taldeak">
-                        <div class="talde1">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                               aria-expanded="false">
-                                Talde 1
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Talde Partaideak</a></li>
-@*                                @await Component.InvokeAsync("Langileak")
-*@                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Talde Partidak</a></li>
-@*                                @await Component.InvokeAsync("Partidak")
-*@                                <li><a class="dropdown-item" href="#">Talde Podium</a></li>
+            <div class="navbar-nav me-auto mb-2 mb-lg-0">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light bg-menua">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">PUNTUAZIO OROKORRA</a>
+                        
+                        <div class="collapse navbar-collapse erlatiboa" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item dropdown full-width">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                    TALDEAK
+                                    </a>
+@*                                        @await Component.InvokeAsync("Langileak", new { id = 1 }
+*@
+                                </li>
+                                <li class="nav-item dropdown full-width">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        JOKOAK
+                                    </a>
+@*                                        @await Component.InvokeAsync("Ardoak", new { id = 2 })
+*@
+                                </li>
+                                <li class="nav-item dropdown full-width">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        EMAN IRITZIA
+                                    </a>
+@*                                        @await Component.InvokeAsync("Upeltegiak")
+*@                                    </li>
                             </ul>
                         </div>
                     </div>
-               @* </li>*@
-            </ul>
+                </nav>
+            </div>
         </div>
         <a class="foro" href="#">FORO</a>
     </nav>
+    <div class=" container hhh ">
+
+    </div>
 </div>
 

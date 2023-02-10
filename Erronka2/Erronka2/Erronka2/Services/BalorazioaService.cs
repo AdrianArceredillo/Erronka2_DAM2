@@ -7,14 +7,13 @@ namespace Erronka2.Services
 {
     public class BalorazioaService : IBalorazioaService
     {
-        private Uri rutaTodos = new Uri("https://localhost:44367/api/Balorazioa/");
-        public async Task<IList<Balorazioa>> GetBalorazioak(int id)
+        private Uri rutaTodos = new Uri("https://localhost:44367/api/balorazioak/");
+        public async Task<IList<Balorazioa>> GetBalorazioak()
         {
-            Uri rutaLangileBat = new Uri(rutaTodos, id.ToString());
             List<Balorazioa> balorazioaList = new List<Balorazioa>();
             using (var httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync(rutaLangileBat))
+                using (var response = await httpClient.GetAsync(rutaTodos))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     balorazioaList = JsonConvert.DeserializeObject<List<Balorazioa>>(apiResponse);

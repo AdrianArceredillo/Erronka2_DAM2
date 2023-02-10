@@ -37,8 +37,6 @@ public class Score : MonoBehaviour
     [SerializeField] private GameObject finalPartida_notificacion;      //mensaje de final de partida
     [SerializeField] private GameObject menuResumen;                    //elemento que será el menú
 
-    private bool ser_herido = false;//indicar si el personaje ha sido herido o no
-
     void Start()
     {
         ScoreNum = 0;
@@ -137,10 +135,6 @@ public class Score : MonoBehaviour
 
 
                 //ChangeColor_LabelsPartida();
-
-
-                //Invoke(nameof(jokoa_itxi), 3.0f);   //finalizar la partida
-                Debug.Log("La partida ha terminado...");
             }
 
 

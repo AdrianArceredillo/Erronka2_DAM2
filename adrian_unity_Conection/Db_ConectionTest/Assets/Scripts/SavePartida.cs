@@ -40,6 +40,11 @@ public class SavePartida : MonoBehaviour
 
         string sql = "INSERT INTO partida (id, user, puntuazioa, data) VALUES (null, @param1,@param2,@param3);";
         dbcmd.CommandText = sql;
+
+        Debug.Log("User: " + texto_Usuario.text);
+        Debug.Log("Punt: " + Int32.Parse(texto_Puntuazioa.text));
+        Debug.Log("Data: " + texto_Data.text);
+
         dbcmd.Parameters.Add(new SqliteParameter("@param1", texto_Usuario.text));
         //dbcmd.Parameters.Add(new SqliteParameter("@param2", Int32.Parse(texto_Puntuazioa.text)));
         dbcmd.Parameters.Add(new SqliteParameter("@param2", Int32.Parse(texto_Puntuazioa.text)));

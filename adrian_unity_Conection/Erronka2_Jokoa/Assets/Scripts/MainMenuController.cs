@@ -6,17 +6,37 @@ using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
-    public void jokoa_ireki(Text user_Jugador)
+    public Text userJugador;
+    public Text textoPlaceholder;
+
+    //public void jokoa_ireki(Text user_Jugador)
+    //{
+    //    if (user_Jugador.text == "")
+    //    {
+    //        user_Jugador.text = "unknown :(";
+    //        user_Jugador.color = Color.red;
+    //    }
+    //    else
+    //    {
+    //        //StateNameController.usuario = "Player: " + user_Jugador.text;
+    //        StateNameController.usuario = user_Jugador.text;
+    //        SceneManager.LoadScene("JokoaScene");
+    //    }
+    //}
+
+    public void jokoa_ireki_comprobacion()
     {
-        if (user_Jugador.text == "")
+        if (userJugador.text == "")
         {
-            user_Jugador.text = "unknown :(";
-            user_Jugador.color = Color.red;
+            userJugador.text = "unknown :(";
+            userJugador.color = Color.red;
+
+            textoPlaceholder.color = Color.red;
         }
         else
         {
             //StateNameController.usuario = "Player: " + user_Jugador.text;
-            StateNameController.usuario = user_Jugador.text;
+            StateNameController.usuario = userJugador.text;
             SceneManager.LoadScene("JokoaScene");
         }
     }

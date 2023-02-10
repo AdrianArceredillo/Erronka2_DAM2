@@ -106,16 +106,19 @@ public class DatosResumen : MonoBehaviour
         if (StateResumenPartida.puntuacion >= 1)
         {
             infoPuntuacion.text = StateResumenPartida.puntuacion.ToString().Trim() + " pts.";
+            //infoPuntuacion.text = StateResumenPartida.puntuacion.ToString().Trim();
             infoPuntuacion.color = Color.green;
         }
         else if (StateResumenPartida.puntuacion == 0)
         {
             infoPuntuacion.text = StateResumenPartida.puntuacion.ToString().Trim() + " pts.";
+            //infoPuntuacion.text = StateResumenPartida.puntuacion.ToString().Trim();
             infoPuntuacion.color = Color.white;
         }
         else if (StateResumenPartida.puntuacion < 0)
         {
             infoPuntuacion.text = StateResumenPartida.puntuacion.ToString().Trim() + " pts.";
+            //infoPuntuacion.text = StateResumenPartida.puntuacion.ToString().Trim();
             infoPuntuacion.color = Color.red;
         }
         else

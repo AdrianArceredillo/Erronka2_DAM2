@@ -3,8 +3,6 @@ using System.Collections.Generic;
 //using System.Diagnostics;
 using UnityEngine;
 
-
-
 public class Zombie : MonoBehaviour
 {
 
@@ -55,7 +53,6 @@ public class Zombie : MonoBehaviour
             gameObject.transform.position.x <= 18.5f
             )
         {
-            //UnityEngine.Debug.Log("AAA");
         }
 
     }
@@ -77,7 +74,6 @@ public class Zombie : MonoBehaviour
 
 
             movimiento_Zombie.gameObject.transform.position = new Vector2(-100f * Time.deltaTime, 0);
-            Debug.Log("adsdasdasds");
 
             //while (movimiento_Zombie.gameObject.transform.position.x < rb_Personaje.gameObject.transform.position.x)
             //{

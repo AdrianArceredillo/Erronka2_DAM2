@@ -16,8 +16,6 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject personaje_Camina;       //personaje caminando
     [SerializeField] private GameObject personaje_Disparando;   //personaje disparando
 
-    private bool juegoPausado = false;
-
     [SerializeField] private GameObject texto_Fondo;    //texto fondo de menú (logo juego)
 
 
@@ -48,18 +46,16 @@ public class Menu : MonoBehaviour
     //función que establecerá "pausa" al juego
     public void ResumenPartida()
     {
-        juegoPausado = true;
         Time.timeScale = 0f;
 
-        imagen_Mancha.SetActive(false);     //ocultar imagen - mancha sangre
+        imagen_Mancha.SetActive(false);//ocultar imagen - mancha sangre
 
         personaje_Camina.SetActive(false);
         personaje_Disparando.SetActive(false);
 
         finalPartida_notificacion.SetActive(false);
-        botonContinuar.SetActive(false);    //deshabilitar el botón de pausa
-        menuResumen.SetActive(true);      //activar y visualizar el menú de pausa
-
+        botonContinuar.SetActive(false);//deshabilitar el botón de pausa
+        menuResumen.SetActive(true);//activar y visualizar el menú de pausa
 
         StateResumenPartida.jugador = txt_jugador.text;
         try
@@ -77,20 +73,16 @@ public class Menu : MonoBehaviour
     //función para reanudar la partida
     public void Reanudar()
     {
-        juegoPausado = false;
         Time.timeScale = 1f;
-        botonContinuar.SetActive(true);     //habilitar el botón pausa
-        menuResumen.SetActive(false);     //ocultar el menú
+        botonContinuar.SetActive(true);//habilitar el botón pausa
+        menuResumen.SetActive(false);//ocultar el menú
 
         texto_Fondo.SetActive(true);
     }
 
-    //guardar los datos de la partida y regresar al menú principal
-    public void guardar_partida()
+    //regresar al inicio después de haber registrado una partida
+    public void regresar_Tras_guardar()
     {
-        //guardar partida
-
-
         //regresar al menú después de guardar la partida
         SceneManager.LoadScene("MainMenu");
     }
@@ -98,9 +90,7 @@ public class Menu : MonoBehaviour
     //resetear la partida
     public void reiniciar_partida()
     {
-        juegoPausado = false;
         Time.timeScale = 1f;
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

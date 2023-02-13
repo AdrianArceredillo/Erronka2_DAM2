@@ -51,9 +51,18 @@ public class JsonaLangileak {
                 Langilea langilea = new Langilea();
                 langilea.setEmail(jsonobj.getString("email"));
                 langilea.setIzena(jsonobj.getString("izena"));
-                langilea.setUser((jsonobj.getString("user")));
+                langilea.setUser((jsonobj.getString("erabiltzailea")));
+
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
-                Date date = sdf.parse(jsonobj.getString("jaiotzadata"));
+
+                //Try catch batekin egin behar da zeren talderen batek ez dut ipini jaiotzadata *kof* *kof* 4 taldea *kof* *kof*
+                Date date = null;
+                try {
+                    date = sdf.parse(jsonobj.getString("jaiotzadata"));
+                } catch (Exception e) {
+                    date = sdf.parse(jsonobj.getString("jaiotzedata"));
+                }
+                
                 langilea.setJaiotzaData(date);
                 langilea.setTaldea(jsonobj.getInt("taldea"));
                 langileak.add(langilea);

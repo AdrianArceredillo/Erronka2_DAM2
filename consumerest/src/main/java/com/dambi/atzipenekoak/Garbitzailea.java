@@ -67,8 +67,9 @@ public class Garbitzailea {
 
 
     public static void garbituPantaila(){
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+        System.out.println("============================");
+        //System.out.print("\033[H\033[2J");
+        //System.out.flush();
     }
 
 }

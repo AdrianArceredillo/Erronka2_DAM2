@@ -26,11 +26,9 @@ import org.apache.http.util.EntityUtils;
 import org.bson.Document;
 
 public class insert {
+    public static String fitxategia = "informazioa.json";
+
     public static void insertPartida(String link, String jokoa) {
-
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-
         String content = "";
         HttpClient client = HttpClientBuilder.create().build();
 
@@ -44,7 +42,6 @@ public class insert {
             HttpEntity entity = response.getEntity();
             content = EntityUtils.toString(entity);
 
-            String fitxategia = "./src/main/java/com/dambi/data/informazioa.json";
             BufferedWriter writer = new BufferedWriter(new FileWriter(fitxategia));
             writer.write(content);
             writer.close();
@@ -96,7 +93,6 @@ public class insert {
             HttpEntity entity = response.getEntity();
             content = EntityUtils.toString(entity);
 
-            String fitxategia = "./src/main/java/com/dambi/data/informazioa.json";
             BufferedWriter writer = new BufferedWriter(new FileWriter(fitxategia));
             writer.write(content);
             writer.close();

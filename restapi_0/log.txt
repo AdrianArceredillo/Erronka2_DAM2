@@ -1,0 +1,6 @@
+[13/02/2023 12:57:09][0:0:0:0:0:0:0:1] /all_Partida metodoa erabili du
+[13/02/2023 12:57:14][0:0:0:0:0:0:0:1] /all_Langilea metodoa erabili du
+[13/02/2023 12:58:15][0:0:0:0:0:0:0:1] /all_Langilea metodoa erabili du
+[13/02/2023 13:01:08][0:0:0:0:0:0:0:1] /all_Partida metodoa erabili du
+[13/02/2023 13:02:10][0:0:0:0:0:0:0:1] /all_Partida metodoa erabili du
+[13/02/2023 13:02:17][0:0:0:0:0:0:0:1] /all_Langilea metodoa erabili du

@@ -42,7 +42,7 @@ public class Partida {
         this.data = data;
     }
 
-    public String getUser() {
+    public String getErabiltzailea() {
         if (langilea == 43)
         return "Adrian";
         if (langilea == 44)
@@ -55,7 +55,7 @@ public class Partida {
         return "0";
     }
 
-    public void setUser(int langilea) {
+    public void setErabiltzailea(int langilea) {
         this.langilea = langilea;
     }
 

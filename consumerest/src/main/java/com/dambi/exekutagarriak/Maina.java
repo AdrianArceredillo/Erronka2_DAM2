@@ -1,5 +1,8 @@
 package com.dambi.exekutagarriak;
 
+import java.io.File;
+import java.util.concurrent.TimeUnit;
+
 import com.dambi.atzipenekoak.Garbitzailea;
 import com.dambi.atzipenekoak.Log;
 import com.dambi.mongo.insert;
@@ -17,10 +20,11 @@ public class Maina {
 
         // 4 TALDEA
         //taldea4();
-    }
 
+    }
+//
 public static void taldea1(){
-    String linkPartida = "============================================";
+    String linkPartida = "http://192.168.65.11:8080/api/allPartidak";
     try {
         insert.insertPartida(linkPartida, "Jokoa 1");
     } catch (Exception e) {
@@ -30,7 +34,7 @@ public static void taldea1(){
     }
     Garbitzailea.garbituPantaila();
     
-    String linkLangilea = "============================================";
+    String linkLangilea = "http://192.168.65.11:8080/api/allLangileak";
     try {
         insert.insertLangilea(linkLangilea);
     } catch (Exception e) {
@@ -87,9 +91,9 @@ public static void taldea3(){
     Garbitzailea.garbituPantaila();
 }
 
-
+//Erlantz, Markel, Raul, Peru
 public static void taldea4(){
-    String linkPartida = "============================================";
+    String linkPartida = "http://192.168.65.123:8080/Partidak/getPartidak";
     try {
         insert.insertPartida(linkPartida, "Jokoa 2");
     } catch (Exception e) {
@@ -99,7 +103,7 @@ public static void taldea4(){
     }
     Garbitzailea.garbituPantaila();
     
-    String linkLangilea = "============================================";
+    String linkLangilea = "http://192.168.65.123:8080/Langileak/getLangileak";
     try {
         insert.insertLangilea(linkLangilea);
     } catch (Exception e) {

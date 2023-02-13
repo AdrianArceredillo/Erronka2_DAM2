@@ -31,11 +31,11 @@ public class Langilea {
         this.izena = izena;
     }
 
-    public String getUser() {
+    public String getErabiltzailea() {
         return user;
     }
 
-    public void setUser(String user) {
+    public void setErabiltzailea(String user) {
         this.user = user;
     }
 
@@ -65,7 +65,3 @@ public class Langilea {
     }
 
 }
-
-
-
-//https://spring.io/guides/tutorials/rest/

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oclYblTGfDl4rfEzz74i9hSFh4Y1W7QnF4YNgDHwozzqS+sSzO4sg6p1toIW1y3KDY0m4r7VIeKh0pVxdN1cjw==",
+  "dgSpecHash": "9fi5nVQl25MP7EPaYdArn/dJHKUQOmX38jZZTdduruDF6lr3mJFC9zPi7Si0xiqwGO3+JhmnJMoW8LLAGCiOXw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arginzoniz.joseba\\Desktop\\Erronka2_DAM2\\Erronka2\\Erronka2\\Erronka2\\Erronka2.csproj",
+  "projectFilePath": "C:\\Users\\arginzoniz.joseba\\Desktop\\Erronka2\\Erronka2_DAM2\\Erronka2\\Erronka2\\Erronka2\\Erronka2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arginzoniz.joseba\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\arginzoniz.joseba\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

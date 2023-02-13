@@ -16,7 +16,6 @@ html {
 }
 
 body {
-    margin-bottom: 60px;
     background: rgb(219,219,219);
     background: radial-gradient(circle, rgba(219,219,219,1) 0%, rgba(0,0,0,0.49343487394957986) 100%);
 }
@@ -42,13 +41,13 @@ body {
     position: static;
 }
 
-    .full-width.dropdown > .dropdown-menu {
-    }
+.full-width.dropdown > .dropdown-menu {
+}
 
-        .full-width.dropdown > .dropdown-menu > li > a {
-            white-space: normal;
-            text-align: center;
-        }
+.full-width.dropdown > .dropdown-menu > li > a {
+    white-space: normal;
+    text-align: center;
+}
 
 #printzipala {
     padding: 10px;
@@ -89,4 +88,72 @@ body {
 
 .forgotRegister {
     text-align: center;
+}
+
+.anchor-link {
+    text-decoration: none;
+}
+
+.anchor-link:focus {
+    outline: none;
+}
+
+.anchor-link h1::after {
+    font-family: "Font Awesome 5 Free";
+    content: " \f0c1";
+    font-weight:900;
+}
+
+@media (max-width: 768px) {
+
+    .taldea {
+        grid-template-columns: 1fr !important;
+    }
+
+    .taldea > .taldea-text {
+        order: 1;
+    }
+
+    .taldea > .irudia {
+        order: 2;
+    }
+
+    .taldeak-wrapper {
+        margin-top: 5%;
+    }
+}
+
+.taldeak-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+
+.taldeak-wrapper > .taldeak {
+    width: 80%;
+}
+
+.taldeak-wrapper > .taldeak > .taldea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: -4px;
+}
+
+.taldea > .irudia img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.taldea > .taldea-text {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    padding: 42px;
+}
+
+.taldea > .taldea-text h1 {
+    text-align:center;
+    color: #cea135;
 }

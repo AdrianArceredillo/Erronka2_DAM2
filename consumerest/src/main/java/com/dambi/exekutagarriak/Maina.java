@@ -43,7 +43,7 @@ public static void taldea1(){
 
 //JOKOAREN IZENA FALTA DA
 public static void taldea2(){
-    String linkPartida = "http://localhost:8080/demo/all_Partida";
+    String linkPartida = "http://192.168.65.90:8081/demo/all_Partida";
     try {
         insert.insertPartida(linkPartida, "Jokoa 2");
     } catch (Exception e) {
@@ -53,7 +53,7 @@ public static void taldea2(){
     }
     Garbitzailea.garbituPantaila();
     
-    String linkLangilea = "http://localhost:8080/demo/all_Langilea";
+    String linkLangilea = "http://192.168.65.90:8081/demo/all_Langilea";
     try {
         insert.insertLangilea(linkLangilea);
     } catch (Exception e) {

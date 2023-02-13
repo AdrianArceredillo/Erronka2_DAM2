@@ -6,7 +6,7 @@ namespace Erronka2.Services
 {
     public class LangileaService : ILangileaService
     {
-        private Uri rutaTodos = new Uri("https://localhost:44367/api/langileak/");
+        private Uri rutaTodos = new Uri("http://192.168.65.22:8080/api/langileak/");
 
         public Task<Langilea> GetLangilea(string user)
         {

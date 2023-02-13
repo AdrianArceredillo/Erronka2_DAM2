@@ -52,7 +52,4 @@ button.accept-policy {
         flex-direction: column;
         text-align: center;
     }
-    form {
-        visibility: hidden;
-    }
 }

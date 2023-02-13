@@ -15,25 +15,12 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm text-light bg-dark border-bottom box-shadow mb-3">
             <div class="container headera">
                 <a class="navbar-brand a" asp-area="" asp-controller="Home" asp-action="Index">ENPRESA ARTEKO TXAPELKETA</a>
-                    
-                <partial name="_LoginPartial" />
+                <partial name="_LoginPartial"  />
             </div>
         </nav>
     </header>
     <div>
-        <div class="container search">
-            <div class="row">
-                <div class="col-md-6">
-                   @*irudia*@
-                </div>
-                <div class="col-md-6">
-                    <form class="form-inline my-2 my-lg-0 float-right" id="searchForm">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-info btn-dark my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
+        
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -54,5 +41,8 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+  
+
 </body>
 </html>

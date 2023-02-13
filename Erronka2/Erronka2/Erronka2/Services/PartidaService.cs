@@ -6,9 +6,9 @@ namespace Erronka2.Services
 {
     public class PartidaService : IPartidaService
     {
-        private Uri rutaTodos = new Uri("https://localhost:44367/api/Partidak/");
+        private Uri rutaTodos = new Uri("http://192.168.65.22:8080/api/partidak/");
 
-        public Task<Partida> GetPartida(int id)
+        public Task<Partida> GetPartida(int partidaId)
         {
             throw new NotImplementedException();
         }

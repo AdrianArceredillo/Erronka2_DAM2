@@ -1,7 +1,19 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<div class="container search">
+    <div class="row">
+        <div class="col-md-6">
+            @*irudia*@
+        </div>
+        <div class="col-md-6">
+            <form class="form-inline my-2 my-lg-0 float-right" id="searchForm">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info btn-dark my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
 <div class="container" id="printzipala">
     <nav class="navbar navbar-expand-lg navbar-light bg-light bg-menua">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -21,16 +33,16 @@
                                         aria-expanded="false">
                                     TALDEAK
                                     </a>
-@*                                        @await Component.InvokeAsync("Langileak", new { id = 1 }
-*@
+                                    @await Component.InvokeAsync("Langileak")
+
                                 </li>
                                 <li class="nav-item dropdown full-width">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">
                                         JOKOAK
                                     </a>
-@*                                      @await Component.InvokeAsync("Partidak", new { id = 1 })
-*@
+                                      @await Component.InvokeAsync("Partidak")
+
                                 </li>
                                 <li class="nav-item dropdown full-width">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -46,8 +58,5 @@
         </div>
         <a class="inkesta" href="#">INKESTA</a>
     </nav>
-    <div class=" container hhh ">
-
-    </div>
 </div>
 

@@ -5,7 +5,6 @@ namespace Erronka2.ViewComponents
 {
     public class PartidakViewComponent : ViewComponent
     {
-    
         private readonly IPartidaService _partidaService; //Inyeccion de dependencias
         public PartidakViewComponent(IPartidaService partidaService)
         {

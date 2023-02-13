@@ -2,10 +2,12 @@ html {
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+@media (max-width: 768px) {
+      
+    .formularioa {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 html {
@@ -56,15 +58,35 @@ body {
     padding: 10px;
 }
 
-.foro {
+.inkesta {
     text-decoration: none;
 }
 
+.formularioa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right:5%;
+}
 
-.hhh {
-    margin-top: 20px;
-    padding: 10%;
-    width: 100%;
-    height:600px;
-    border: 2px solid yellow;
+.formLeft {
+    width:75%;
+    padding:5%;
+}
+
+.formRight {
+    flex-direction: column;
+    text-align: center;
+    padding: 5%;
+}
+
+#registerForm {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.forgotRegister {
+    text-align: center;
 }

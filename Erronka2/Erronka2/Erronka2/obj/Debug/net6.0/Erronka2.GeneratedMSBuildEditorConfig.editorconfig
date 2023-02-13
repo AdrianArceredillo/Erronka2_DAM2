@@ -59,16 +59,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/arginzoniz.joseba/Desktop/Erronka2_DAM2/Erronka2/Erronka2/Erronka2/Views/Partidak/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlkYWtcRGVmYXVsdC5jc2h0bWw=
+[C:/Users/arginzoniz.joseba/Desktop/Erronka2_DAM2/Erronka2/Erronka2/Erronka2/Views/Shared/Components/Langileak/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTGFuZ2lsZWFrXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/arginzoniz.joseba/Desktop/Erronka2_DAM2/Erronka2/Erronka2/Erronka2/Views/Shared/Components/Partidak/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUGFydGlkYWtcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/arginzoniz.joseba/Desktop/Erronka2_DAM2/Erronka2/Erronka2/Erronka2/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/arginzoniz.joseba/Desktop/Erronka2_DAM2/Erronka2/Erronka2/Erronka2/Views/Shared/Langileak/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExhbmdpbGVha1xEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/arginzoniz.joseba/Desktop/Erronka2_DAM2/Erronka2/Erronka2/Erronka2/Views/Shared/_LoginPartial.cshtml]

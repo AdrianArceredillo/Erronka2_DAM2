@@ -1,61 +1,61 @@
-﻿@model IEnumerable<Erronka2.Models.Langilea>
+﻿@model IEnumerable<Erronka2.Models.LangilePartida>
 
-@{
-    ViewData["Title"] = "Default";
-}
+<ul class="dropdown-menu">
+    <li>
+        <div class="container padinaMenu">
+            <div class="row ">
+                <div class="col-md-4 nireMenua">
+                    <h4 class="borgona">Aukeratu partida:</h4>
+                    @{
+                        var izena = "";
+                        foreach (var item in Model)
+                        {
+                            if (item.PartidaiIzena != izena)
+                            {
+                                <a href="#">@Html.DisplayFor(modelItem => item.PartidaiIzena)</a>
 
-<h1>Default</h1>
+                                <br />
+                                izena = item.PartidaiIzena;
+                            }
+                        }
+                    }
+                </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.izena)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.user)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.jaiotzedata)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.taldea)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.izena)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.user)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.jaiotzedata)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.taldea)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                <div class="col-md-8">
+                    @{
+                        //var images = "" ;
+                        //foreach (var item in Model) {
+                        //    switch (ViewBag.mota != 0)
+                        //    {
+                        //            case 1:
+                        //            <img class="img-fluid" src="~/images/wine-white.jpg" />
+                        //            break;
+                        //        case 2:
+                        //            <img class="img-fluid" src="~/images/wine-red.jpg" />
+                        //            break;
+                        //        case 3:
+                        //            <img class="img-fluid" src="~/images/wine_rose.jpg" />
+                        //            break;
+                        //    }
+                        //}
+
+                        //if (ViewBag.mota == 1)
+                        //{
+                        //    <img class="img-fluid" src="~/images/wine-white.jpg" />
+                        //}
+                        //if (ViewBag.mota == 2)
+                        //{
+                        //    <img class="img-fluid" src="~/images/wine-red.jpg" />
+                        //}
+                        //if (ViewBag.mota == 3)
+                        //{
+                        //    <img class="img-fluid" src="~/images/wine_rose.jpg" />
+                        //}
+                    }
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
 
 

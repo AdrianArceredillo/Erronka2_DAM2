@@ -1,0 +1,172 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <head>
+            <meta charset="UTF-8">
+            <title>Fancy HTML Form</title>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+            <style>
+                body {
+                    background-color: #f6f9fc;
+                    font-family: 'Montserrat', sans-serif;
+                }
+
+                .inkestaForm {
+                    background-color: #fff;
+                    border-radius: 10px;
+                    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+                    margin: 50px auto;
+                    padding: 30px 50px;
+                    width: 500px;
+                }
+
+                h1 {
+                    color: #444;
+                    font-size: 35px;
+                    margin: 0 0 30px 0;
+                    text-align: center;
+                }
+
+                p {
+                    color: #444;
+                    display: block;
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+
+                label {
+                        color: #444;
+                        display: block;
+                        font-size: 16px;
+                        margin-bottom: 5px;
+                }
+
+                .inkestaButton {
+                    background-color: #307bbe;
+                    border: none;
+                    border-radius: 5px;
+                    color: #fff;
+                    cursor: pointer;
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-top: 20px;
+                    padding: 10px;
+                    width: 100%;
+                }
+
+                .inkestaButton:hover {
+                    background-color: #2862a3;
+                }
+                .izenaTel {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .galderak {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+            </style>
+    </head>
+    <body>
+            <form class="inkestaForm">
+                <h1>INKESTA</h1>
+                <div class="izenaTel">
+                    <div class="sartuIzena">
+                        <label for="izena">IZENA:</label>
+                        <input type="text" id="izena" name="izena" placeholder="Izena" required>
+                    </div>
+                    <div class="sartuIzena">
+                        <label for="tel">TELEFONOA:</label>
+                        <input type="tel" id="tel" name="tel" placeholder="Telefonoa">
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <p>SAR EZAZU ZURE IZENA:</p>
+                <div class="galderak">
+                    <div class="a">
+                        <label for="age1">18 - 30</label>
+                        <input type="radio" id="age1" name="age" value="30">
+                    </div>
+                    <div class="a">
+                        <label for="age2">31 - 60</label>
+                        <input type="radio" id="age2" name="age" value="60">
+                    </div>
+                    <div class="a">
+                        <label for="age3">61 - 100</label>
+                        <input type="radio" id="age3" name="age" value="100">
+                    </div>
+                </div>
+                <br />
+                <p>PUNTUA EZAZU JOKOAREN ZAILTASUNA:</p>
+                <div class="galderak">
+                    <div class="a">
+                        <label for="puntu1">1 - 2</label>
+                        <input type="radio" id="puntuak" name="puntuak" value="1">
+                    </div>
+                    <div class="a">
+                        <label for="puntu4">3 - 4</label>
+                        <input type="radio" id="puntuak" name="puntuak" value="3">
+                    </div>
+                    <div class="a">
+                        <label for="puntu4" >5 - 6</label>
+                        <input type="radio" id="puntuak" name="puntuak" value="5">
+                    </div>
+                    <div class="a">
+                        <label for="puntu7">7 - 8</label>
+                        <input type="radio" id="puntuak" name="puntuak" value="7">
+                    </div>
+                    <div class="a">
+                        <label for="puntu7">9 - 10</label>
+                        <input type="radio" id="puntuak" name="puntuak" value="9">
+                    </div>
+                </div>
+                <br />
+                <p>HERRIALDEA:</p>
+                <div class="galderak">
+                    <div class="a">
+                        <label for="herri">ARABA</label>
+                    <input type="radio" id="herri1" name="herriak" value="A">
+                    </div>
+                    <div class="a">
+                        <label for="age2">BIZKAIA</label>
+                    <input type="radio" id="herri2" name="herriak" value="B">
+                    </div>
+                    <div class="a">
+                        <label for="age3">GIPUZKOA</label>
+                    <input type="radio" id="herri3" name="herriak" value="C">
+                    </div>
+                    <div class="a">
+                        <label for="age3">NAFARROA</label>
+                    <input type="radio" id="herri3" name="herriak" value="D">
+                    </div>
+                </div>
+                <br>
+                <p>LENGOAI ATSEGINENA:</p>
+                <div class="galderak">
+                    <div class="a">
+                        <label for="lengoai">JAVA</label>
+                        <input type="radio" id="lengoai1" name="lengoaiak" value="Java">
+                    </div>
+                    <div class="a">
+                        <label for="lengoai">PYTHON</label>
+                        <input type="radio" id="lengoai2" name="lengoaiak" value="Python">
+                    </div>
+                    <div class="a">
+                        <label for="lengoai">C#</label>
+                        <input type="radio" id="lengoai3" name="lengoaiak" value="C#">
+                    </div>
+                    <div class="a">
+                        <label for="lengoai">C++</label>
+                        <input type="radio" id="lengoai4" name="lengoaiak" value="C++">
+                    </div>
+                </div>
+                                
+                <button class="inkestaButton" type="submit">Submit</button>
+            </form>
+    </body>
+}

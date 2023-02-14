@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arginzoniz.joseba\\Desktop\\Erronka2\\Erronka2_DAM2\\Erronka2\\Erronka2\\Erronka2\\Erronka2.csproj": {}
+    "C:\\Users\\arginzoniz.joseba\\Desktop\\Erronka2_DAM2\\Erronka2\\Erronka2\\Erronka2\\Erronka2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arginzoniz.joseba\\Desktop\\Erronka2\\Erronka2_DAM2\\Erronka2\\Erronka2\\Erronka2\\Erronka2.csproj": {
+    "C:\\Users\\arginzoniz.joseba\\Desktop\\Erronka2_DAM2\\Erronka2\\Erronka2\\Erronka2\\Erronka2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arginzoniz.joseba\\Desktop\\Erronka2\\Erronka2_DAM2\\Erronka2\\Erronka2\\Erronka2\\Erronka2.csproj",
+        "projectUniqueName": "C:\\Users\\arginzoniz.joseba\\Desktop\\Erronka2_DAM2\\Erronka2\\Erronka2\\Erronka2\\Erronka2.csproj",
         "projectName": "Erronka2",
-        "projectPath": "C:\\Users\\arginzoniz.joseba\\Desktop\\Erronka2\\Erronka2_DAM2\\Erronka2\\Erronka2\\Erronka2\\Erronka2.csproj",
+        "projectPath": "C:\\Users\\arginzoniz.joseba\\Desktop\\Erronka2_DAM2\\Erronka2\\Erronka2\\Erronka2\\Erronka2.csproj",
         "packagesPath": "C:\\Users\\arginzoniz.joseba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arginzoniz.joseba\\Desktop\\Erronka2\\Erronka2_DAM2\\Erronka2\\Erronka2\\Erronka2\\obj\\",
+        "outputPath": "C:\\Users\\arginzoniz.joseba\\Desktop\\Erronka2_DAM2\\Erronka2\\Erronka2\\Erronka2\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\arginzoniz.joseba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -90,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

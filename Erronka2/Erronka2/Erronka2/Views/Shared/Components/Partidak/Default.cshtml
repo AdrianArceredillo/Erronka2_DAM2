@@ -1,65 +1,19 @@
 ﻿@model IEnumerable<Erronka2.Models.Partida>
 
-@{
-    ViewData["Title"] = "Default";
-}
+<ul class="dropdown-menu">
+    <li>
+        <div class="container padinaMenu">
+            <div class="nireMenua">
+                <h5 class="borgona">Zein Partida baloratu nahi duzu?</h5>
+                @{
+                    foreach (var item in Model)
+                    {
+                        <a asp-controller="Balorazioa" asp-action="Index" asp-route-id="@item.partidaId" asp-route-izena="@item.jokoa">@Html.DisplayFor(modelItem => item.jokoa)</a>
 
-<h1>Default</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.partidaId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.langilea)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.jokoa)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.puntuazioa)
-            </th>
-           @* <th>
-                @Html.DisplayNameFor(model => model.taldea)
-            </th>*@
-            <th>
-                @Html.DisplayNameFor(model => model.data)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.partidaId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.langilea)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.jokoa)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.puntuazioa)
-            </td>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.taldea)
-            </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.data)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {/*id=item.PrimaryKey*/ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                        <br />
+                    }
+                }
+            </div>
+        </div>
+    </li>
+</ul>

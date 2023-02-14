@@ -72,3 +72,6 @@ TagManager:
   - name: Indicador Vida
     uniqueID: 1576790073
     locked: 0
+  - name: Fondo Menu
+    uniqueID: 3772450015
+    locked: 0

@@ -48,7 +48,7 @@ public class JsonaPartidak {
                 JsonObject jsonobj = jsonarray.getJsonObject(i);
                 Partida partida = new Partida();
                 partida.setId(jsonobj.getInt("id"));
-                partida.setUser(jsonobj.getString("user"));
+                partida.setUser(jsonobj.getString("erabiltzailea"));
                 partida.setPuntuazioa((jsonobj.getInt("puntuazioa")));
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
                 Date date = sdf.parse(jsonobj.getString("data"));

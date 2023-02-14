@@ -4,3 +4,22 @@
 [13/02/2023 12:26:20]http://192.168.65.90:8081/demo/all_Langilea erabiliz, langileen informazioa gorde da. (0) datu berri gorde dira.
 [13/02/2023 12:45:25]http://192.168.65.90:8081/demo/all_Partida erabiliz, partiden informazioa gorde da. (0) datu berri gorde dira.
 [13/02/2023 12:45:26]http://192.168.65.90:8081/demo/all_Langilea erabiliz, langileen informazioa gorde da. (0) datu berri gorde dira.
+[14/02/2023 09:18:27]Konexio errorea http://192.168.65.90:8081/demo/all_Partida helbidearekin
+[14/02/2023 09:18:27]http://192.168.65.90:8081/demo/all_Langilea erabiliz, langileen informazioa gorde da. (4) datu berri gorde dira.
+[14/02/2023 09:21:01]http://192.168.65.90:8081/demo/all_Partida erabiliz, partiden informazioa gorde da. (19) datu berri gorde dira.
+[14/02/2023 09:21:01]http://192.168.65.90:8081/demo/all_Langilea erabiliz, langileen informazioa gorde da. (0) datu berri gorde dira.
+[14/02/2023 09:59:42]http://192.168.65.90:8081/demo/all_Partida erabiliz, partiden informazioa gorde da. (0) datu berri gorde dira.
+[14/02/2023 09:59:42]http://192.168.65.90:8081/demo/all_Langilea erabiliz, langileen informazioa gorde da. (0) datu berri gorde dira.
+[14/02/2023 09:59:42]Konexio errorea http://192.168.65.123:8080/Partidak/getPartidak helbidearekin
+[14/02/2023 09:59:42]Konexio errorea http://192.168.65.123:8080/Langileak/getLangileak helbidearekin
+[14/02/2023 10:03:46]http://192.168.65.90:8081/demo/all_Partida erabiliz, partiden informazioa gorde da. (0) datu berri gorde dira.
+[14/02/2023 10:03:46]http://192.168.65.90:8081/demo/all_Langilea erabiliz, langileen informazioa gorde da. (0) datu berri gorde dira.
+[14/02/2023 10:03:46]Konexio errorea http://192.168.65.123:8080/Partidak/getPartidak helbidearekin
+[14/02/2023 10:03:46]Konexio errorea http://192.168.65.123:8080/Langileak/getLangileak helbidearekin
+[14/02/2023 10:14:23]Konexio errorea http://192.168.65.123:8080/Partidak/getPartidak helbidearekin
+[14/02/2023 13:35:10]http://192.168.65.90:8081/demo/all_Partida erabiliz, partiden informazioa gorde da. (25) datu berri gorde dira.
+[14/02/2023 13:35:10]http://192.168.65.90:8081/demo/all_Langilea erabiliz, langileen informazioa gorde da. (0) datu berri gorde dira.
+[14/02/2023 13:35:37]http://192.168.65.90:8081/demo/all_Partida erabiliz, partiden informazioa gorde da. (25) datu berri gorde dira.
+[14/02/2023 13:35:37]http://192.168.65.90:8081/demo/all_Langilea erabiliz, langileen informazioa gorde da. (0) datu berri gorde dira.
+[14/02/2023 13:35:55]http://192.168.65.90:8081/demo/all_Partida erabiliz, partiden informazioa gorde da. (25) datu berri gorde dira.
+[14/02/2023 13:35:55]http://192.168.65.90:8081/demo/all_Langilea erabiliz, langileen informazioa gorde da. (0) datu berri gorde dira.

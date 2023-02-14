@@ -13,7 +13,7 @@ public class Erabiltzailea {
         System.out.print("\033[H\033[2J");
         System.out.flush();
 
-        String Host = "127.0.0.1"; // "localhost" ipintzea berdina da
+        String Host = "192.168.65.91"; // "localhost" ipintzea berdina da
         // String Host = "192.168.65.16";
         int Puerto = 6000;
         while (true) {

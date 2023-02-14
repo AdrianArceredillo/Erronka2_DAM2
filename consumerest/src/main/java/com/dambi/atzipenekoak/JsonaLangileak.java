@@ -56,7 +56,7 @@ public class JsonaLangileak {
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
 
                 //Try catch batekin egin behar da zeren talderen batek ez dut ipini jaiotzadata *kof* *kof* 4 taldea *kof* *kof*
-                Date date = null;
+                Date date = sdf.parse("1970-01-02 00:00:00.0");
                 try {
                     date = sdf.parse(jsonobj.getString("jaiotzadata"));
                 } catch (Exception e) {

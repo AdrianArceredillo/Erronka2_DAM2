@@ -15,6 +15,30 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\otero.haritz\Desktop\Erronka2 DAM2\Erronka2_DAM2\WebErronka\WebErronka
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -41,6 +65,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/PodiumJokoak/IndexAsync.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9kaXVtSm9rb2FrXEluZGV4QXN5bmMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/Shared/Components/Jokoak/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSm9rb2FrXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/Shared/_LoginPartial.cshtml]

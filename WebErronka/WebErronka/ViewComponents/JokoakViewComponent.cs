@@ -6,14 +6,13 @@ namespace WebErronka.ViewComponents
     public class JokoakViewComponent : ViewComponent
     {
         private readonly IJokoaService _jokoaService;
-        public JokoakViewComponent(IJokoaService ardoaService)
+        public JokoakViewComponent(IJokoaService jokoaService)
         {
-            _jokoaService = ardoaService;
+            _jokoaService = jokoaService;
         }
         public async Task<IViewComponentResult> InvokeAsync(int id)
         {
-            ViewBag.jokoaId = id;
-            return View(await _jokoaService.GetJokoaIzena(id));
+            return View(await _jokoaService.GetJokoa(id));
         }
     }
 }

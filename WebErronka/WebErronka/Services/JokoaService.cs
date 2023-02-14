@@ -6,11 +6,11 @@ namespace WebErronka.Services
 
     public class JokoaService : IJokoaService
     {
-        private Uri rutaJokoa = new Uri("https://localhost:44367/api/jokoak/");
+        private Uri rutaJokoa = new Uri("http://192.168.65.91:8080/api/jokoak");
         public async Task<Jokoa> GetJokoa(int id)
         {
             Jokoa jokoa = new Jokoa();
-            Uri jokoBat = new Uri(rutaJokoa, "jokoa/" + id.ToString());
+            Uri jokoBat = new Uri(rutaJokoa + "/" + id.ToString());
             using (var httpClient = new HttpClient())
             {
                 using (var response = await httpClient.GetAsync(jokoBat))

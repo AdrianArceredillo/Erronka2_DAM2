@@ -1,18 +1,27 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+@media (min-width: 1500px) {
+    html {
+        font-size: 23px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: lightgrey;
+}
+
+.hidden {
+    display: none;
+}
+
+#nav-toggler {
+    display: none;
 }

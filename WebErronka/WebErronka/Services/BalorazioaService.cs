@@ -6,8 +6,8 @@ namespace WebErronka.Services
 {
     public class BalorazioaService : IBalorazioaService
     {
-        private Uri rutaTodos = new Uri("https://localhost:44367/api/balorazioak/");
-        private Uri rutaBalorazioa = new Uri("https://localhost:44367/api/balorazioak/");
+        private Uri rutaTodos = new Uri("https://192.168.65.22:8080/api/balorazioak/");
+        private Uri rutaBalorazioa = new Uri("https://192.168.65.22:8080/api/balorazioak/");
         public async Task<IList<Balorazioa>> GetBalorazioak()
         {
 

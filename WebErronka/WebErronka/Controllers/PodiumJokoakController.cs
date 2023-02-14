@@ -8,10 +8,11 @@ namespace WebErronka.Controllers
     public class PodiumJokoakController : Controller
     {
         private readonly IPartidaService _partidaService;
-        public async Task<IActionResult> IndexAsync(int jokoaId)
+        public async Task<IActionResult> IndexAsync(string jokoIzena)
         {
-            IList<Partida> balorazioList = new List<Partida>();
-            var partidaList = await _partidaService.GetPartidakJokuarekiko(jokoaId);
+            List<Partida> partidaList = new List<Partida>();
+            partidaList = await _partidaService.GetPartidakJokuarekiko(jokoIzena);
+
 
             //Partida bakoitzaren datuak hartu
             IList<PodiumJokoakViewModel> podiumVMlist = new List<PodiumJokoakViewModel>();
@@ -20,12 +21,11 @@ namespace WebErronka.Controllers
             {
                 try
                 {
-
                     PodiumJokoakViewModel podiumViewModel = new PodiumJokoakViewModel()
                     {
-                        jokalaria = balorazioList[i].langilea,
-                        puntuazioa = balorazioList[i].puntuazioa,
-                        taldea = balorazioList[i].taldea,
+                        jokalaria = partidaList[i].langilea,
+                        puntuazioa = partidaList[i].puntuazioa,
+                        taldea = partidaList[i].taldea,
 
                     };
                     podiumVMlist.Add(podiumViewModel);

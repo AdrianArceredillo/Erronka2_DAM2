@@ -4,82 +4,100 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WebErronka</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebErronka.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
 </head>
+
 <body>
+   
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebErronka</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Podium</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                               aria-expanded="false">
-                                PodiumJokoak
-                            </a>
-                            <div class="dropdown-menu">
-                                @*<a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-parameterName="@joko1id" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 1 })</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-parameterName="@joko2id" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 2 })</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-parameterName="@joko3id" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 3 })</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-parameterName="@joko4id" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 4 })</a>*@
-                            </div>
-                        </li>
+        
+            <nav class="navbar navbar-expand-md navbar-toggleable-sm navbar-light bg-black border-bottom box-shadow mb-3">
+                <div class="container-fluid">
+                    <form asp-controller="Home" asp-action="Index">
+                        <input type="image" src="~/images/home.png" style="width:200px; height: 100px;" sty alt="Submit">
+                    </form>
 
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                               aria-expanded="false">
-                                BalorazioaJokoak
-                            </a>
+                <button class="navbar-toggler navbar-dark text-warning" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-md-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" asp-area="" asp-controller="Home" asp-action="Index">Podium</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-warning" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    PodiumJokoak
+                                </a>
                             @{
                                 int joko1id = 1;
                                 int joko2id = 2;
                                 int joko3id = 3;
                                 int joko4id = 4;
+
                                 string joko1Izena = "Mahi Kingdom";
-                                string joko2Izena = "";
+                                string joko2Izena = "Jokua 2";
                                 string joko3Izena = "Pouni";
                                 string joko4Izena = "Johnny";
-                                
+                               
+                               
                             }
-                            
-                            <div class="dropdown-menu">
-                                @*<a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko1Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 1 })</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko2Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 2 })</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko3Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 3 })</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko4Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 4 })</a>*@
-                            </div>
-                        </li>
+                                
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                               aria-expanded="false">
-                                Partaideak
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Talde1</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Talde2</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Talde3</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Talde4</a>
-                            </div>
-                        </li>
-                       
+                                <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-jokoIzena="@joko1Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 1 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-jokoIzena="@joko2Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 2 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-jokoIzena="@joko3Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 3 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-jokoIzena="@joko4Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 4 })</a>
+                                </div>
+                            </li>
 
-                    </ul>
-                    <partial name="_LoginPartial" />
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-warning" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    BalorazioaJokoak
+                                </a>
+                                
+
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko1Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 1 })</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko2Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 2 })</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko3Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 3 })</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko4Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 4 })</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-warning" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    Partaideak
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Talde1</a>                                                                             
+                                    <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Talde2</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Talde3</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Talde4</a>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                        <partial name="_LoginPartial" />
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -92,9 +110,12 @@
             &copy; 2023 - WebErronka - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    
+        
 </body>
 </html>

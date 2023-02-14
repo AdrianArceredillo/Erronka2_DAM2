@@ -30,7 +30,6 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
-
 //Gure zerbitzuak
 
 builder.Services.AddScoped<ILangileaService, LangileaService>();

@@ -177,7 +177,8 @@ public class MovimientoJugador : MonoBehaviour
             disparando.gameObject.transform.position = personaje.gameObject.GetComponent<Rigidbody2D>().transform.position;
 
             disparando.gameObject.SetActive(true);
-            Invoke(nameof(disp), 1.0f);
+            Invoke(nameof(disp), 0.5f);
+            //Invoke(nameof(disp), 1.0f);
         }
 
         //lanzar_Granadas

@@ -35,7 +35,7 @@ public class Score : MonoBehaviour
 
 
     [SerializeField] private GameObject finalPartida_notificacion;      //mensaje de final de partida
-    [SerializeField] private GameObject menuResumen;                    //elemento que será el menú
+    //[SerializeField] private GameObject menuResumen;                    //elemento que será el menú
 
     void Start()
     {
@@ -69,7 +69,7 @@ public class Score : MonoBehaviour
         //lblLives.color = Color.red;
 
         //finalPartida_notificacion.SetActive(false);
-        menuResumen.SetActive(false);
+        //menuResumen.SetActive(false);
         finalPartida_notificacion.SetActive(false);
 
 

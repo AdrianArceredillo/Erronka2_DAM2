@@ -7,6 +7,15 @@ html {
         flex-direction: column;
         text-align: center;
     }
+
+    .izenaTel {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .sartuTel {
+        margin-top: 20px;
+    }
 }
 
 html {

@@ -18,7 +18,7 @@
                 box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
                 margin: 50px auto;
                 padding: 30px 50px;
-                width: 30%;
+                width: 500px;
             }
 
             h1 {
@@ -43,6 +43,10 @@
                 margin-bottom: 5px;
             }
 
+            input {
+                width: 95%;
+            }
+
             .inkestaButton {
                 background-color: #307bbe;
                 border: none;
@@ -61,7 +65,7 @@
             }
             .izenaTel {
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-around;
             }
 
             .galderak {
@@ -69,6 +73,7 @@
                 justify-content: space-between;
                 text-align: center;
             }
+
 
         </style>
     </head>
@@ -80,7 +85,7 @@
                     <label for="izena">IZENA:</label>
                     <input type="text" id="izena" name="izena" placeholder="Izena" required>
                 </div>
-                <div class="sartuIzena">
+                <div class="sartuTel">
                     <label for="tel">TELEFONOA:</label>
                     <input type="tel" id="tel" name="tel" placeholder="Telefonoa">
                 </div>
@@ -107,51 +112,51 @@
             <div class="galderak">
                 <div class="a">
                     <label for="puntu1">1 - 2</label>
-                    <input type="radio" id="puntuak" name="puntuak" value="1">
+                    <input type="radio" id="puntu1" name="puntuak" value="1">
                 </div>
                 <div class="a">
                     <label for="puntu4">3 - 4</label>
-                    <input type="radio" id="puntuak" name="puntuak" value="3">
+                    <input type="radio" id="puntu2" name="puntuak" value="3">
                 </div>
                 <div class="a">
                     <label for="puntu4" >5 - 6</label>
-                    <input type="radio" id="puntuak" name="puntuak" value="5">
+                    <input type="radio" id="puntu3" name="puntuak" value="5">
                 </div>
                 <div class="a">
                     <label for="puntu7">7 - 8</label>
-                    <input type="radio" id="puntuak" name="puntuak" value="7">
+                    <input type="radio" id="puntu4" name="puntuak" value="7">
                 </div>
                 <div class="a">
                     <label for="puntu7">9 - 10</label>
-                    <input type="radio" id="puntuak" name="puntuak" value="9">
+                    <input type="radio" id="puntu5" name="puntuak" value="9">
                 </div>
             </div>
             <br />
             <p>PUNTUA EZAZU JOKOAREN ERABILGARRITASUNA:</p>
             <div class="galderak">
                 <div class="a">
-                    <label for="puntu1">1</label>
-                    <input type="radio" id="puntuak" name="puntuak" value="1">
+                    <label for="erabil1">1</label>
+                    <input type="radio" id="erabil1" name="erabil" value="1">
                 </div>
                 <div class="a">
-                    <label for="puntu2">2</label>
-                    <input type="radio" id="puntuak" name="puntuak" value="2">
+                    <label for="erabil2">2</label>
+                    <input type="radio" id="erabil2" name="erabil" value="2">
                 </div>
                 <div class="a">
-                    <label for="puntu3" >3</label>
-                    <input type="radio" id="puntuak" name="puntuak" value="3">
+                    <label for="erabil3">3</label>
+                    <input type="radio" id="erabil3" name="erabil" value="3">
                 </div>
                 <div class="a">
-                    <label for="puntu4">4</label>
-                    <input type="radio" id="puntuak" name="puntuak" value="4">
+                    <label for="erabil4">4</label>
+                    <input type="radio" id="erabil4" name="erabil" value="4">
                 </div>
                 <div class="a">
-                    <label for="puntu5">5</label>
-                    <input type="radio" id="puntuak" name="puntuak" value="5">
+                    <label for="erabil5">5</label>
+                    <input type="radio" id="erabil5" name="erabil" value="5">
                 </div>
             </div>
             <br />
-            <p>HERRIALDEA:</p>
+            <p>ESKUALDEA:</p>
             <div class="galderak">
                 <div class="a">
                     <label for="herri">ARABA</label>
@@ -167,7 +172,7 @@
                 </div>
                 <div class="a">
                     <label for="age3">NAFARROA</label>
-                    <input type="radio" id="herri3" name="herriak" value="D">
+                    <input type="radio" id="herri4" name="herriak" value="D">
                 </div>
             </div>
             <br>
@@ -175,22 +180,22 @@
             <div class="galderak">
             <div class="a">
                 <label for="lengoai">C#</label>
-                <input type="radio" id="lengoai3" name="lengoaiak" value="C#">
+                <input type="radio" id="lengoai1" name="lengoaiak" value="C#">
             </div>
             <div class="a">
                 <label for="lengoai">C++</label>
-                <input type="radio" id="lengoai4" name="lengoaiak" value="C++">
+                <input type="radio" id="lengoai2" name="lengoaiak" value="C++">
             </div>
                 <div class="a">
                     <label for="lengoai">JAVA</label>
-                    <input type="radio" id="lengoai1" name="lengoaiak" value="Java">
+                    <input type="radio" id="lengoai3" name="lengoaiak" value="Java">
                 </div>
                 <div class="a">
                     <label for="lengoai">PYTHON</label>
-                    <input type="radio" id="lengoai2" name="lengoaiak" value="Python">
+                    <input type="radio" id="lengoai4" name="lengoaiak" value="Python">
                 </div>
             </div>
-                                    
+                                                        
             <button class="inkestaButton" type="submit">BIDALI</button>
         </form>
     </body>

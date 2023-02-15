@@ -6,14 +6,14 @@ namespace Erronka2.Controllers
 {
     public class JokoaController : Controller
     {
-        private readonly IJokoaService _jokoaaService;
+        private readonly IJokoaService _jokoaService;
 
 
         // GET: Balorazioak
         public async Task<IActionResult> Index(int jokoaId)
         {
             Jokoa jokoa = new Jokoa();
-            jokoa = await _jokoaaService.GetJokoa(jokoaId);
+            jokoa = await _jokoaService.GetJokoa(jokoaId);
             return View(jokoa);
         }
     }

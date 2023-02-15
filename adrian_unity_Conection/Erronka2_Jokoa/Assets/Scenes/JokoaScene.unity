@@ -1177,7 +1177,6 @@ GameObject:
   m_Component:
   - component: {fileID: 87790033}
   - component: {fileID: 87790035}
-  - component: {fileID: 87790034}
   - component: {fileID: 87790036}
   - component: {fileID: 87790037}
   m_Layer: 0
@@ -1202,50 +1201,6 @@ Transform:
   m_Father: {fileID: 695329811}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &87790034
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87790032}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 19.2, y: 10.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 4.2009506, y: 0.013579279}
-      - {x: 3.852076, y: -0.2494742}
-      - {x: 3.5074532, y: -0.5188762}
-      - {x: 3.0557015, y: -0.4220689}
-      - {x: 2.8263648, y: -0.15480281}
-      - {x: 2.2710876, y: -0.043612674}
-      - {x: 1.9860674, y: -0.33976686}
-      - {x: 1.3799891, y: -0.5823834}
-      - {x: 1.0514685, y: -0.744467}
-      - {x: 0.8402591, y: -0.9253572}
-      - {x: 8.9187355, y: -1.3623793}
-      - {x: 8.337094, y: -1.0454264}
-      - {x: 7.5604153, y: -1.0508847}
-      - {x: 7.200957, y: -0.71313167}
-      - {x: 6.5527325, y: -0.52964926}
-      - {x: 6.305469, y: -0.14687157}
-      - {x: 5.7048936, y: -0.10678904}
-      - {x: 5.1558714, y: 0.027210891}
-      - {x: 4.530708, y: -0.20726173}
 --- !u!212 &87790035
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2023,7 +1978,7 @@ PolygonCollider2D:
       - {x: 0.0897242, y: -0.2046753}
       - {x: 0.3772979, y: -0.098356776}
       - {x: 0.58778536, y: -0.018600643}
-      - {x: 1.3898776, y: 0.07718861}
+      - {x: 1.6740936, y: 0.16598934}
 --- !u!114 &181387546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7726,6 +7681,7 @@ GameObject:
   - component: {fileID: 985683668}
   - component: {fileID: 985683669}
   - component: {fileID: 985683670}
+  - component: {fileID: 985683671}
   m_Layer: 0
   m_Name: houses_00
   m_TagString: plat_fence
@@ -7857,6 +7813,36 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!60 &985683671
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985683666}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 10.8}
+    newSize: {x: 19.2, y: 10.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.3627114, y: 3.9268444}
+      - {x: 1.1504519, y: 3.911023}
+      - {x: 1.0759865, y: 3.7004583}
+      - {x: 5.0895457, y: 3.728774}
+      - {x: 5.4742584, y: 3.9205124}
 --- !u!1 &988784693
 GameObject:
   m_ObjectHideFlags: 0
@@ -9923,8 +9909,8 @@ MonoBehaviour:
   Enemigo_Movimiento: {fileID: 1560080505}
   maxX: 40
   minX: -7
-  maxY: 2
-  minY: -3
+  maxY: 2.28
+  minY: 2
 --- !u!114 &1264456545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12252,7 +12238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531501178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.07, y: -3.74, z: 0}
+  m_LocalPosition: {x: -4.26, y: 1.01, z: 0}
   m_LocalScale: {x: 3.6981905, y: 3.0724, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17021,7 +17007,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100145398}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -2.3, y: 0.2, z: 0}
+  m_LocalPosition: {x: -2.62, y: 1.47, z: 0}
   m_LocalScale: {x: 0.7089, y: 7.7606254, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -1,13 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WebErronka.Services;
 using WebErronka.ViewModels;
 
 namespace WebErronka.Controllers
 {
+    [Authorize]
     public class PodiumGeneralController : Controller
     {
         private readonly IPartidaService _partidaService;
-        public async Task<IActionResult> IndexAsync()
+
+        public PodiumGeneralController(IPartidaService partidaService)
+        {
+            _partidaService = partidaService;
+        }
+
+        public async Task<IActionResult> PodiumInprimatu()
         {
 
             var partidaList = await _partidaService.GetPartidak();
@@ -27,9 +35,9 @@ namespace WebErronka.Controllers
                 };
                 podiumVMlist.Add(podiumGeneralaViewModel);
             }
-            var modelberria = new PodiumJokoakViewModel(); //Bistaratuko dugun ViewModel osoa
 
-            return View(modelberria);
+
+            return View(podiumVMlist);
 
         }
     }

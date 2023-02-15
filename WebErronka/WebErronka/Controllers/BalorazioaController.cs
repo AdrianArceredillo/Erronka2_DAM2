@@ -10,7 +10,12 @@ namespace WebErronka.Controllers
     public class BalorazioaController : Controller
     {
         private readonly IBalorazioaService _balorazioaService;
-        public async Task<IActionResult> Index(string jokoa)
+        public BalorazioaController(IBalorazioaService balorazioaService)
+        {
+            _balorazioaService = balorazioaService;
+        }
+
+        public async Task<IActionResult> BalorazioakInprimatu(string jokoa)
         {
             IList<Balorazioa> balorazioList = new List<Balorazioa>();
             balorazioList = await _balorazioaService.GetBalorazioakJokoarekiko(jokoa);
@@ -29,9 +34,8 @@ namespace WebErronka.Controllers
                 };
                 balorazioaVMlist.Add(balorazioaViewModel);
             }
-            var modelberria = new BalorazioaViewModel(); //Bistaratuko dugun ViewModel osoa
 
-            return View(modelberria);
+            return View(balorazioaVMlist);
 
             //}
         }

@@ -5,7 +5,7 @@ namespace WebErronka.Services
 {
     public class PartidaService : IPartidaService
     {
-        private Uri rutaTodos = new Uri("https://192.168.65.22:8080/api/partidak/");
+        private Uri rutaTodos = new Uri("http://192.168.65.91:8080/api/partidak/");
 
         public async Task<IList<LangilePartida>> GetLangilea(int partidaId)
         {
@@ -43,7 +43,7 @@ namespace WebErronka.Services
         {
             List<Partida> sortedList = new List<Partida>();
             List<Partida> partidaList = new List<Partida>();
-            Uri rutaPartidakJokuBatekiko = new Uri(rutaTodos, jokoIzena);
+            Uri rutaPartidakJokuBatekiko = new Uri(rutaTodos + jokoIzena);
             using (var httpClient = new HttpClient())
             {
                 using (var response = await httpClient.GetAsync(rutaPartidakJokuBatekiko))

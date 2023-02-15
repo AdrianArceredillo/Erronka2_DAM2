@@ -33,7 +33,7 @@
                     <div class="navbar-collapse collapse d-md-inline-flex justify-content-between">
                         <ul class="navbar-nav flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link text-warning" asp-area="" asp-controller="Home" asp-action="Index">Podium</a>
+                            <a class="nav-link text-warning" asp-area="" asp-controller="PodiumGeneral" asp-action="PodiumInprimatu">Podium</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-warning" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -47,7 +47,7 @@
                                 int joko4id = 4;
 
                                 string joko1Izena = "Mahi Kingdom";
-                                string joko2Izena = "Jokua 2";
+                                string joko2Izena = "ZOMBIE KILLER";
                                 string joko3Izena = "Pouni";
                                 string joko4Izena = "Johnny";
                                
@@ -56,10 +56,10 @@
                                 
 
                                 <div class="dropdown-menu">
-                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-jokoIzena="@joko1Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 1 })</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-jokoIzena="@joko2Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 2 })</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-jokoIzena="@joko3Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 3 })</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-jokoIzena="@joko4Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 4 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-jokoIzena="@joko1Izena" asp-action="PartidakInprimatu">@await Component.InvokeAsync("Jokoak", new { id = 1 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-jokoIzena="@joko2Izena" asp-action="PartidakInprimatu">@await Component.InvokeAsync("Jokoak", new { id = 2 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-jokoIzena="@joko3Izena" asp-action="PartidakInprimatu">@await Component.InvokeAsync("Jokoak", new { id = 3 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="PodiumJokoak" asp-route-jokoIzena="@joko4Izena" asp-action="PartidakInprimatu">@await Component.InvokeAsync("Jokoak", new { id = 4 })</a>
                                 </div>
                             </li>
 
@@ -72,10 +72,10 @@
                                 
 
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko1Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 1 })</a>
-                                    <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko2Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 2 })</a>
-                                    <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko3Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 3 })</a>
-                                    <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko4Izena" asp-action="Index">@await Component.InvokeAsync("Jokoak", new { id = 4 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko1Izena" asp-action="BalorazioakInprimatu">@await Component.InvokeAsync("Jokoak", new { id = 1 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko2Izena" asp-action="BalorazioakInprimatu">@await Component.InvokeAsync("Jokoak", new { id = 2 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko3Izena" asp-action="BalorazioakInprimatu">@await Component.InvokeAsync("Jokoak", new { id = 3 })</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-parameterName="@joko4Izena" asp-action="BalorazioakInprimatu">@await Component.InvokeAsync("Jokoak", new { id = 4 })</a>
                                 </div>
                             </li>
 

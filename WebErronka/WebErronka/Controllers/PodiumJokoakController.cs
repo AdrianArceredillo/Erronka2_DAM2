@@ -8,7 +8,11 @@ namespace WebErronka.Controllers
     public class PodiumJokoakController : Controller
     {
         private readonly IPartidaService _partidaService;
-        public async Task<IActionResult> IndexAsync(string jokoIzena)
+        public PodiumJokoakController(IPartidaService partidaService)
+        {
+            _partidaService = partidaService;
+        }
+        public async Task<IActionResult> PartidakInprimatu(string jokoIzena)
         {
             List<Partida> partidaList = new List<Partida>();
             partidaList = await _partidaService.GetPartidakJokuarekiko(jokoIzena);
@@ -36,9 +40,9 @@ namespace WebErronka.Controllers
                 }
 
             }
-            var modelberria = new PodiumJokoakViewModel(); //Bistaratuko dugun ViewModel osoa
 
-            return View(modelberria);
+
+            return View(podiumVMlist);
 
         }
     }

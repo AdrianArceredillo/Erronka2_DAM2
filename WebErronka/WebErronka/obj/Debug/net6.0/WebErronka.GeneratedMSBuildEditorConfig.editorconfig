@@ -43,12 +43,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/Balorazioa/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsb3JhemlvYVxDcmVhdGUuY3NodG1s
+[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/Balorazioa/BalorazioakInprimatu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsb3JhemlvYVxCYWxvcmF6aW9ha0lucHJpbWF0dS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/Balorazioa/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsb3JhemlvYVxJbmRleC5jc2h0bWw=
+[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/Balorazioa/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsb3JhemlvYVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/Home/Index.cshtml]
@@ -59,12 +59,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/PodiumGeneral/IndexAsync.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9kaXVtR2VuZXJhbFxJbmRleEFzeW5jLmNzaHRtbA==
+[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/PodiumGeneral/PodiumInprimatu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9kaXVtR2VuZXJhbFxQb2RpdW1JbnByaW1hdHUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/PodiumJokoak/IndexAsync.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9kaXVtSm9rb2FrXEluZGV4QXN5bmMuY3NodG1s
+[C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/PodiumJokoak/PartidakInprimatu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9kaXVtSm9rb2FrXFBhcnRpZGFrSW5wcmltYXR1LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/otero.haritz/Desktop/Erronka2 DAM2/Erronka2_DAM2/WebErronka/WebErronka/Views/Shared/Components/Jokoak/Default.cshtml]

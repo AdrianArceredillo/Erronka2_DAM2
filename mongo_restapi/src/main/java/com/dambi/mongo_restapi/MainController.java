@@ -48,6 +48,19 @@ public class MainController {
         return balorazioaRepository.findAll();
     }
 
+    @GetMapping("/balorazioak/{jokoa}")
+    public List<Balorazioa> getBalorazioaByTaldea(@PathVariable String jokoa) {
+        return balorazioaRepository.findByJokoaEquals(jokoa);
+    }
+
+    @PostMapping("/balorazioaGehitu")
+    public Balorazioa createBalorazioa(@RequestBody Balorazioa balorazioa) {
+        balorazioaRepository.save(balorazioa);
+        return balorazioa;
+    }
+
+
+
     @GetMapping("/jokoak")
     public List<Jokoa> getAllJokoak() {
         return jokoaRepository.findAll();
@@ -58,20 +71,20 @@ public class MainController {
         return jokoaRepository.findByTaldea(taldea);
     }
 
-    // @PostMapping("/partidas")
-    // public Partida createPartida(@RequestBody Partida partida) {
-    //     partida.set_id(ObjectId.get());
-    //     partidaRepository.save(partida);
-    //     return partida;
-    // }
+    @PostMapping("/partidas")
+    public Partida createPartida(@RequestBody Partida partida) {
+        //partida.set_id(ObjectId.get());
+        partidaRepository.save(partida);
+        return partida;
+    }
 
-    // @PutMapping("/partidas/{id}")
-    // public Partida updatePartida(@PathVariable ObjectId id, @RequestBody Partida
-    // partida) {
-    // partida.set_id(id);
-    // repository.save(partida);
-    // return partida;
-    // }
+    @PutMapping("/partidas/{id}")
+    public Partida updatePartida(@PathVariable ObjectId id, @RequestBody Partida
+    partida) {
+    //partida.set_id(id);
+    partidaRepository.save(partida);
+    return partida;
+    }
 
     // @DeleteMapping("/partidas/{id}")
     // public void deletePartida(@PathVariable ObjectId id) {

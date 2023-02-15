@@ -15,16 +15,17 @@ public class Balorazioa {
     private String testua;
     private int kopurua;
     private Date data;
+    private String jokoa;
 
-    //ID
+    // ID
     // public ObjectId get_id() {
-    //     return _id;
+    // return _id;
     // }
 
     // public void set_id(ObjectId _id) {
-    //     this._id = _id;
+    // this._id = _id;
     // }
-    //ERABILTZAILEA
+    // ERABILTZAILEA
     public String getErabiltzailea() {
         return erabiltzailea;
     }
@@ -32,7 +33,8 @@ public class Balorazioa {
     public void setErabiltzailea(String erabiltzailea) {
         this.erabiltzailea = erabiltzailea;
     }
-    //TESTUA
+
+    // TESTUA
     public String getTestua() {
         return testua;
     }
@@ -40,7 +42,8 @@ public class Balorazioa {
     public void setTestua(String izena) {
         this.testua = izena;
     }
-    //KOPURUA
+
+    // KOPURUA
     public int getKopurua() {
         return kopurua;
     }
@@ -48,12 +51,22 @@ public class Balorazioa {
     public void setKopurua(int kopurua) {
         this.kopurua = kopurua;
     }
-    //DATA
+
+    // DATA
     public Date getData() {
         return data;
     }
 
     public void setData(Date data) {
         this.data = data;
+    }
+
+    // JOKOA
+    public String getJokoa() {
+        return jokoa;
+    }
+
+    public void setJokoa(String jokoa) {
+        this.jokoa = jokoa;
     }
 }

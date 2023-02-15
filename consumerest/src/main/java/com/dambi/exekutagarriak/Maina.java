@@ -26,7 +26,7 @@ public class Maina {
 public static void taldea1(){
     String linkPartida = "http://192.168.65.11:8080/api/allPartidak";
     try {
-        insert.insertPartida(linkPartida, "Mahi Kingdom");
+        insert.insertPartida(linkPartida, "Mahi Kingdom", 1);
     } catch (Exception e) {
         Garbitzailea.garbituPantaila();
         Log.logIdatzi("Konexio errorea " + linkPartida + " helbidearekin");
@@ -46,10 +46,19 @@ public static void taldea1(){
 }
 
 //JOKOAREN IZENA FALTA DA
+
+//Mahi Kingdom
+//ZOMBIE KILLER
+//Pouni
+//Johnny
+
 public static void taldea2(){
     String linkPartida = "http://192.168.65.90:8081/demo/all_Partida";
     try {
-        insert.insertPartida(linkPartida, "Johnny");
+        //insert.insertPartida(linkPartida, "Mahi Kingdom", 1);
+        insert.insertPartida(linkPartida, "ZOMBIE KILLER", 2);
+        //insert.insertPartida(linkPartida, "Pouni", 3);
+        //insert.insertPartida(linkPartida, "Johnny", 4);
     } catch (Exception e) {
         Garbitzailea.garbituPantaila();
         Log.logIdatzi("Konexio errorea " + linkPartida + " helbidearekin");
@@ -57,22 +66,22 @@ public static void taldea2(){
     }
     Garbitzailea.garbituPantaila();
     
-    String linkLangilea = "http://192.168.65.90:8081/demo/all_Langilea";
-    try {
-        insert.insertLangilea(linkLangilea);
-    } catch (Exception e) {
-        Garbitzailea.garbituPantaila();
-        Log.logIdatzi("Konexio errorea " + linkLangilea + " helbidearekin");
-        System.out.println("Konexio errorea " + linkLangilea + " helbidearekin");
-    }
-    Garbitzailea.garbituPantaila();
+    // String linkLangilea = "http://192.168.65.90:8081/demo/all_Langilea";
+    // try {
+    //     insert.insertLangilea(linkLangilea);
+    // } catch (Exception e) {
+    //     Garbitzailea.garbituPantaila();
+    //     Log.logIdatzi("Konexio errorea " + linkLangilea + " helbidearekin");
+    //     System.out.println("Konexio errorea " + linkLangilea + " helbidearekin");
+    // }
+    // Garbitzailea.garbituPantaila();
 }
 
 
 public static void taldea3(){
     String linkPartida = "============================================";
     try {
-        insert.insertPartida(linkPartida, "Pouni");
+        insert.insertPartida(linkPartida, "Pouni", 3);
     } catch (Exception e) {
         Garbitzailea.garbituPantaila();
         Log.logIdatzi("Konexio errorea " + linkPartida + " helbidearekin");
@@ -95,7 +104,7 @@ public static void taldea3(){
 public static void taldea4(){
     String linkPartida = "http://192.168.65.123:8080/Partidak/getPartidak";
     try {
-        insert.insertPartida(linkPartida, "Johnny");
+        insert.insertPartida(linkPartida, "Johnny", 4);
     } catch (Exception e) {
         Garbitzailea.garbituPantaila();
         Log.logIdatzi("Konexio errorea " + linkPartida + " helbidearekin");

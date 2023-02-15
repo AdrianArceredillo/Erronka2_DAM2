@@ -28,7 +28,7 @@ import org.bson.Document;
 public class insert {
     public static String fitxategia = "informazioa.json";
 
-    public static void insertPartida(String link, String jokoa) {
+    public static void insertPartida(String link, String jokoa, int taldea) {
         String content = "";
         HttpClient client = HttpClientBuilder.create().build();
 
@@ -46,7 +46,7 @@ public class insert {
             writer.write(content);
             writer.close();
             // Fitxategia irakurri eta datuak lortu
-            partidak = JsonaPartidak.irakurri(fitxategia, jokoa);
+            partidak = JsonaPartidak.irakurri(fitxategia, jokoa, taldea);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -62,7 +62,8 @@ public class insert {
                         .append("langilea", partida.getUser()) // langile bezala utziko da eta ez user bezala
                         .append("puntuazioa", partida.getPuntuazioa())
                         .append("data", partida.getData())
-                        .append("jokoa", partida.getJokoa());
+                        .append("jokoa", partida.getJokoa())
+                        .append("taldea", partida.getTaldea());
 
                 db.getCollection("partida").insertOne(doc);
                 kontagailua++;

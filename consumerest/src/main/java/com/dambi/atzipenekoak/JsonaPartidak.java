@@ -36,7 +36,7 @@ import java.io.FileReader;
 
 public class JsonaPartidak {
 
-        public static Partidak irakurri(String strFileIn, String jokoa) {
+        public static Partidak irakurri(String strFileIn, String jokoa, int taldea) {
 
         Partidak partidak = null;
         try {
@@ -54,6 +54,7 @@ public class JsonaPartidak {
                 Date date = sdf.parse(jsonobj.getString("data"));
                 partida.setData(date);
                 partida.setJokoa(jokoa);
+                partida.setTaldea(taldea);
                 partidak.add(partida);
             }
             

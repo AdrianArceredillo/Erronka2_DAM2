@@ -1,29 +1,33 @@
 package com.dambi.mongo_restapi.pojoak;
+
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.Date;
 
 @Document(collection = "partida")
+@JsonIgnoreProperties("_class")
 public class Partida {
     // @Id
     // private ObjectId _id;
     private Integer partidaId;
     private String langilea;
-    private int puntuazioa;
+    private int puntuazioa, taldea;
     private Date data;
     private String jokoa;
-    
-    //ID
+
+    // ID
     // public ObjectId get_id() {
-    //     return _id;
+    // return _id;
     // }
 
     // public void set_id(ObjectId _id) {
-    //     this._id = _id;
+    // this._id = _id;
     // }
-    //PARTIDA
+    // PARTIDA
     public Integer getPartidaId() {
         return partidaId;
     }
@@ -31,7 +35,8 @@ public class Partida {
     public void setPartidaId(Integer id) {
         this.partidaId = id;
     }
-    //LANGILEA
+
+    // LANGILEA
     public String getLangilea() {
         return langilea;
     }
@@ -39,7 +44,8 @@ public class Partida {
     public void setLangilea(String user) {
         this.langilea = user;
     }
-    //PUNTUAZIOA
+
+    // PUNTUAZIOA
     public int getPuntuazioa() {
         return puntuazioa;
     }
@@ -47,7 +53,8 @@ public class Partida {
     public void setPuntuazioa(int puntuazioa) {
         this.puntuazioa = puntuazioa;
     }
-    //DATA
+
+    // DATA
     public Date getData() {
         return data;
     }
@@ -55,7 +62,8 @@ public class Partida {
     public void setData(Date data) {
         this.data = data;
     }
-    //JOKOA
+
+    // JOKOA
     public String getJokoa() {
         return jokoa;
     }
@@ -64,5 +72,13 @@ public class Partida {
         this.jokoa = jokoa;
     }
 
+    // Taldea
+    public int getTaldea() {
+        return taldea;
+    }
+
+    public void setTalda(int taldea) {
+        this.taldea = taldea;
+    }
 
 }

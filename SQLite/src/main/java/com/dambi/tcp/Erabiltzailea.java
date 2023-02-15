@@ -13,12 +13,19 @@ public class Erabiltzailea {
         System.out.print("\033[H\033[2J");
         System.out.flush();
 
+        boolean hasiera = true;
+
         String Host = "192.168.65.91"; // "localhost" ipintzea berdina da
         // String Host = "192.168.65.16";
         int Puerto = 6000;
         while (true) {
             while (true) {
-                TimeUnit.SECONDS.sleep(3);
+                if (hasiera){
+                    hasiera = false;
+                } else {
+                    TimeUnit.SECONDS.sleep(2);
+                }
+                
                 try {
 
                     // SQLite-ko datuak lortu
@@ -41,14 +48,14 @@ public class Erabiltzailea {
                     objectOutputStream.writeObject(datuak);
 
                     DataInputStream flujoEntrada = new DataInputStream(Cliente.getInputStream());
-                    // EL SERVIDOR ME ENVIA UN MENSAJE
+
 
                     String mezua = flujoEntrada.readUTF();
 
                     System.out.println("Zerbitzaritik jasotzen: \n" + mezua);
-                    SQLite.datuakGarbitu();
+                    //SQLite.datuakGarbitu();
 
-                    // CERRAR STREAMS Y SOCKETS
+
                     flujoEntrada.close();
                     Cliente.close();
 

@@ -15,10 +15,10 @@ namespace WebErronka.Controllers
             _balorazioaService = balorazioaService;
         }
 
-        public async Task<IActionResult> BalorazioakInprimatu(string jokoa)
+        public async Task<IActionResult> BalorazioakInprimatu(string jokoIzena)
         {
             IList<Balorazioa> balorazioList = new List<Balorazioa>();
-            balorazioList = await _balorazioaService.GetBalorazioakJokoarekiko(jokoa);
+            balorazioList = await _balorazioaService.GetBalorazioakJokoarekiko(jokoIzena);
 
             //Ardo bakoitzaren datuak hartu eta ViewModel bezala sortu
             IList<BalorazioaViewModel> balorazioaVMlist = new List<BalorazioaViewModel>();
@@ -26,10 +26,11 @@ namespace WebErronka.Controllers
             {
                 BalorazioaViewModel balorazioaViewModel = new BalorazioaViewModel()
                 {
-
-                    Erabiltzailea = x.Erabiltzailea,
-                    Kopurua = x.Kopurua,
-                    Data = x.Data,
+                    jokoa = x.jokoa,
+                    erabiltzailea = x.erabiltzailea,
+                    testua = x.testua,
+                    kopurua = x.kopurua,
+                    data = x.data,
 
                 };
                 balorazioaVMlist.Add(balorazioaViewModel);
@@ -39,6 +40,8 @@ namespace WebErronka.Controllers
 
             //}
         }
+
+
         public IActionResult Create(string jokoa)
         {
             Balorazioa balorazioa = new Balorazioa();
@@ -48,16 +51,22 @@ namespace WebErronka.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id, jokoa, Erabiltzailea, Testua, Kopurua, Data")] Balorazioa balorazioa)
+        public IActionResult Create(Balorazioa balorazioa)
         {
             if (ModelState.IsValid)
             {
-                balorazioa.Data = DateTime.Today;
-                balorazioa.Erabiltzailea = HttpContext.User.Identity.Name;
+                // Populate the Erabiltzailea and Data properties
+                balorazioa.erabiltzailea = HttpContext.User.Identity.Name;
+                balorazioa.data = DateTime.Now;
                 _balorazioaService.BalorazioaGehitu(balorazioa);
+
                 return RedirectToAction("Index", "Home");
             }
-            return View(balorazioa);
+            else
+            {
+                // There are validation errors in the form data, so redisplay the form with error messages
+                return View(balorazioa);
+            }
         }
     }
 }

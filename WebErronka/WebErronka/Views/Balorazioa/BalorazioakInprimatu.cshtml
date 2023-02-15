@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebErronka.Models.Balorazioa>
+﻿@model IEnumerable<WebErronka.ViewModels.BalorazioaViewModel>
 
 @{
     ViewData["Title"] = "Index";
@@ -14,13 +14,16 @@
         <tr>
             
             <th>
-                @Html.DisplayNameFor(model => model.Erabiltzailea)
+                @Html.DisplayNameFor(model => model.erabiltzailea)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Kopurua)
+                @Html.DisplayNameFor(model => model.kopurua)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Data)
+                @Html.DisplayNameFor(model => model.testua)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.data)
             </th>
             <th></th>
         </tr>
@@ -28,24 +31,26 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+                
             <td>
-                @Html.DisplayFor(modelItem => item.Erabiltzailea)
+                    @Html.DisplayFor(modelItem => item.erabiltzailea)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Kopurua)
+                    @for (int i = 1; i <= item.kopurua; i++)
+                    {
+                    <img id="izarra" style="width:20px; height:20px;" src="~/images/izarra.png">
+                }
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.testua)
+                </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Data)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.DisplayFor(modelItem => item.data)
             </td>
         </tr>
 }
         Balorazioa egiteko:
-        <a asp-action="Create" asp-route-upeltegiaId=@Model.First().jokoa>Berria</a>
+        <a asp-action="Create" asp-route-jokoa=@Model.First().jokoa>Berria</a>
 
 
     </tbody>

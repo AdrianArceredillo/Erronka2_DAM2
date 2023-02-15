@@ -6,8 +6,9 @@ namespace WebErronka.Services
 {
     public class BalorazioaService : IBalorazioaService
     {
-        private Uri rutaTodos = new Uri("https://192.168.65.91:8080/api/balorazioak/");
-        private Uri rutaBalorazioa = new Uri("https://192.168.65.91:8080/api/balorazioak/");
+        private Uri rutaTodos = new Uri("http://192.168.65.91:8080/api/balorazioak/");
+        private Uri rutaBalorazioa = new Uri("http://192.168.65.91:8080/api/balorazioak/");
+        private Uri rutaPostBalorazioa = new Uri("http://192.168.65.91:8080/api/balorazioaGehitu/");
         public async Task<IList<Balorazioa>> GetBalorazioak()
         {
 
@@ -23,10 +24,10 @@ namespace WebErronka.Services
             return balorazioList;
         }
 
-        public async Task<IList<Balorazioa>> GetBalorazioakJokoarekiko(string jokoa)
+        public async Task<IList<Balorazioa>> GetBalorazioakJokoarekiko(string jokoIzena)
         {
             List<Balorazioa> balorazioList = new List<Balorazioa>();
-            Uri balorazioAkJokoarekiko = new Uri(rutaBalorazioa + jokoa);
+            Uri balorazioAkJokoarekiko = new Uri(rutaBalorazioa + jokoIzena);
             using (var httpClient = new HttpClient())
             {
                 using (var response = await httpClient.GetAsync(balorazioAkJokoarekiko))
@@ -43,7 +44,9 @@ namespace WebErronka.Services
             using (var httpClient = new HttpClient())
             {
                 StringContent content = new StringContent(JsonConvert.SerializeObject(balorazioa), Encoding.UTF8, "application/json");
-                var response = await httpClient.PostAsync(rutaTodos, content);
+
+                var response = await httpClient.PostAsync(rutaPostBalorazioa, content);
+                string responseContent = await response.Content.ReadAsStringAsync();
                 response.EnsureSuccessStatusCode();
             }
         }

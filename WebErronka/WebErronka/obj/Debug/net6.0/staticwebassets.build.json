@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XwoprHVRXUiKnf+wl0JITEPxe1qpVsG+Y8eJdGeSxZo=",
+  "Hash": "2BOb9FZvh8D1MIlokTAnIEBoGNo3go/cJIw9svzj4/g=",
   "Source": "WebErronka",
   "BasePath": "_content/WebErronka",
   "Mode": "Default",
@@ -1120,6 +1120,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Home.png"
+    },
+    {
+      "Identity": "C:\\Users\\otero.haritz\\Desktop\\Erronka2 DAM2\\Erronka2_DAM2\\WebErronka\\WebErronka\\wwwroot\\images\\izarra.png",
+      "SourceId": "WebErronka",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\otero.haritz\\Desktop\\Erronka2 DAM2\\Erronka2_DAM2\\WebErronka\\WebErronka\\wwwroot\\",
+      "BasePath": "_content/WebErronka",
+      "RelativePath": "images/izarra.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\izarra.png"
     },
     {
       "Identity": "C:\\Users\\otero.haritz\\Desktop\\Erronka2 DAM2\\Erronka2_DAM2\\WebErronka\\WebErronka\\wwwroot\\js\\site.js",

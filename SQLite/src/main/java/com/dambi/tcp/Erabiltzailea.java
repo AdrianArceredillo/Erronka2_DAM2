@@ -10,22 +10,19 @@ import com.dambi.sqlite.SQLite;
 public class Erabiltzailea {
     public static void main(String[] args) throws Exception {
 
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-
-        boolean hasiera = true;
-
-        String Host = "192.168.65.91"; // "localhost" ipintzea berdina da
+        String Host = "192.168.65.90"; // "localhost" ipintzea berdina da
         // String Host = "192.168.65.16";
         int Puerto = 6000;
         while (true) {
+
             while (true) {
-                if (hasiera){
-                    hasiera = false;
-                } else {
-                    TimeUnit.SECONDS.sleep(2);
-                }
-                
+                System.out.print("PROGRAMA EXEKUTATZEN");
+                TimeUnit.SECONDS.sleep(1);
+                System.out.print(".");
+                TimeUnit.SECONDS.sleep(1);
+                System.out.print(".");
+                TimeUnit.SECONDS.sleep(1);
+                System.out.println(".");
                 try {
 
                     // SQLite-ko datuak lortu
@@ -49,12 +46,10 @@ public class Erabiltzailea {
 
                     DataInputStream flujoEntrada = new DataInputStream(Cliente.getInputStream());
 
-
                     String mezua = flujoEntrada.readUTF();
 
                     System.out.println("Zerbitzaritik jasotzen: \n" + mezua);
-                    //SQLite.datuakGarbitu();
-
+                    SQLite.datuakGarbitu();
 
                     flujoEntrada.close();
                     Cliente.close();

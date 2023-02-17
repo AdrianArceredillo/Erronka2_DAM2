@@ -51,7 +51,7 @@ public class insert {
             e.printStackTrace();
         }
 
-        MongoClient mongo = MongoClients.create("mongodb://127.0.0.1:27017"); // Datu Basearen Helbidea
+        MongoClient mongo = MongoClients.create("mongodb://192.168.65.90:27017"); // Datu Basearen Helbidea
 
         MongoDatabase db = mongo.getDatabase("Erronka2");
 
@@ -76,7 +76,7 @@ public class insert {
         mongo.close();
     }
 
-    public static void insertLangilea(String link) {
+    public static void insertLangilea(String link, int taldea) {
 
         System.out.print("\033[H\033[2J");
         System.out.flush();
@@ -98,12 +98,12 @@ public class insert {
             writer.write(content);
             writer.close();
             // Fitxategia irakurri eta datuak lortu
-            langileak = JsonaLangileak.irakurri(fitxategia);
+            langileak = JsonaLangileak.irakurri(fitxategia, taldea);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        MongoClient mongo = MongoClients.create("mongodb://127.0.0.1:27017"); // Datu Basearen Helbidea
+        MongoClient mongo = MongoClients.create("mongodb://192.168.65.90:27017"); // Datu Basearen Helbidea
 
         MongoDatabase db = mongo.getDatabase("Erronka2");
 

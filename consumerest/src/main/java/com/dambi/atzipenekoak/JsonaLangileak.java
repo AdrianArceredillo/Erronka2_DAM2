@@ -38,7 +38,7 @@ import java.io.FileWriter;
 
 public class JsonaLangileak {
 
-    public static Langileak irakurri(String strFileIn) {
+    public static Langileak irakurri(String strFileIn, int taldea) {
 
         Langileak langileak = null;
         try {
@@ -52,22 +52,20 @@ public class JsonaLangileak {
                 langilea.setEmail(jsonobj.getString("email"));
                 langilea.setIzena(jsonobj.getString("izena"));
                 langilea.setUser((jsonobj.getString("erabiltzailea")));
-
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
-
-                //Try catch batekin egin behar da zeren talderen batek ez dut ipini jaiotzadata *kof* *kof* 4 taldea *kof* *kof*
-                Date date = sdf.parse("1970-01-02 00:00:00.0");
-                try {
+                Date date;
+                if(taldea == 4) {
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
                     date = sdf.parse(jsonobj.getString("jaiotzadata"));
-                } catch (Exception e) {
-                    date = sdf.parse(jsonobj.getString("jaiotzedata"));
+                } else {
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
+                    date = sdf.parse(jsonobj.getString("jaiotzadata"));
                 }
-                
+               
                 langilea.setJaiotzaData(date);
                 langilea.setTaldea(jsonobj.getInt("taldea"));
                 langileak.add(langilea);
             }
-            
+
         } catch (Exception e) {
             System.out.println("Arazoak String-a irakurtzerakoan.");
         }

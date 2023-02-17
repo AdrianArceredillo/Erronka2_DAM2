@@ -33,10 +33,9 @@ import com.dambi.pojoak.Partidak;
 
 import java.io.FileReader;
 
-
 public class JsonaPartidak {
 
-        public static Partidak irakurri(String strFileIn, String jokoa, int taldea) {
+    public static Partidak irakurri(String strFileIn, String jokoa, int taldea) {
 
         Partidak partidak = null;
         try {
@@ -48,16 +47,29 @@ public class JsonaPartidak {
                 JsonObject jsonobj = jsonarray.getJsonObject(i);
                 Partida partida = new Partida();
                 partida.setId(jsonobj.getInt("id"));
-                partida.setUser(jsonobj.getString("erabiltzailea"));
-                partida.setPuntuazioa((jsonobj.getInt("puntuazioa")));
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
-                Date date = sdf.parse(jsonobj.getString("data"));
-                partida.setData(date);
+                if (taldea == 4) {
+
+                    partida.setUser(jsonobj.getJsonObject("langilea").getString("erabiltzailea"));
+                    partida.setPuntuazioa((jsonobj.getInt("puntuazioa")));
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+                    Date date = sdf.parse(jsonobj.getString("data"));
+                    partida.setData(date);
+
+                } else {
+
+                    partida.setUser(jsonobj.getString("erabiltzailea"));
+                    partida.setPuntuazioa((jsonobj.getInt("puntuazioa")));
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
+                    Date date = sdf.parse(jsonobj.getString("data"));
+                    partida.setData(date);
+                }
+
                 partida.setJokoa(jokoa);
                 partida.setTaldea(taldea);
                 partidak.add(partida);
+
             }
-            
+
         } catch (Exception e) {
             System.out.println("Arazoak String-a irakurtzerakoan.");
         }

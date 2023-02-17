@@ -38,3 +38,12 @@
 [15/02/2023 11:34:11]http://192.168.65.90:8081/demo/all_Partida erabiliz, partiden informazioa gorde da. (3) datu berri gorde dira.
 [15/02/2023 11:34:11]http://192.168.65.90:8081/demo/all_Partida erabiliz, partiden informazioa gorde da. (3) datu berri gorde dira.
 [15/02/2023 11:36:39]http://192.168.65.90:8081/demo/all_Partida erabiliz, partiden informazioa gorde da. (1) datu berri gorde dira.
+[17/02/2023 12:31:50]Konexio errorea http://192.168.65.123:8080/Partidak/getPartidak helbidearekin
+[17/02/2023 12:34:23]Konexio errorea http://192.168.65.123:8080/Partidak/getPartidak helbidearekin
+[17/02/2023 12:53:54]http://192.168.65.123:8080/Partidak/getPartidak erabiliz, partiden informazioa gorde da. (15) datu berri gorde dira.
+[17/02/2023 13:09:21]http://192.168.65.123:8080/Langileak/getLangileak erabiliz, langileen informazioa gorde da. (5) datu berri gorde dira.
+[17/02/2023 13:29:55]http://192.168.65.90:8081/demo/all_Partida erabiliz, partiden informazioa gorde da. (191) datu berri gorde dira.
+[17/02/2023 14:25:29]http://192.168.65.90:8081/demo/all_Partida erabiliz, partiden informazioa gorde da. (191) datu berri gorde dira.
+[17/02/2023 14:25:29]http://192.168.65.90:8081/demo/all_Langilea erabiliz, langileen informazioa gorde da. (4) datu berri gorde dira.
+[17/02/2023 14:25:29]http://192.168.65.123:8080/Partidak/getPartidak erabiliz, partiden informazioa gorde da. (15) datu berri gorde dira.
+[17/02/2023 14:25:29]http://192.168.65.123:8080/Langileak/getLangileak erabiliz, langileen informazioa gorde da. (5) datu berri gorde dira.

@@ -9,5 +9,7 @@ import com.dambi.mongo_restapi.pojoak.Partida;
 
 public interface PartidaRepository extends MongoRepository<Partida, ObjectId> {
     List<Partida> findByJokoaEquals(String jokoa);
+    Partida findByPartidaIdAndJokoa(Integer partidaId, String jokoa);
+
 }
     

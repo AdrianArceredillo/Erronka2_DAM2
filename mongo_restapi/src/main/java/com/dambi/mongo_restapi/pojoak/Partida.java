@@ -77,7 +77,7 @@ public class Partida {
         return taldea;
     }
 
-    public void setTalda(int taldea) {
+    public void setTaldea(int taldea) {
         this.taldea = taldea;
     }
 

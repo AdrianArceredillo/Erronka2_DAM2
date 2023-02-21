@@ -18,7 +18,7 @@ public class SQLite {
 
     private static Connection connect() {
         // SQLite connection string
-        String url = "jdbc:sqlite:C:/sqlite/db/test.db";
+        String url = "jdbc:sqlite:../adrian_unity_Conection/Erronka2_Jokoa/Assets/erronka2.db";
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);

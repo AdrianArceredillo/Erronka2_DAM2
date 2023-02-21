@@ -10,16 +10,16 @@ import com.dambi.mongo.insert;
 public class Maina {
     public static void main(String[] args) {
         // 1 TALDEA
-        taldea1();
+        //taldea1();
 
         // 2 TALDEA
-        //taldea2();
+        taldea2();
 
         // 3 TALDEA
-        taldea3();
+        //taldea3();
 
         // 4 TALDEA
-        taldea4();
+        //taldea4();
 
     }
 

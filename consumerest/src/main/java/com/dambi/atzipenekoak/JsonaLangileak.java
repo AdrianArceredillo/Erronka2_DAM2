@@ -25,6 +25,8 @@ import org.json.JSONObject;
 import com.dambi.pojoak.Langilea;
 import com.dambi.pojoak.Langileak;
 
+import ch.qos.logback.core.db.DataSourceConnectionSource;
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -52,7 +54,10 @@ public class JsonaLangileak {
                 langilea.setEmail(jsonobj.getString("email"));
                 langilea.setIzena(jsonobj.getString("izena"));
                 langilea.setUser((jsonobj.getString("erabiltzailea")));
+                
                 Date date;
+                SimpleDateFormat err = new SimpleDateFormat("yyyy-MM-dd");
+                date = err.parse("2000-01-01");
                 if(taldea == 4) {
                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX"); //Taldea 4
                     date = sdf.parse(jsonobj.getString("jaiotzadata"));
@@ -60,7 +65,8 @@ public class JsonaLangileak {
                 if(taldea == 1) {
                     SimpleDateFormat sdfm = new SimpleDateFormat("yyyy-MM-dd"); //Taldea 1
                     date = sdfm.parse(jsonobj.getString("jaiotzadata"));
-                } else {
+                }
+                if(taldea == 2) {
                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S"); //Taldea 2
                     date = sdf.parse(jsonobj.getString("jaiotzadata"));
                 }

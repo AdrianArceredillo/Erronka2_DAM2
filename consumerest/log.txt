@@ -76,3 +76,37 @@
 [21/02/2023 11:36:27]http://192.168.65.12:8080/demo/get erabiliz, partiden informazioa gorde da. (4) datu berri gorde dira.
 [21/02/2023 11:36:27]http://192.168.65.123:8080/Partidak/getPartidak erabiliz, partiden informazioa gorde da. (18) datu berri gorde dira.
 [21/02/2023 11:36:27]Konexio errorea http://192.168.65.123:8080/Langileak/getLangileak helbidearekin
+[21/02/2023 13:28:11]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin
+[21/02/2023 13:28:11]http://192.168.65.4:8080/api/allLangileak erabiliz, langileen informazioa gorde da. (0) datu berri gorde dira.
+[21/02/2023 13:28:11]http://192.168.65.12:8080/demo/get erabiliz, partiden informazioa gorde da. (0) datu berri gorde dira.
+[21/02/2023 13:28:11]http://192.168.65.123:8080/Partidak/getPartidak erabiliz, partiden informazioa gorde da. (0) datu berri gorde dira.
+[21/02/2023 13:28:11]Konexio errorea http://192.168.65.123:8080/Langileak/getLangileak helbidearekin
+[21/02/2023 13:29:26]Konexio errorea http://192.168.65.123:8080/Langileak/getLangileak helbidearekin
+[21/02/2023 13:30:55]Konexio errorea http://192.168.65.123:8080/Langileak/getLangileak helbidearekin
+[21/02/2023 13:31:10]Konexio errorea http://192.168.65.123:8080/Langileak/getLangileak helbidearekin
+[21/02/2023 13:31:20]Konexio errorea http://192.168.65.123:8080/Langileak/getLangileak helbidearekin
+[21/02/2023 13:34:01]http://192.168.65.123:8080/Langileak/getLangileak erabiliz, langileen informazioa gorde da. (0) datu berri gorde dira.
+[21/02/2023 13:35:20]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin
+[21/02/2023 13:35:21]http://192.168.65.4:8080/api/allLangileak erabiliz, langileen informazioa gorde da. (11) datu berri gorde dira.
+[21/02/2023 13:35:21]http://192.168.65.90:8081/demo/all_Partida erabiliz, partiden informazioa gorde da. (4) datu berri gorde dira.
+[21/02/2023 13:35:21]http://192.168.65.90:8081/demo/all_Langilea erabiliz, langileen informazioa gorde da. (0) datu berri gorde dira.
+[21/02/2023 13:35:21]http://192.168.65.12:8080/demo/get erabiliz, partiden informazioa gorde da. (4) datu berri gorde dira.
+[21/02/2023 13:35:21]http://192.168.65.123:8080/Partidak/getPartidak erabiliz, partiden informazioa gorde da. (18) datu berri gorde dira.
+[21/02/2023 13:35:21]http://192.168.65.123:8080/Langileak/getLangileak erabiliz, langileen informazioa gorde da. (0) datu berri gorde dira.
+[21/02/2023 13:37:06]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin
+[21/02/2023 13:44:22]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin
+[21/02/2023 13:45:07]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin
+[21/02/2023 13:48:01]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin
+[21/02/2023 13:48:17]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin
+[21/02/2023 14:22:44]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin
+[21/02/2023 14:22:56]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin
+[21/02/2023 14:23:14]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin
+[21/02/2023 14:23:23]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin
+[21/02/2023 14:23:33]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin
+[21/02/2023 14:23:44]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin
+[21/02/2023 14:23:55]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin
+[21/02/2023 14:24:51]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin
+[21/02/2023 14:27:51]http://192.168.65.4:8080/api/allPartidak erabiliz, partiden informazioa gorde da. (38) datu berri gorde dira.
+[21/02/2023 14:28:31]http://192.168.65.4:8080/api/allPartidak erabiliz, partiden informazioa gorde da. (38) datu berri gorde dira.
+[21/02/2023 14:28:56]http://192.168.65.4:8080/api/allPartidak erabiliz, partiden informazioa gorde da. (38) datu berri gorde dira.
+[21/02/2023 14:29:31]Konexio errorea http://192.168.65.4:8080/api/allPartidak helbidearekin

@@ -52,11 +52,18 @@ public class JsonaPartidak {
 
                     partida.setUser(jsonobj.getJsonObject("langilea").getString("erabiltzailea"));
                     partida.setPuntuazioa((jsonobj.getInt("puntuazioa")));
-                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+                    SimpleDateFormat sdf = null;
+                    if (taldea == 4) {
+                        sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+                    } else {
+                        sdf = new SimpleDateFormat("yyyy-MM-dd");
+                    }
+
                     Date date = sdf.parse(jsonobj.getString("data"));
+
                     partida.setData(date);
 
-                } else {
+                } else { //2 Taldea
 
                     partida.setUser(jsonobj.getString("erabiltzailea"));
                     partida.setPuntuazioa((jsonobj.getInt("puntuazioa")));

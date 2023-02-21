@@ -16,10 +16,10 @@ public class Maina {
         //taldea2();
 
         // 3 TALDEA
-        taldea3();
+        //taldea3();
 
         // 4 TALDEA
-        taldea4();
+        //taldea4();
 
     }
 
@@ -40,15 +40,15 @@ public static void taldea1(){
     }
     Garbitzailea.garbituPantaila();
     
-    String linkLangilea = "http://192.168.65.4:8080/api/allLangileak";
-    try {
-        insert.insertLangilea(linkLangilea, taldea);
-    } catch (Exception e) {
-        Garbitzailea.garbituPantaila();
-        Log.logIdatzi("Konexio errorea " + linkLangilea + " helbidearekin");
-        System.out.println("Konexio errorea " + linkLangilea + " helbidearekin");
-    }
-    Garbitzailea.garbituPantaila();
+    // String linkLangilea = "http://192.168.65.4:8080/api/allLangileak";
+    // try {
+    //     insert.insertLangilea(linkLangilea, taldea);
+    // } catch (Exception e) {
+    //     Garbitzailea.garbituPantaila();
+    //     Log.logIdatzi("Konexio errorea " + linkLangilea + " helbidearekin");
+    //     System.out.println("Konexio errorea " + linkLangilea + " helbidearekin");
+    // }
+    // Garbitzailea.garbituPantaila();
 }
 
 public static void taldea2(){

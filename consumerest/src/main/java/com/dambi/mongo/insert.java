@@ -51,7 +51,7 @@ public class insert {
             e.printStackTrace();
         }
 
-        MongoClient mongo = MongoClients.create("mongodb://192.168.65.90:27017"); // Datu Basearen Helbidea
+        MongoClient mongo = MongoClients.create("mongodb://192.168.65.91:27017"); // Datu Basearen Helbidea
 
         MongoDatabase db = mongo.getDatabase("Erronka2");
 
@@ -103,7 +103,7 @@ public class insert {
             e.printStackTrace();
         }
 
-        MongoClient mongo = MongoClients.create("mongodb://192.168.65.90:27017"); // Datu Basearen Helbidea
+        MongoClient mongo = MongoClients.create("mongodb://192.168.65.91:27017"); // Datu Basearen Helbidea
 
         MongoDatabase db = mongo.getDatabase("Erronka2");
 

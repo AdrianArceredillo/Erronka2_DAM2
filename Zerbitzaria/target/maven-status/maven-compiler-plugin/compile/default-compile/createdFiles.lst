@@ -1,0 +1,4 @@
+com\dambi\sqlite\SQLite.class
+com\dambi\tcp\Konexioa.class
+com\dambi\tcp\Zerbitzaria.class
+com\dambi\object\Datuak.class

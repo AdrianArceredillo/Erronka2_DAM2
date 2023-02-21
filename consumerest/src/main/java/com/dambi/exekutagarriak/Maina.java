@@ -10,22 +10,27 @@ import com.dambi.mongo.insert;
 public class Maina {
     public static void main(String[] args) {
         // 1 TALDEA
-        //taldea1();
+        taldea1();
 
         // 2 TALDEA
-        taldea2();
+        //taldea2();
 
         // 3 TALDEA
-        //taldea3();
+        taldea3();
 
         // 4 TALDEA
         taldea4();
 
     }
-//
+
+
+//Mahi Kingdom
+//ZOMBIE KILLER
+//Pouni
+//Johnny
 public static void taldea1(){
     int taldea = 1;
-    String linkPartida = "http://192.168.65.11:8080/api/allPartidak";
+    String linkPartida = "http://192.168.65.4:8080/api/allPartidak";
     try {
         insert.insertPartida(linkPartida, "Mahi Kingdom", taldea);
     } catch (Exception e) {
@@ -35,7 +40,7 @@ public static void taldea1(){
     }
     Garbitzailea.garbituPantaila();
     
-    String linkLangilea = "http://192.168.65.11:8080/api/allLangileak";
+    String linkLangilea = "http://192.168.65.4:8080/api/allLangileak";
     try {
         insert.insertLangilea(linkLangilea, taldea);
     } catch (Exception e) {
@@ -45,11 +50,6 @@ public static void taldea1(){
     }
     Garbitzailea.garbituPantaila();
 }
-
-//Mahi Kingdom
-//ZOMBIE KILLER
-//Pouni
-//Johnny
 
 public static void taldea2(){
     int taldea = 2;
@@ -80,7 +80,7 @@ public static void taldea2(){
 
 public static void taldea3(){
     int taldea = 3;
-    String linkPartida = "============================================";
+    String linkPartida = "http://192.168.65.12:8080/demo/get";
     try {
         insert.insertPartida(linkPartida, "Pouni", taldea);
     } catch (Exception e) {
@@ -90,15 +90,15 @@ public static void taldea3(){
     }
     Garbitzailea.garbituPantaila();
     
-    String linkLangilea = "============================================";
-    try {
-        insert.insertLangilea(linkLangilea, taldea);
-    } catch (Exception e) {
-        Garbitzailea.garbituPantaila();
-        Log.logIdatzi("Konexio errorea " + linkLangilea + " helbidearekin");
-        System.out.println("Konexio errorea " + linkLangilea + " helbidearekin");
-    }
-    Garbitzailea.garbituPantaila();
+    // String linkLangilea = "============================================";
+    // try {
+    //     insert.insertLangilea(linkLangilea, taldea);
+    // } catch (Exception e) {
+    //     Garbitzailea.garbituPantaila();
+    //     Log.logIdatzi("Konexio errorea " + linkLangilea + " helbidearekin");
+    //     System.out.println("Konexio errorea " + linkLangilea + " helbidearekin");
+    // }
+    // Garbitzailea.garbituPantaila();
 }
 
 //Erlantz, Markel, Raul, Peru

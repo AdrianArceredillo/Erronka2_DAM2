@@ -54,10 +54,14 @@ public class JsonaLangileak {
                 langilea.setUser((jsonobj.getString("erabiltzailea")));
                 Date date;
                 if(taldea == 4) {
-                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX"); //Taldea 4
                     date = sdf.parse(jsonobj.getString("jaiotzadata"));
+                }
+                if(taldea == 1) {
+                    SimpleDateFormat sdfm = new SimpleDateFormat("yyyy-MM-dd"); //Taldea 1
+                    date = sdfm.parse(jsonobj.getString("jaiotzadata"));
                 } else {
-                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S"); //Taldea 2
                     date = sdf.parse(jsonobj.getString("jaiotzadata"));
                 }
                

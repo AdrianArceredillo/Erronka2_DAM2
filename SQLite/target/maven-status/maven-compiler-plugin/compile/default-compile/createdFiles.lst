@@ -1,0 +1,6 @@
+com\dambi\sqlite\SQLite.class
+com\dambi\tcp\Konexioa.class
+com\dambi\tcp\Erabiltzailea.class
+com\dambi\object\Datuak.class
+com\dambi\probak\Sleep.class
+com\dambi\object\proba.class

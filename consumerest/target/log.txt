@@ -1,0 +1,2 @@
+[13/02/2023 12:10:51]http://192.168.65.90:8081/demo/all_Partida erabiliz, partiden informazioa gorde da. (19) datu berri gorde dira.
+[13/02/2023 12:10:51]http://192.168.65.90:8081/demo/all_Langilea erabiliz, langileen informazioa gorde da. (4) datu berri gorde dira.

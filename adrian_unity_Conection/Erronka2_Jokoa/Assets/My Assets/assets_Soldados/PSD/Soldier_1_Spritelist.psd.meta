@@ -1,0 +1,4210 @@
+fileFormatVersion: 2
+guid: cb70c81cc9b0449428777a166083d26a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_3
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 1152
+        width: 62
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0649274d15505644bb7baba24055e933
+      internalID: 138144266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_4
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 1152
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d1e832bbeb7404595675b79fe6ab97
+      internalID: 185948265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_5
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1152
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fae7ab64f225ae4d86622741769ee11
+      internalID: -1601112147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_6
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 1152
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf579aa1527244341a7830c85f524de3
+      internalID: -1403927151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_7
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 1152
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598acef34447d0b49a55883ccb92b200
+      internalID: 1298607268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_8
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1152
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9994f72a88ac7fd47a6aabd1b7297ade
+      internalID: 1047899533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_9
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1152
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24421ac135f84bb4b9c56a7143969183
+      internalID: -1110487646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_10
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1152
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c536ce8869c73d45820c6b284814b71
+      internalID: 1342583399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_11
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 1152
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8811ba4e78266a640acca50ef000fc2b
+      internalID: 1667780648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_12
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1152
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 522ccd644f42cad4a86faa73224877bb
+      internalID: 1708023933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_13
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 1152
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519558bf303088546afeae856548a634
+      internalID: -1646236918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_17
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 1087
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032944ca96f0dd241b2b06eeaa16dccd
+      internalID: -2083864754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_18
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1087
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e344ade779b28d446a6c0b610e8b4923
+      internalID: -1092320641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_19
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 1087
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b79727a5e7c9c448dea21adacafebe
+      internalID: 214501142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_20
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1087
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6e3984f453ad94689fb38c8609d188
+      internalID: 641943146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andar_01
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1023
+        width: 39
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a106a9f357b18b4b9440da576cfba31
+      internalID: -2106316528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andar_02
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 1022
+        width: 50
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 10, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e104a117de180764cb68dbb91a44883b
+      internalID: 1610396182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_25
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1023
+        width: 46
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471ec9b8a92765449a40e99cd57807eb
+      internalID: 223318366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_28
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 1022
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e83b39f2257b2e47abd224cd510209c
+      internalID: 858044184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_29
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1022
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7beb9866ce28c2428e6f8a8287d557b
+      internalID: 1124442389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_30
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1022
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f7ad5867b5cb5488db2fe7893a36e7
+      internalID: 535962496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_31
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1022
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eea248adc5e6a243aa8d3e98cb1d932
+      internalID: 263131547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_32
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 1022
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42bd8a9852023e64ab1ca3ed317181ec
+      internalID: -674135096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_33
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1022
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72cfaf3d6126ab943b5c185a02acbfc3
+      internalID: 22174802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_34
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 1022
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d26b630fd6dc84b8e5162f5c76bac0
+      internalID: 563851239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_35
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 957
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d4f8dff6904c64e90f6d8329878165
+      internalID: 939655536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_36
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 892
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22aa175e8e0f28d49a3556612817753e
+      internalID: -624197467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_40
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 892
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451289e63d086a541ad1f23f128525e1
+      internalID: -1293009373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_43
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 892
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 915ef3af83819844c8ea5f7b1830ca59
+      internalID: 416069840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_44
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 892
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b410563466a962a49a4d274886f9c4bb
+      internalID: -753500060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_45
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 892
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e697084592141da4290df0e4540e2f3f
+      internalID: 1519669224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_46
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 892
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578d3f51fcb43034da39b4b43f21ad5f
+      internalID: 97337084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_47
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 892
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ea6bf0be08fc9418a21def56cac0f9
+      internalID: -809755979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_48
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 892
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5f2bb4aa7398a4482eab9ebf953a9b
+      internalID: 1965110705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_49
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 892
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b257410dd28e6a548bb05ba75433d2aa
+      internalID: -1008989953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_50
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 827
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c219674f4d6b7d4aa9554253949a712
+      internalID: -1978769338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_51
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 827
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b445b9625e6a1e43b320d358f9bc8ec
+      internalID: -1097440623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_52
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 827
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f6116fb6be6bb468ef22006607cedf
+      internalID: -1255999935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_53
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 827
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13d7d2dfaefd884f80e62545adda123
+      internalID: 1092600941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_54
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 827
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c8889b7ee522649a056b3c58dd257d
+      internalID: -1622063274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_55
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 827
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071e3bb3a757d77449c46dabc9401c32
+      internalID: -1043882174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_56
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 762
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6265a4434ad57384690c9ffc33c31f04
+      internalID: -612981385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_57
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 762
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616480691b22fbf4db06c2808f7e66b9
+      internalID: 375978686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_58
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 762
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacffe32b422b9d458ff4eb2a271b2e0
+      internalID: 1227665337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_59
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 762
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc36c53ae1d5e5c438d014caf3d1b5ba
+      internalID: -951541574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_60
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 762
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c9c9ac4d08481439037a919b400109
+      internalID: 1363312051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_61
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 762
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794fe917ce16ec1448af6b3358962a07
+      internalID: 999084182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_62
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 762
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006a5fe565772774b970149f92967c31
+      internalID: -656280664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_63
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 762
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97bf49135bf506c4dbc4833419f37aba
+      internalID: 481453464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_64
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 762
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ce96e9b5cc8064f81f20bdf224491e
+      internalID: -1041014697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_65
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 697
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7e7e2c7ec674745bf54b9187a72c29
+      internalID: -1698221008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_66
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 697
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ac774a5a1c2ef49945e15ccf18706f
+      internalID: 767342846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_67
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 697
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904ae0c2bd1093b47941eb1d8eacfdba
+      internalID: -1475376987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_68
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 697
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be603d3e471553c4caac675dbcad9e6a
+      internalID: 730072732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_69
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 697
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3945bba84177012498f7e7cce55e662e
+      internalID: -79955352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_70
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 697
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c0b86d8d82a2f4793d3d9bcd49d2ff
+      internalID: -1019571143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_71
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 632
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b493d04007b4a499b629d603cacd11
+      internalID: 1459882579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_72
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 632
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7ae51319a16e2a41a31d29c8fec457e
+      internalID: 17677003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_73
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 632
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93331643038860946ad35e18cfd1b022
+      internalID: -1502625161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_74
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 632
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b71c419f84f789429c5e4e2955bcd41
+      internalID: -1845350080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_75
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 632
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772fcc3bb38bfcb41a73b31297571e0d
+      internalID: 1064917988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_76
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 632
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8357b60677985a488dbc4861f01d9be
+      internalID: 1065899027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_77
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 632
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2691665ed697af0418805ff0ac07ecca
+      internalID: -427909528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_78
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 632
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf96f3ebb20f204ea998eac7d305962
+      internalID: 158591654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_79
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 632
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7297789ebfb857949bdfa16b9a3ad0c7
+      internalID: 1594165964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_80
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f56f6e0de6df9842a0a8f88b51181e9
+      internalID: 585792967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_81
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aace656f91e68b84dbde99a13890acd9
+      internalID: 788859097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_82
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2349791c8acde5845bf974af6dcee166
+      internalID: -913629803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_83
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79361b84a36c71248b75625a2ec1eda4
+      internalID: -865046077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_84
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c310e4e7561c3f44b07a2834f068b5d
+      internalID: 325324391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_85
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59196d6768f021a47a65da55f2904e46
+      internalID: -571706061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_86
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd9b0d9beed45f439aac93e7526af74
+      internalID: -1990931921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_87
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88ff3c7aabfef844b3d2cb056623913
+      internalID: -1955332249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_88
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45c345a52c289946b2e74d67a594dc3
+      internalID: -1139970134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_89
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956b24537e346044085c55377052bafe
+      internalID: -1159614795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_90
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d369657001829445b89039b2980f1ac
+      internalID: 1699315379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_91
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6decef82de432d14086a4110dbcdc016
+      internalID: 784680086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_92
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d079755eeca7d046ac767ded58cd787
+      internalID: 311480989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_93
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31ca0fc1384c9446a99d0454f2f10a9
+      internalID: 1738032034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_94
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ce37860ffe45d4aa8d33bb669678e1
+      internalID: -1065404174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_95
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e27cbae5a948443bec6d89a4d2d1e6
+      internalID: 1641401018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_96
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971eb6e3ec770204fac513336f9629c1
+      internalID: 2095144630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_97
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618c3c4573b076b4bbd2e93f98bd251c
+      internalID: -151343137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_98
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 567
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c3a4bd1b79fca34b921946e5fb1d0e9
+      internalID: 1101179337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_99
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06c82a3cced29e4daf06e188631c044
+      internalID: -2077749641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_100
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d0f900db6f6c345b6eb4ee1516959b
+      internalID: 817796977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_101
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995eaacc11ac1c04da7b7b9188e07872
+      internalID: -1543522083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_102
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b53fff7f9acf14b8391cd8e1047d59
+      internalID: 2015830783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_103
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a5fa957e90cbf409b08194162f464e
+      internalID: 1014997657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_104
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a0889f88ffbdd4d808d613e08d9493
+      internalID: 2142670723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_105
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61dd3aa9bbe25e940b821c484873960e
+      internalID: -758562279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_106
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4cf03c6739c84c4babcd25d43e04ffc
+      internalID: -1942509661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_107
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40bd2f89235cc9242be26d0b7ddc084d
+      internalID: 415362075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_108
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b1df79b32778e4591d58c7ba09829f
+      internalID: 1253336433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_109
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddb7a2db9e982146b9462e5fffd5b61
+      internalID: 1904228217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_110
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955b7ef00d98eb9408feedd6d897cb56
+      internalID: 906246800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_111
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c7a952098ed5343987d0b26ba267b1
+      internalID: 1900176776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_112
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc041e18b0d32e469e118a93ed9102f
+      internalID: -1357276836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_113
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c014efcabd70b35479187c0a004b0b98
+      internalID: 151429148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_114
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c68fd88c643785a43988baa6c0e18e46
+      internalID: 847032673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_115
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db7848dc5e247742b97606c39c49417
+      internalID: 1162614954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_116
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0d41f9891eb2a44af078cc71f1d941
+      internalID: -1807323932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_117
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5384aef0637a9a4cac607dcb98c7e14
+      internalID: -953716671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_118
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53ff4fc30dfd1748ba677c7d5bb2a7e
+      internalID: 1211532447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_119
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae71f676265fe0c458ddba85a6500608
+      internalID: 1513243563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_120
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9fda5a222953e54c896bbdea001e17e
+      internalID: -555404154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_121
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871504739f749374ba758142577a2e80
+      internalID: -886403845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_122
+      rect:
+        serializedVersion: 2
+        x: 2172
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8e0efd8f423744588056175f8395a1
+      internalID: -1270671389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_123
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 502
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0585ba36c547a3a4191be6f82a71fff5
+      internalID: -1542849333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_124
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855eef183b294024abff827d445d18eb
+      internalID: -1955097035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_125
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33fa1ceeff3508141930d6722ccc8a0c
+      internalID: -1200965177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_126
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79bdc17cfbc727040af71b005ba740c7
+      internalID: 2052404833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_127
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691eb8c1101e21242b8c128ead36fb35
+      internalID: -1054720265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_128
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf26b1070b2fe84c83bfcd664f61025
+      internalID: -508986912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_129
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92cf57e38dd703a4eb8530b1358aee9d
+      internalID: -2120368584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_130
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01dee7a1c62787a40b83ad5c78f92b0a
+      internalID: 1616234635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_131
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7140dbead495a1e42b3448fa7d27ac25
+      internalID: 1761362619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_132
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0431c1e3728e14fbe5ce8684169d5a
+      internalID: 1450039699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_133
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00af1514f61c1c141b4dda314f7170ec
+      internalID: -395289954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_134
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37095e0545bec8d47af2fbf4b9d279dd
+      internalID: 526963611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_135
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d16e5e05597c646bafd00ece37ecd7
+      internalID: -42568875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_136
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f604742998c3b704ab0ecbb385fe2fad
+      internalID: 182607712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_137
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968e360d85d5c9f46a81cda8676b917f
+      internalID: -1014888907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_138
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02f672da50f83d4887a33818c05c25c
+      internalID: -1791233672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_139
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ac24dfd20279e4f80d61b819d8919c
+      internalID: 551565762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_140
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43edc7d57acc7914b86b162a11a888f1
+      internalID: 890269229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_141
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde6f605169770b47882ecbbe4c61dd3
+      internalID: 457457443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_142
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8397c9b7557b648a1486c1d876bdb7
+      internalID: -171667079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_143
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9166b421182404f804ad937cf7527d
+      internalID: -1370365565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_144
+      rect:
+        serializedVersion: 2
+        x: 2121
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403f373935708654dbb949d0eb2c9e47
+      internalID: -2043680272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_145
+      rect:
+        serializedVersion: 2
+        x: 2172
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe316fe8fec13f24c949e02af8237db5
+      internalID: 1367580623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_146
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ca5cbfa592cc043b5ba9eaac4982c8
+      internalID: -265374242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_147
+      rect:
+        serializedVersion: 2
+        x: 2274
+        y: 437
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 222a0a56322af1f438c4d79d2934ea7e
+      internalID: -133515364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_148
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ac6f87fbf882e4c9ba2b4a9b04ca9d
+      internalID: 1676730152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_149
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7826bb9adb0fa4547a25856583333f10
+      internalID: 42514893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_150
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e6018112fca5840abb9bfdacc78a66
+      internalID: 1813167910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_151
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dff8e057216f6541ae08c45dd0b2804
+      internalID: 2019049358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_152
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff7b8c797177d449b1162c6c1326e8d
+      internalID: 960363356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_153
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e855d9da516a21c458298e420f4ffbc9
+      internalID: 1095066410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_154
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e262e1ce5a5804d930fbec1979f109
+      internalID: 968372473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_155
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b93664b3b344674b88934c6795a5032
+      internalID: 87768877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_156
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698c0bcd92b7f7f4185d3c951e242c0f
+      internalID: 423888675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_157
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352937b04c4d3734ab9b37b8bb2b784c
+      internalID: 1236495922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_158
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a40ccb17cd969f4a9efd4426a49a14a
+      internalID: 913860107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_159
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5ba53c9e2386e408e886419c5664b2
+      internalID: -631825497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_160
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0535e6c50f727534ebe69cb5ecd79dda
+      internalID: -1078253432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_161
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b32eb697aa02a45ab50d3c85890d62
+      internalID: -958927239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_162
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c25852196c1d14ba8759f2fea7db56
+      internalID: -438366147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_163
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045caece926e11a4091f0343c91dcf66
+      internalID: -574880355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_164
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e35fb5c05625c04e9b9e1e0542bb9f7
+      internalID: 959590018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_165
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e24054365159b41b7e458719246b6f
+      internalID: -1579079833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_166
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 945c290711713f94b9d0717916c15c4e
+      internalID: -1881843742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_167
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a135b256e20654da7bbe420199e83b
+      internalID: 1133305935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_168
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8aeb7851a0f1ca46b17f2753832631c
+      internalID: 1770766021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_169
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1af0fd3633fa447b2a9aa8d2ecdbfa
+      internalID: 1671185367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_170
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84e1060aa61faa48af4696e1244f3e6
+      internalID: 818121314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_171
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61923675c2e3deb489a61304186b905b
+      internalID: -704178837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_172
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67a09106c9375e46a0c1c6388ccb0f9
+      internalID: 444476115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_173
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e20926eaffa324478369bb097e707b2
+      internalID: 85670971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_174
+      rect:
+        serializedVersion: 2
+        x: 2121
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db79987416393a04ebbf7dcc697f9ef9
+      internalID: 46785784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_175
+      rect:
+        serializedVersion: 2
+        x: 2172
+        y: 372
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e22dbcb180ce8458e230ea2972ef4d
+      internalID: -1921818613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_176
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 307
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a1c07eae7bfc54fbdb226f0d15abe9
+      internalID: 1322919197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_177
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 307
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e5d176f78c289498dfb61e06afd07a
+      internalID: 292241622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_178
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 307
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ec36d0286aa594686eaf63c983fdfc
+      internalID: 1546948153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_179
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 307
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f6a741c116ea94f809da6a679b6784
+      internalID: -1540887526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_180
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 307
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252e95b6ecf11dc4498742384a281dad
+      internalID: 1210911140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_181
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 242
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa0928209647234da148d7687650269
+      internalID: -570197884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_182
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 242
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6071c5af3fbd0584ca674ac60ff34dee
+      internalID: -1776221887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_183
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 242
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceba98389b68f244bade32020b7fdb6b
+      internalID: 954327058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_184
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 242
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d0af1e63af6bd43bf2941260e2cad2
+      internalID: -1728371826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_185
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 242
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf041491304efd468e3ba366838ad4b
+      internalID: 123337744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_186
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 177
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd50a31417d32548997164794dd4734
+      internalID: -713285510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_187
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 177
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37680a1b305eb4448b8ac12bafe679d5
+      internalID: 1305377590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_188
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 177
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31208c83ca5f5647903c4628e549aa3
+      internalID: 368266387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_189
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 177
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066679f439d7bf64cbfa0e1a3aba16c6
+      internalID: 1207928268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_190
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 112
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16c3b00bbffb5444b78c270668d2c2a
+      internalID: -869442123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_191
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 112
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14bd5d6a4bdad9e42b536c3db0e7dd40
+      internalID: -1421669984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_192
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 112
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb293019d82360b4e9a4bdeefb05df04
+      internalID: -1991419582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_193
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 112
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0e7bbac2fed064cad74e6407c06519
+      internalID: -2128312405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_194
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 112
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f1b0be836fb304b8adcf8b3dcf63ef
+      internalID: 1150661525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_195
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 112
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43dc16904385aa4c8fda6d66db74ff2
+      internalID: 2015197909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_196
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 47
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b69dcb326a12b44b3f1adb940406bf
+      internalID: -174528598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_197
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 47
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26db43a439b67b34f8873fb67dcecec5
+      internalID: -127853499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_1_Spritelist_198
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 47
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a2fee0a93e7784a9add9e2aa059e0e
+      internalID: 1360902877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Soldier_1_Spritelist_40: -1293009373
+      Soldier_1_Spritelist_156: 423888675
+      Soldier_1_Spritelist_161: -958927239
+      Soldier_1_Spritelist_179: -1540887526
+      Soldier_1_Spritelist_181: -570197884
+      Soldier_1_Spritelist_81: 788859097
+      Soldier_1_Spritelist_79: 1594165964
+      Soldier_1_Spritelist_1: -793084529
+      Soldier_1_Spritelist_139: 551565762
+      Soldier_1_Spritelist_38: -392581282
+      Soldier_1_Spritelist_73: -1502625161
+      Soldier_1_Spritelist_54: -1622063274
+      Soldier_1_Spritelist_116: -1807323932
+      Soldier_1_Spritelist_39: -1618777678
+      Soldier_1_Spritelist_33: 22174802
+      Soldier_1_Spritelist_132: 1450039699
+      Soldier_1_Spritelist_35: 939655536
+      Soldier_1_Spritelist_55: -1043882174
+      Soldier_1_Spritelist_123: -1542849333
+      Soldier_1_Spritelist_77: -427909528
+      Soldier_1_Spritelist_88: -1139970134
+      Soldier_1_Spritelist_191: -1421669984
+      Soldier_1_Spritelist_155: 87768877
+      Soldier_1_Spritelist_86: -1990931921
+      Soldier_1_Spritelist_45: 1519669224
+      Soldier_1_Spritelist_109: 1904228217
+      Soldier_1_Spritelist_140: 890269229
+      Soldier_1_Spritelist_98: 1101179337
+      Soldier_1_Spritelist_82: -913629803
+      Soldier_1_Spritelist_190: -869442123
+      Soldier_1_Spritelist_4: 185948265
+      Soldier_1_Spritelist_61: 999084182
+      Soldier_1_Spritelist_8: 1047899533
+      Soldier_1_Spritelist_72: 17677003
+      Soldier_1_Spritelist_189: 1207928268
+      Soldier_1_Spritelist_110: 906246800
+      Soldier_1_Spritelist_127: -1054720265
+      Soldier_1_Spritelist_169: 1671185367
+      Soldier_1_Spritelist_130: 1616234635
+      Soldier_1_Spritelist_184: -1728371826
+      Soldier_1_Spritelist_119: 1513243563
+      Soldier_1_Spritelist_114: 847032673
+      Soldier_1_Spritelist_101: -1543522083
+      Soldier_1_Spritelist_14: 467081889
+      Soldier_1_Spritelist_46: 97337084
+      Soldier_1_Spritelist_53: 1092600941
+      Soldier_1_Spritelist_129: -2120368584
+      Soldier_1_Spritelist_100: 817796977
+      Soldier_1_Spritelist_76: 1065899027
+      Soldier_1_Spritelist_108: 1253336433
+      Soldier_1_Spritelist_146: -265374242
+      Soldier_1_Spritelist_118: 1211532447
+      Soldier_1_Spritelist_83: -865046077
+      Soldier_1_Spritelist_194: 1150661525
+      Soldier_1_Spritelist_187: 1305377590
+      Soldier_1_Spritelist_115: 1162614954
+      Soldier_1_Spritelist_3: 138144266
+      Soldier_1_Spritelist_11: 1667780648
+      Soldier_1_Spritelist_84: 325324391
+      Soldier_1_Spritelist_120: -555404154
+      Soldier_1_Spritelist_171: -704178837
+      Soldier_1_Spritelist_141: 457457443
+      Soldier_1_Spritelist_175: -1921818613
+      Soldier_1_Spritelist_62: -656280664
+      Soldier_1_Spritelist_93: 1738032034
+      Soldier_1_Spritelist_2: 2019165271
+      Soldier_1_Spritelist_135: -42568875
+      Soldier_1_Spritelist_173: 85670971
+      Soldier_1_Spritelist_138: -1791233672
+      Soldier_1_Spritelist_164: 959590018
+      Soldier_1_Spritelist_178: 1546948153
+      Soldier_1_Spritelist_168: 1770766021
+      Soldier_1_Spritelist_133: -395289954
+      Soldier_1_Spritelist_188: 368266387
+      Soldier_1_Spritelist_105: -758562279
+      Soldier_1_Spritelist_87: -1955332249
+      Soldier_1_Spritelist_32: -674135096
+      Soldier_1_Spritelist_157: 1236495922
+      Soldier_1_Spritelist_195: 2015197909
+      Soldier_1_Spritelist_111: 1900176776
+      Soldier_1_Spritelist_9: -1110487646
+      Soldier_1_Spritelist_186: -713285510
+      Soldier_1_Spritelist_149: 42514893
+      Soldier_1_Spritelist_148: 1676730152
+      Soldier_1_Spritelist_95: 1641401018
+      Soldier_1_Spritelist_64: -1041014697
+      Soldier_1_Spritelist_106: -1942509661
+      Soldier_1_Spritelist_166: -1881843742
+      Soldier_1_Spritelist_151: 2019049358
+      Soldier_1_Spritelist_128: -508986912
+      Soldier_1_Spritelist_158: 913860107
+      Soldier_1_Spritelist_196: -174528598
+      Soldier_1_Spritelist_6: -1403927151
+      Soldier_1_Spritelist_36: -624197467
+      Soldier_1_Spritelist_20: 641943146
+      Soldier_1_Spritelist_134: 526963611
+      Soldier_1_Spritelist_163: -574880355
+      Soldier_1_Spritelist_154: 968372473
+      Soldier_1_Spritelist_34: 563851239
+      Soldier_1_Spritelist_74: -1845350080
+      Soldier_1_Spritelist_103: 1014997657
+      Soldier_1_Spritelist_162: -438366147
+      Soldier_1_Spritelist_25: 223318366
+      Soldier_1_Spritelist_42: 1274717570
+      Soldier_1_Spritelist_67: -1475376987
+      Soldier_1_Spritelist_78: 158591654
+      Soldier_1_Spritelist_159: -631825497
+      Soldier_1_Spritelist_104: 2142670723
+      Soldier_1_Spritelist_174: 46785784
+      Soldier_1_Spritelist_97: -151343137
+      Soldier_1_Spritelist_92: 311480989
+      Soldier_1_Spritelist_117: -953716671
+      Soldier_1_Spritelist_193: -2128312405
+      Soldier_1_Spritelist_16: -2045999945
+      Soldier_1_Spritelist_22: -1331859394
+      Soldier_1_Spritelist_107: 415362075
+      Soldier_1_Spritelist_59: -951541574
+      Soldier_1_Spritelist_147: -133515364
+      Soldier_1_Spritelist_12: 1708023933
+      Soldier_1_Spritelist_47: -809755979
+      Soldier_1_Spritelist_19: 214501142
+      Soldier_1_Spritelist_96: 2095144630
+      Soldier_1_Spritelist_43: 416069840
+      Soldier_1_Spritelist_51: -1097440623
+      Soldier_1_Spritelist_122: -1270671389
+      Soldier_1_Spritelist_26: 2105200640
+      Soldier_1_Spritelist_99: -2077749641
+      Soldier_1_Spritelist_167: 1133305935
+      Soldier_1_Spritelist_52: -1255999935
+      Soldier_1_Spritelist_142: -171667079
+      Soldier_1_Spritelist_0: -586949325
+      Soldier_1_Spritelist_150: 1813167910
+      Soldier_1_Spritelist_60: 1363312051
+      Soldier_1_Spritelist_144: -2043680272
+      Soldier_1_Spritelist_27: 690803635
+      Soldier_1_Spritelist_177: 292241622
+      Soldier_1_Spritelist_50: -1978769338
+      Soldier_1_Spritelist_182: -1776221887
+      Soldier_1_Spritelist_137: -1014888907
+      Soldier_1_Spritelist_85: -571706061
+      Soldier_1_Spritelist_41: 566449152
+      Soldier_1_Spritelist_66: 767342846
+      Soldier_1_Spritelist_80: 585792967
+      Soldier_1_Spritelist_90: 1699315379
+      Soldier_1_Spritelist_94: -1065404174
+      Soldier_1_Spritelist_58: 1227665337
+      Soldier_1_Spritelist_91: 784680086
+      Soldier_1_Spritelist_48: 1965110705
+      Soldier_1_Spritelist_176: 1322919197
+      Soldier_1_Spritelist_49: -1008989953
+      Soldier_1_Spritelist_18: -1092320641
+      Soldier_1_Spritelist_75: 1064917988
+      Soldier_1_Spritelist_125: -1200965177
+      Soldier_1_Spritelist_37: -1396030909
+      Soldier_1_Spritelist_30: 535962496
+      Soldier_1_Spritelist_172: 444476115
+      Soldier_1_Spritelist_102: 2015830783
+      Soldier_1_Spritelist_10: 1342583399
+      Soldier_1_Spritelist_153: 1095066410
+      Soldier_1_Spritelist_126: 2052404833
+      andar_02: 1610396182
+      Soldier_1_Spritelist_69: -79955352
+      Soldier_1_Spritelist_7: 1298607268
+      Soldier_1_Spritelist_131: 1761362619
+      Soldier_1_Spritelist_44: -753500060
+      Soldier_1_Spritelist_160: -1078253432
+      Soldier_1_Spritelist_89: -1159614795
+      Soldier_1_Spritelist_197: -127853499
+      Soldier_1_Spritelist_5: -1601112147
+      Soldier_1_Spritelist_31: 263131547
+      Soldier_1_Spritelist_29: 1124442389
+      Soldier_1_Spritelist_145: 1367580623
+      Soldier_1_Spritelist_63: 481453464
+      Soldier_1_Spritelist_65: -1698221008
+      Soldier_1_Spritelist_70: -1019571143
+      Soldier_1_Spritelist_136: 182607712
+      andar_01: -2106316528
+      Soldier_1_Spritelist_112: -1357276836
+      Soldier_1_Spritelist_71: 1459882579
+      Soldier_1_Spritelist_152: 960363356
+      Soldier_1_Spritelist_17: -2083864754
+      Soldier_1_Spritelist_113: 151429148
+      Soldier_1_Spritelist_170: 818121314
+      Soldier_1_Spritelist_56: -612981385
+      Soldier_1_Spritelist_23: 797205935
+      Soldier_1_Spritelist_57: 375978686
+      Soldier_1_Spritelist_165: -1579079833
+      Soldier_1_Spritelist_198: 1360902877
+      Soldier_1_Spritelist_180: 1210911140
+      Soldier_1_Spritelist_192: -1991419582
+      Soldier_1_Spritelist_183: 954327058
+      Soldier_1_Spritelist_185: 123337744
+      Soldier_1_Spritelist_121: -886403845
+      Soldier_1_Spritelist_68: 730072732
+      Soldier_1_Spritelist_13: -1646236918
+      Soldier_1_Spritelist_124: -1955097035
+      Soldier_1_Spritelist_143: -1370365565
+      Soldier_1_Spritelist_28: 858044184
+      Soldier_1_Spritelist_15: -1892269845
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

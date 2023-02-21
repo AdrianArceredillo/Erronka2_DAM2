@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - ground
+  - Margen Der.
+  - Margen Izq.
+  - Margen Top
+  - plataforma
+  - OneWayPlatform
+  - enemigo
+  - fence
+  - plat_fence
+  - enemigo_mov
+  - Player_Disparando
+  - healthBar - border
+  - healthBar - inside
+  - efecto sangrado
+  - mancha sangre
+  - menu resumen
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - mapa fondo
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Primer Plano
+    uniqueID: 3150592751
+    locked: 0
+  - name: Fondo
+    uniqueID: 3660004873
+    locked: 0
+  - name: Edificio 1
+    uniqueID: 2112773591
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Jugador
+    uniqueID: 3881920271
+    locked: 0
+  - name: Indicador Vida
+    uniqueID: 1576790073
+    locked: 0
+  - name: Fondo Menu
+    uniqueID: 3772450015
+    locked: 0

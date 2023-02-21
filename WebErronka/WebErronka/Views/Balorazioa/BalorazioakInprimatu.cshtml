@@ -4,11 +4,9 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Balorazioak: </h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -49,7 +47,7 @@
             </td>
         </tr>
 }
-        Balorazioa egiteko:
+        Laga zure balorazioa:
         <a asp-action="Create" asp-route-jokoa=@Model.First().jokoa>Berria</a>
 
 

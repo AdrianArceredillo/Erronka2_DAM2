@@ -4,11 +4,9 @@
     ViewData["Title"] = "Index";
 }
 
-<h1></h1>
+<h1>Lehenengo 5 puntuazioa hoberenak:  </h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -21,7 +19,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.taldea)
             </th>
-            <th></th>
+            
         </tr>
     </thead>
     <tbody>
@@ -36,11 +34,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.taldea)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
+            
         </tr>
 }
     </tbody>

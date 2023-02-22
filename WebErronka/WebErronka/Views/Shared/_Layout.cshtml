@@ -78,6 +78,9 @@
                                 <a class="dropdown-item" asp-area="" asp-controller="Balorazioa" asp-route-jokoIzena="@joko4Izena" asp-action="BalorazioakInprimatu">@await Component.InvokeAsync("Jokoak", new { id = 4 })</a>
                                 </div>
                             </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning inkesta" href="@Url.Action("Index", "Inkesta")">Inkesta</a>
+                        </li>
                         </ul>
                         <partial name="_LoginPartial" />
                     </div>

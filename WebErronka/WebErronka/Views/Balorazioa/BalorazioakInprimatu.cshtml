@@ -1,0 +1,55 @@
+﻿@model IEnumerable<WebErronka.ViewModels.BalorazioaViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Balorazioak: </h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.erabiltzailea)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kopurua)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.testua)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.data)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                
+            <td>
+                    @Html.DisplayFor(modelItem => item.erabiltzailea)
+            </td>
+            <td>
+                    @for (int i = 1; i <= item.kopurua; i++)
+                    {
+                    <img id="izarra" style="width:20px; height:20px;" src="~/images/izarra.png">
+                }
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.testua)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.data)
+            </td>
+        </tr>
+}
+        Laga zure balorazioa:
+        <a asp-action="Create" asp-route-jokoa=@Model.First().jokoa>Berria</a>
+
+
+    </tbody>
+</table>

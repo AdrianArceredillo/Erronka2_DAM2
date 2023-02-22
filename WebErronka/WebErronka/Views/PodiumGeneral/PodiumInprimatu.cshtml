@@ -1,0 +1,48 @@
+﻿@model IEnumerable<WebErronka.ViewModels.PodiumGeneralaViewModel>
+
+@{
+    ViewData["Title"] = "IndexAsync";
+}
+
+<h1>Joko guztien podiuma</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.jokoa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.jokalaria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.puntuazioa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.taldea)
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.jokoa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.jokalaria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.puntuazioa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.taldea)
+            </td>
+
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,62 @@
+<odoo>
+
+<template id="partidak_ordenatuta_template" name="Partida List">
+<html>
+<head>
+  
+  <style>
+    h1{
+      font-family: arial, sans-serif;
+      color: black;
+      background-color: transparent;
+    }
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      margin-left:auto;
+      margin-right: auto;
+      width: 80%;
+      box-shadow: 15px 15px 15px #EAEBE7;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 0.5px solid #DDD;
+    }
+
+    tr:hover {
+      background-color: #EAEBE7;
+    }
+
+    body {
+      background-color: Lightgray;
+    }
+
+  </style>
+</head>   
+<body>
+  <div >
+    <div id="wrap" class="container" >  
+    <h1 style= "text-align:center">ENPRESA TXAPELKETA</h1>
+      <div class = "Sailkapena"> 
+        <h2 style= "text-align:center">Podium</h2>
+        <table border="2" id="MyTable">
+          <tr bgcolor="#EAEBE7">
+            <th style="text-align:center">Langilea</th>
+            <th style="text-align:center">Gehiengo puntuazioa</th>
+          </tr>
+          <t t-foreach="partidak_ordenatuta" t-as="partida">
+                        <tr>
+                            <td><t t-esc="partida.erabiltzailea"/></td>
+                            <td><t t-esc="partida.max"/></td>
+                        </tr>
+                    </t>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+</template>
+
+</odoo>
